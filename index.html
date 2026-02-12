@@ -3,242 +3,875 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSOLRC SEOUL</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MODU RUNNING | 우리의 달리기에는 마침표가 없다</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --base-color: #181934;
-            --accent-color: #33b2b2;
+            --brand-main: #f5bc00;
+            --brand-main-deep: #c89200;
+            --brand-ink: #1f1702;
+            --blue-accent: #2a9abb;
+            --panel: linear-gradient(152deg, rgba(245, 188, 0, 0.94), rgba(255, 217, 94, 0.8));
+            --line: rgba(31, 23, 2, 0.2);
+            --text-main: #1f1702;
+            --text-sub: rgba(31, 23, 2, 0.78);
         }
-        .video-bg {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width:120vw;
-        height: 160vh;
-        object-fit: cover; /* 📌 비율 유지하면서 가득 차게 */
-        opacity: 0.3;
-        z-index: -1;
-    }
-    </style>
-</head>
-<!-- <body class="bg-gray-900 text-[var(--accent-color)] flex flex-col items-center space-y-10 p-8"> -->
-<body class="relative bg-[var(--base-color)] text-[var(--accent-color)] flex flex-col items-center space-y-10 p-8"></body>
 
-    <!-- 🎥 Background Video -->
-    <video autoplay loop muted playsinline class="video-bg">
-        <source src="img/bgr.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        * {
+            box-sizing: border-box;
+        }
 
-    <!-- Overlay -->
-    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #0f1117;
+        }
 
-    <!-- 📢 Banner -->
-    <div class="relative max-w-4xl w-full flex flex-col items-center text-center p-6">
-        <img src="img/cafe_대지_1.png" alt="배너 이미지" class="w-full max-h-60 object-cover rounded-lg shadow-lg">
-        <h1 class="text-4xl font-bold mt-4">🏃‍♂️ VSOL RC SEOUL RB</h1>
-        <p class="text-lg text-gray-300 mt-2">매주 함께 달리는 특별한 경험을 즐겨보세요!</p>
+        body {
+            min-height: 100vh;
+            font-family: "Noto Sans KR", sans-serif;
+            color: var(--text-main);
+            background: transparent;
+            overflow-x: hidden;
+        }
 
-        <!-- 🔗 오픈 카톡방 버튼 -->
-        <a href="https://open.kakao.com/o/gYDXge9g" target="_blank" 
-        class="mt-4 inline-block bg-[var(--accent-color)] text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
-            💬 오픈 카톡방 참여하기
-        </a>
-    </div>
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background: linear-gradient(140deg, rgba(8, 11, 18, 0.7), rgba(16, 12, 4, 0.58));
+        }
 
-    <!-- 📅 Google Calendar Event List -->
-    <div class="relative max-w-4xl w-full bg-[var(--base-color)] p-6 rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-white mb-6 text-center">📅 모임 일정</h2>
-        <ul id="event-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></ul>
-    </div>
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.7;
+            background:
+                radial-gradient(circle at 8% 14%, rgba(245, 188, 0, 0.3), transparent 30%),
+                radial-gradient(circle at 86% 3%, rgba(42, 154, 187, 0.2), transparent 26%);
+        }
 
-    <!-- 📝 Google Form -->
-    <div class="relative max-w-2xl w-full bg-[var(--base-color)] p-8 rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-[var(--accent-color)] mb-6 text-center">📋 참가 신청</h2>
-        
-        <form id="attendance-form" class="space-y-4">
-            <!-- 이름 -->
-            <div>
-                <label class="block font-medium text-gray-300">이름/소속 또는 기수 (ex. 김영진/4기, 홍길동/의적크루)</label>
-                <input type="text" id="name" required 
-                    class="w-full bg-gray-700 text-white border border-gray-500 rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
-            </div>
+        .bg-video {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
 
-            <!-- 참석 여부 -->
-            <div>
-                <label class="block font-medium text-gray-300">참석 여부 및 희망 페이스</label>
-                <select id="attendance" 
-                    class="w-full bg-gray-700 text-white border border-gray-500 rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
-                    <option value="~400">~400</option>
-                    <option value="~430">~430</option>
-                    <option value="~500">~500</option>
-                    <option value="~600">~600</option>
-                    <option value="~700">~700</option>
-                    <option value="걷기">걷기</option>
-                    <option value="현장 참여만 (운동X)">현장 참여만 (운동X)</option>
-                </select>
-            </div>
+        main {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 32px 18px 84px;
+            position: relative;
+            z-index: 2;
+        }
 
-            <!-- 오늘 특별히 할 수 있는 보직 -->
-            <div>
-                <label class="block font-medium text-gray-300">오늘 특별히 할 수 있는 보직</label>
-                <select id="role" 
-                    class="w-full bg-gray-700 text-white border border-gray-500 rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
-                    <option value="없음">없음</option>
-                    <option value="페이서">페이서</option>
-                    <option value="짐보관(차량지원)">짐보관(차량지원)</option>
-                    <option value="포토">포토</option>
-                </select>
-            </div>
+        .panel {
+            background: var(--panel);
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            border-radius: 24px;
+            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+            backdrop-filter: blur(10px) saturate(130%);
+            position: relative;
+            overflow: hidden;
+            animation: cardRise 0.55s ease both;
+        }
 
-            <!-- 짐보관 필요 여부 -->
-            <div>
-                <label class="block font-medium text-gray-300">짐보관 필요</label>
-                <select id="luggage" 
-                    class="w-full bg-gray-700 text-white border border-gray-500 rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
-                    <option value="O">O</option>
-                    <option value="X">X</option>
-                </select>
-            </div>
+        .panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0.24), transparent 42%, rgba(255, 255, 255, 0.07) 68%, transparent 84%);
+            pointer-events: none;
+        }
 
-            <!-- 뒷풀이 참석 여부 -->
-            <div>
-                <label class="block font-medium text-gray-300">뒷풀이 참석여부</label>
-                <select id="afterparty" 
-                    class="w-full bg-gray-700 text-white border border-gray-500 rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
-                    <option value="O">O</option>
-                    <option value="X">X</option>
-                </select>
-            </div>
+        .panel > * {
+            position: relative;
+            z-index: 1;
+        }
 
-            <!-- 제출 버튼 -->
-            <button type="submit" 
-                class="w-full bg-[var(--accent-color)] text-white py-2 rounded-lg font-bold hover:bg-[var(--base-color)]">
-                신청하기
-            </button>
-        </form>
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+            align-items: stretch;
+        }
 
-        <p id="status-message" class="text-green-600 font-semibold mt-4 hidden">✅ 신청이 완료되었습니다!</p>
+        .hero-copy {
+            padding: 30px 26px;
+            position: relative;
+        }
 
-        <div class="text-center mt-6">
-            <p class="text-lg text-gray-300">✨ 혹시 처음 오셨다면? <br> 아래 링크를 클릭하여 장문의 설문을 해주시면, 도움이 됩니다! ✨</p>
-            <a href="https://forms.gle/fZx2BcQ4uupftmjD8" target="_blank" 
-               class="inline-block mt-3 bg-[var(--accent-color)] text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
-                📋 필수는 아니에요!! 시간 되실 때 해주세요 :)
-            </a>
-        </div>
-    </div>
+        .hero-copy-main {
+            min-width: 0;
+        }
 
-    <!-- 리더 4명 섹션 -->
-    <div class="relative max-w-4xl w-full bg-[var(--base-color)] p-6 rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-[var(--accent-color)] mb-6 text-center">🏃‍♂️ 우리 리더들</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-            <div class="p-4 bg-gray-700 rounded-lg hover:scale-105 transition">
-                <img src="img/continue_proudly.png" alt="이상진" class="w-24 h-24 mx-auto rounded-full shadow-lg object-cover">
-                <p class="mt-2 text-xl font-semibold text-white">이상진</p>
-                <p class="text-gray-300 text-sm">"더 많은 사람들이 꾸준히 생동할 수 있도록,"</p>
-                <a href="https://instagram.com/continue_proudly" target="_blank" class="text-blue-400 text-sm">@continue_proudly</a>
-            </div>
+        .hero-head {
+            padding-right: clamp(170px, 24vw, 300px);
+        }
 
-            <div class="p-4 bg-gray-700 rounded-lg hover:scale-105 transition">
-                <img src="img/kimyoungjin06.png" alt="김영진" class="w-24 h-24 mx-auto rounded-full shadow-lg object-cover">
-                <p class="mt-2 text-xl font-semibold text-white">김영진</p>
-                <p class="text-gray-300 text-sm">"함께 달리는 순간이 최고!"</p>
-                <a href="https://instagram.com/kimyoungjin06" target="_blank" class="text-blue-400 text-sm">@kimyoungjin06</a>
-            </div>
+        .hero-icon-wrap {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(150px, 22vw, 260px);
+            pointer-events: none;
+        }
 
-            <div class="p-4 bg-gray-700 rounded-lg hover:scale-105 transition">
-                <img src="img/bravomylife_71.png" alt="이성희" class="w-24 h-24 mx-auto rounded-full shadow-lg object-cover">
-                <p class="mt-2 text-xl font-semibold text-white">이성희</p>
-                <p class="text-gray-300 text-sm">"80세에도 달리는 할머니 러너를 꿈꾸며"</p>
-                <a href="https://instagram.com/bravomylife_71" target="_blank" class="text-blue-400 text-sm">@bravomylife_71</a>
-            </div>
+        .hero-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            transform: scale(1.08);
+            filter: drop-shadow(0 8px 14px rgba(31, 23, 2, 0.18));
+        }
 
-            <div class="p-4 bg-gray-700 rounded-lg hover:scale-105 transition">
-                <img src="img/storytelle_r_unner.png" alt="최준석" class="w-24 h-24 mx-auto rounded-full shadow-lg object-cover">
-                <p class="mt-2 text-xl font-semibold text-white">최준석</p>
-                <p class="text-gray-300 text-sm">"즐기며, 즐거웠던, 내일도 즐거울 달리기!"</p>
-                <a href="https://instagram.com/storytelle_r_unner" target="_blank" class="text-blue-400 text-sm">@storytelle_r_unner</a>
-            </div>
+        .brand {
+            margin: 0 0 8px;
+            color: rgba(31, 23, 2, 0.72);
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+        }
 
-            <div class="p-4 bg-gray-700 rounded-lg hover:scale-105 transition">
-                <img src="img/gogo_jahyoung.png" alt="최자형" class="w-24 h-24 mx-auto rounded-full shadow-lg object-cover">
-                <p class="mt-2 text-xl font-semibold text-white">최자형</p>
-                <p class="text-gray-300 text-sm">"어제와 오늘을 함께 달릴 수 있는 문화유산 런!"</p>
-                <a href="https://instagram.com/gogo_jahyoung" target="_blank" class="text-blue-400 text-sm">@gogo_jahyoung</a>
-            </div>
-        </div>
-    </div>
+        h1 {
+            margin: 0;
+            font-family: "Do Hyeon", sans-serif;
+            font-size: clamp(2.2rem, 4.8vw, 3.6rem);
+            line-height: 1.05;
+            color: #2b1f00;
+            letter-spacing: 0.01em;
+            text-transform: none;
+        }
 
-    <script>
-        // 📅 Google Calendar API로 일정 불러오기
-        async function fetchCalendarEvents() {
-            const calendarId = "cd1e782daf5288296e784c60ce242d07c9ec2d6c68b2c4827e2b733cd7dae7fd@group.calendar.google.com";
-            const apiKey = "AIzaSyBSmEJk_eQEcAqndlavLug4YWtNj35e4BU";
-            const timeMin = new Date().toISOString();
+        .keyphrase {
+            margin: 10px 0 8px;
+            font-family: "Do Hyeon", sans-serif;
+            font-size: clamp(1.35rem, 3vw, 2rem);
+            line-height: 1.2;
+            color: rgba(31, 23, 2, 0.92);
+            letter-spacing: 0.005em;
+        }
 
-            try {
-                const response = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&singleEvents=true&orderBy=startTime&timeMin=${timeMin}`);
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        .lead {
+            margin: 0 0 18px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-sub);
+            max-width: 56ch;
+        }
 
-                const data = await response.json();
-                const eventList = document.getElementById("event-list");
-                eventList.innerHTML = "";
+        .template-copy {
+            margin: 0 0 10px;
+            color: rgba(31, 23, 2, 0.84);
+            font-size: 0.96rem;
+            font-weight: 600;
+        }
 
-                if (data.items && data.items.length > 0) {
-                    data.items.slice(0, 4).forEach(event => {
-                        const start = new Date(event.start.dateTime || event.start.date);
-                        const location = event.location ? `<br>📍 <strong>${event.location}</strong>` : ""; // 🔥 위치 정보 추가
+        .hashtags {
+            margin: 0 0 12px;
+            color: rgba(31, 23, 2, 0.88);
+            font-size: 0.92rem;
+            line-height: 1.55;
+            font-weight: 700;
+            word-break: keep-all;
+        }
 
-                        const listItem = document.createElement("li");
-                        listItem.className = "p-4 bg-gray-700 border-l-4 border-[var(--accent-color)] rounded-md shadow-md hover:scale-105 transition text-white";
-                        listItem.innerHTML = `<strong>${event.summary}</strong> <br> 📅 ${start.toLocaleDateString()} ${start.toLocaleTimeString()} ${location}`; // 🔥 위치 정보 표시
+        .partner {
+            margin: 0 0 18px;
+            color: rgba(31, 23, 2, 0.78);
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
 
-                        eventList.appendChild(listItem);
-                    });
-                } else {
-                    eventList.innerHTML = "<p class='text-white text-center'>일정이 없습니다.</p>";
-                }
-            } catch (error) {
-                console.error("Error fetching calendar events:", error);
-                document.getElementById("event-list").innerHTML = "<p class='text-red-400 text-center'>일정을 불러올 수 없습니다.</p>";
+        .partner a {
+            color: rgba(31, 23, 2, 0.95);
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            color: #fff8de;
+            background: var(--brand-ink);
+            border: 1px solid var(--brand-ink);
+        }
+
+        .btn-primary:hover {
+            background: #30240a;
+            border-color: #30240a;
+        }
+
+        .btn-ghost {
+            color: var(--brand-ink);
+            border: 1px solid rgba(31, 23, 2, 0.28);
+            background: rgba(255, 255, 255, 0.34);
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(31, 23, 2, 0.44);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .album {
+            margin-top: 24px;
+            padding: 18px;
+        }
+
+        .album-track-wrap {
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            background: rgba(8, 15, 27, 0.34);
+        }
+
+        .album-track {
+            display: flex;
+            transition: transform 0.55s ease;
+            will-change: transform;
+        }
+
+        .album-slide {
+            min-width: 100%;
+            margin: 0;
+            position: relative;
+            height: clamp(220px, 40vw, 370px);
+            overflow: hidden;
+        }
+
+        .album-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1.02);
+        }
+
+        .album-slide figcaption {
+            position: absolute;
+            left: 12px;
+            bottom: 12px;
+            margin: 0;
+            padding: 8px 12px;
+            border-radius: 14px;
+            color: #f7fbff;
+            background: rgba(8, 15, 27, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(4px);
+        }
+
+        .album-slide figcaption strong {
+            display: block;
+            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+            font-weight: 800;
+        }
+
+        .album-slide figcaption span {
+            display: block;
+            margin-top: 2px;
+            font-size: 0.72rem;
+            color: rgba(247, 251, 255, 0.82);
+            font-weight: 600;
+        }
+
+        .album-dots {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .album-dot {
+            width: 10px;
+            height: 10px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(31, 23, 2, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .album-dot.is-active {
+            background: #2b2106;
+            transform: scale(1.35);
+        }
+
+        .schedule {
+            margin-top: 24px;
+            padding: 24px 20px 20px;
+        }
+
+        .schedule-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(31, 23, 2, 0.18);
+            padding-bottom: 14px;
+        }
+
+        h2 {
+            margin: 4px 0 0;
+            font-family: "Do Hyeon", sans-serif;
+            letter-spacing: 0.01em;
+            font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+            color: #241900;
+        }
+
+        .date-window {
+            margin: 0;
+            color: rgba(31, 23, 2, 0.72);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .event-list {
+            list-style: none;
+            margin: 16px 0 0;
+            padding: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .event-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 14px;
+            align-items: center;
+            padding: 14px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-left: 6px solid rgba(245, 188, 0, 0.9);
+            background: linear-gradient(130deg, rgba(8, 13, 22, 0.95), rgba(25, 34, 50, 0.88));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            animation: fadeInUp 0.38s ease both;
+        }
+
+        .event-date {
+            min-width: 100px;
+        }
+
+        .event-date strong {
+            display: block;
+            font-size: 1rem;
+            color: #fff2bf;
+        }
+
+        .event-dday {
+            display: inline-block;
+            margin-top: 4px;
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--brand-ink);
+            background: #ffd44f;
+            border-radius: 999px;
+            padding: 2px 8px;
+        }
+
+        .event-title {
+            margin: 0;
+            color: #f6f9ff;
+            font-size: 1.03rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .event-meta {
+            margin: 5px 0 0;
+            color: #adbbd4;
+            font-size: 0.92rem;
+        }
+
+        .badge {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            color: #ffe9a5;
+            border-radius: 999px;
+            padding: 5px 9px;
+            border: 1px solid rgba(245, 188, 0, 0.46);
+            background: rgba(245, 188, 0, 0.16);
+        }
+
+        .loading, .empty, .error {
+            padding: 16px;
+            border-radius: 14px;
+            border: 1px dashed rgba(255, 255, 255, 0.24);
+            text-align: center;
+            color: #becbe0;
+            background: rgba(8, 15, 27, 0.6);
+        }
+
+        .error {
+            color: #ffd2d2;
+            border-color: rgba(255, 120, 120, 0.65);
+            background: rgba(72, 13, 13, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
+        @keyframes cardRise {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        fetchCalendarEvents();
+        @media (max-width: 900px) {
+            .hero-head {
+                padding-right: 180px;
+            }
 
+            .hero-icon-wrap {
+                top: 20px;
+                right: 16px;
+                bottom: 20px;
+                width: 168px;
+            }
+        }
 
-        // 📝 Google Forms로 참석 신청 제출
-        document.getElementById("attendance-form").addEventListener("submit", function(event) {
-            event.preventDefault();
+        @media (max-width: 640px) {
+            main {
+                padding-top: 20px;
+            }
 
-            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLScCrvHj2OVFcVKP24oKDCekH_ZgFuYAMnrodqdedjivkmh33g/formResponse";  // Google Forms API URL
-            const formData = new FormData();
+            .hero-copy {
+                padding: 24px 18px;
+            }
 
-            formData.append("entry.392058225", document.getElementById("name").value);  // "이름" 필드
-            formData.append("entry.610835873", document.getElementById("attendance").value);  // "참석 여부"
-            formData.append("entry.515292938", document.getElementById("role").value);  // "오늘 특별히 할 수 있는 보직"
-            formData.append("entry.2053606332", document.getElementById("luggage").value);  // "짐보관 필요"
-            formData.append("entry.1733669883", document.getElementById("afterparty").value);  // "뒷풀이 참석여부"
+            .schedule {
+                padding: 20px 14px 14px;
+            }
 
-            fetch(formURL, {
-                method: "POST",
-                mode: "no-cors",
-                body: formData
-            }).then(() => {
-                document.getElementById("status-message").classList.remove("hidden");
-                document.getElementById("attendance-form").reset();
-            }).catch(error => console.error("Error!", error.message));
-        });
+            .hero-copy-main {
+                padding-right: 0;
+            }
+
+            .hero-head {
+                padding-right: 0;
+            }
+
+            .hero-icon-wrap {
+                position: static;
+                width: 108px;
+                margin-top: 2px;
+            }
+
+            .hero-icon {
+                width: 100%;
+                height: auto;
+            }
+
+            .album {
+                padding: 14px;
+            }
+
+            .album-slide {
+                height: 220px;
+            }
+
+            .event-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .event-date {
+                min-width: 0;
+            }
+
+            .badge {
+                justify-self: start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="bg-video" autoplay loop muted playsinline aria-hidden="true">
+        <source src="img/bgr2.mp4" type="video/mp4">
+    </video>
+
+    <main>
+        <section class="hero">
+            <div class="panel hero-copy">
+                <div class="hero-copy-main">
+                    <div class="hero-head">
+                        <p class="brand">모두의러닝</p>
+                        <h1>모두의러닝 (Modu Running Crew)</h1>
+                        <p class="keyphrase">우리의 달리기에는 마침표가 없다</p>
+                        <p class="lead">No Period in our Running.</p>
+                    </div>
+                    <p class="template-copy">차별없이 다 함께 하는 러닝을 추구합니다</p>
+                    <p class="hashtags">#모두의러닝 #서울러닝크루 #우리의러닝에는마침표가없다</p>
+                    <p class="partner">바이탈솔루션 파트너크루 / <a href="https://instagram.com/vitalsolution" target="_blank" rel="noopener noreferrer">@vitalsolution</a></p>
+                    <div class="cta-row">
+                        <a class="btn btn-primary" href="https://instagram.com/modu_running" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a class="btn btn-ghost" href="https://open.kakao.com/o/gYDXge9g" target="_blank" rel="noopener noreferrer">오픈카톡</a>
+                    </div>
+                </div>
+                <div class="hero-icon-wrap" aria-hidden="true">
+                    <img class="hero-icon" src="img/icon1.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="panel album" aria-label="자체대회 앨범">
+            <div class="album-track-wrap" id="album-track-wrap">
+                <div class="album-track" id="album-track">
+                    <figure class="album-slide">
+                        <img src="img/3rd_comp.jpg" alt="MODU RUNNING 자체대회 단체 사진">
+                        <figcaption>
+                            <strong>OUR 3RD RACE</strong>
+                            <span>2025.10.03</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="album-slide">
+                        <img src="img/PO6C0048.jpg" alt="MODU RUNNING 자체대회 사진 1">
+                        <figcaption>
+                            <strong>MODU RUNNING</strong>
+                            <span>2025.10.03</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="album-slide">
+                        <img src="img/PO6C0129.jpg" alt="MODU RUNNING 자체대회 사진 2">
+                        <figcaption>
+                            <strong>NO PERIOD IN OUR RUNNING</strong>
+                            <span>2025.10.03</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="album-slide">
+                        <img src="img/PO6C0148.jpg" alt="MODU RUNNING 자체대회 사진 3">
+                        <figcaption>
+                            <strong>FINISH STRONG</strong>
+                            <span>2025.10.03</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="album-dots" id="album-dots">
+                <button class="album-dot is-active" type="button" data-index="0" aria-label="1번 사진 보기" aria-current="true"></button>
+                <button class="album-dot" type="button" data-index="1" aria-label="2번 사진 보기"></button>
+                <button class="album-dot" type="button" data-index="2" aria-label="3번 사진 보기"></button>
+                <button class="album-dot" type="button" data-index="3" aria-label="4번 사진 보기"></button>
+            </div>
+        </section>
+
+        <section class="panel schedule">
+            <div class="schedule-head">
+                <div>
+                    <h2>다가오는 한 달 일정</h2>
+                </div>
+                <p id="date-window" class="date-window">일정 범위 계산 중...</p>
+            </div>
+            <ul id="event-list" class="event-list">
+                <li class="loading">일정을 불러오는 중입니다...</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        (() => {
+            const CALENDAR_ID = "5ck7murv5tvaqidim3j7rokhdk@group.calendar.google.com";
+            const API_KEY = "AIzaSyBSmEJk_eQEcAqndlavLug4YWtNj35e4BU";
+            const DAYS_AHEAD = 30;
+            const TIME_ZONE = "Asia/Seoul";
+            const ALBUM_DELAY = 3600;
+
+            const eventListElement = document.getElementById("event-list");
+            const dateWindowElement = document.getElementById("date-window");
+            const albumTrack = document.getElementById("album-track");
+            const albumTrackWrap = document.getElementById("album-track-wrap");
+            const albumSlides = Array.from(document.querySelectorAll(".album-slide"));
+            const albumDots = Array.from(document.querySelectorAll(".album-dot"));
+
+            let albumIndex = 0;
+            let albumTimer = null;
+
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const end = new Date(today);
+            end.setDate(end.getDate() + DAYS_AHEAD);
+
+            const dayFormatter = new Intl.DateTimeFormat("ko-KR", {
+                month: "numeric",
+                day: "numeric",
+                weekday: "short",
+                timeZone: TIME_ZONE
+            });
+
+            const rangeFormatter = new Intl.DateTimeFormat("ko-KR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                timeZone: TIME_ZONE
+            });
+
+            const timeFormatter = new Intl.DateTimeFormat("ko-KR", {
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false,
+                timeZone: TIME_ZONE
+            });
+
+            dateWindowElement.textContent = `${rangeFormatter.format(today)} - ${rangeFormatter.format(end)}`;
+
+            function getEventStart(event) {
+                if (!event?.start) {
+                    return null;
+                }
+
+                if (event.start.date) {
+                    const parts = event.start.date.split("-").map(Number);
+                    if (parts.length !== 3) {
+                        return null;
+                    }
+                    return new Date(parts[0], parts[1] - 1, parts[2], 0, 0, 0);
+                }
+
+                if (event.start.dateTime) {
+                    return new Date(event.start.dateTime);
+                }
+
+                return null;
+            }
+
+            function getDdayLabel(eventDate) {
+                const target = new Date(eventDate.getFullYear(), eventDate.getMonth(), eventDate.getDate());
+                const diffDays = Math.round((target - today) / 86400000);
+
+                if (diffDays <= 0) {
+                    return "오늘";
+                }
+
+                return `D-${diffDays}`;
+            }
+
+            function getTimeLabel(event) {
+                if (event.start?.date) {
+                    return "종일";
+                }
+
+                if (event.start?.dateTime && event.end?.dateTime) {
+                    return `${timeFormatter.format(new Date(event.start.dateTime))} - ${timeFormatter.format(new Date(event.end.dateTime))}`;
+                }
+
+                if (event.start?.dateTime) {
+                    return timeFormatter.format(new Date(event.start.dateTime));
+                }
+
+                return "시간 미정";
+            }
+
+            function clearEvents() {
+                eventListElement.innerHTML = "";
+            }
+
+            function appendMessage(className, text) {
+                const item = document.createElement("li");
+                item.className = className;
+                item.textContent = text;
+                eventListElement.appendChild(item);
+            }
+
+            function setAlbumSlide(index) {
+                if (!albumTrack || !albumSlides.length) {
+                    return;
+                }
+
+                albumIndex = (index + albumSlides.length) % albumSlides.length;
+                albumTrack.style.transform = `translateX(-${albumIndex * 100}%)`;
+
+                albumDots.forEach((dot, dotIndex) => {
+                    const isActive = dotIndex === albumIndex;
+                    dot.classList.toggle("is-active", isActive);
+                    dot.setAttribute("aria-current", isActive ? "true" : "false");
+                });
+            }
+
+            function stopAlbumAutoplay() {
+                if (albumTimer) {
+                    window.clearInterval(albumTimer);
+                    albumTimer = null;
+                }
+            }
+
+            function startAlbumAutoplay() {
+                if (!albumTrack || albumSlides.length < 2) {
+                    return;
+                }
+
+                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    return;
+                }
+
+                stopAlbumAutoplay();
+                albumTimer = window.setInterval(() => {
+                    setAlbumSlide(albumIndex + 1);
+                }, ALBUM_DELAY);
+            }
+
+            function renderEventList(events) {
+                clearEvents();
+
+                if (!events.length) {
+                    appendMessage("empty", "한 달 이내 등록된 일정이 없습니다.");
+                    return;
+                }
+
+                events.forEach((event, index) => {
+                    const start = getEventStart(event);
+                    if (!start) {
+                        return;
+                    }
+
+                    const item = document.createElement("li");
+                    item.className = "event-item";
+                    item.style.animationDelay = `${Math.min(index * 40, 320)}ms`;
+
+                    const dateBox = document.createElement("div");
+                    dateBox.className = "event-date";
+
+                    const dateMain = document.createElement("strong");
+                    dateMain.textContent = dayFormatter.format(start);
+
+                    const dDay = document.createElement("span");
+                    dDay.className = "event-dday";
+                    dDay.textContent = getDdayLabel(start);
+
+                    dateBox.appendChild(dateMain);
+                    dateBox.appendChild(dDay);
+
+                    const body = document.createElement("div");
+                    body.className = "event-body";
+
+                    const title = document.createElement("p");
+                    title.className = "event-title";
+                    title.textContent = event.summary || "제목 미정";
+
+                    const meta = document.createElement("p");
+                    meta.className = "event-meta";
+                    const placeText = event.location ? ` · ${event.location}` : "";
+                    meta.textContent = `${getTimeLabel(event)}${placeText}`;
+
+                    body.appendChild(title);
+                    body.appendChild(meta);
+
+                    const badge = document.createElement("span");
+                    badge.className = "badge";
+                    badge.textContent = event.start?.date ? "ALL DAY" : "TIME";
+
+                    item.appendChild(dateBox);
+                    item.appendChild(body);
+                    item.appendChild(badge);
+                    eventListElement.appendChild(item);
+                });
+            }
+
+            async function fetchCalendarEvents() {
+                const params = new URLSearchParams({
+                    key: API_KEY,
+                    singleEvents: "true",
+                    orderBy: "startTime",
+                    timeMin: today.toISOString(),
+                    timeMax: end.toISOString(),
+                    maxResults: "100"
+                });
+
+                const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?${params.toString()}`;
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    const items = (data.items || [])
+                        .filter((event) => {
+                            const start = getEventStart(event);
+                            return start && start >= today && start <= end;
+                        })
+                        .sort((a, b) => getEventStart(a) - getEventStart(b));
+
+                    renderEventList(items);
+                } catch (error) {
+                    clearEvents();
+                    appendMessage("error", "일정을 불러오지 못했습니다. 캘린더 설정을 확인해 주세요.");
+                    console.error("Calendar fetch failed:", error);
+                }
+            }
+
+            if (albumTrack && albumSlides.length) {
+                albumDots.forEach((dot) => {
+                    dot.addEventListener("click", () => {
+                        const nextIndex = Number(dot.dataset.index || "0");
+                        setAlbumSlide(nextIndex);
+                        startAlbumAutoplay();
+                    });
+                });
+
+                if (albumTrackWrap) {
+                    albumTrackWrap.addEventListener("mouseenter", stopAlbumAutoplay);
+                    albumTrackWrap.addEventListener("mouseleave", startAlbumAutoplay);
+                }
+
+                setAlbumSlide(0);
+                startAlbumAutoplay();
+            }
+
+            fetchCalendarEvents();
+        })();
     </script>
-
 </body>
 </html>
-
-
-
-
