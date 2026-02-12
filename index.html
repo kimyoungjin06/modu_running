@@ -483,6 +483,52 @@
             text-transform: lowercase;
         }
 
+        .feedback-box {
+            margin-top: 24px;
+            padding: 18px;
+        }
+
+        .feedback-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .feedback-title {
+            margin: 0;
+            font-family: "Do Hyeon", sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.01em;
+            color: #241900;
+        }
+
+        .feedback-text {
+            margin: 0 0 10px;
+            color: rgba(31, 23, 2, 0.88);
+            font-size: 0.96rem;
+            line-height: 1.72;
+            font-weight: 600;
+        }
+
+        .feedback-notes {
+            margin: 0 0 10px;
+            padding-left: 18px;
+            color: rgba(31, 23, 2, 0.86);
+            font-size: 0.92rem;
+            line-height: 1.68;
+            font-weight: 600;
+        }
+
+        .feedback-end {
+            margin: 0;
+            color: rgba(31, 23, 2, 0.9);
+            font-size: 0.96rem;
+            font-weight: 700;
+        }
+
         .ongoing-program {
             margin-top: 24px;
             padding: 18px;
@@ -662,6 +708,10 @@
                 max-width: 220px;
             }
 
+            .feedback-box {
+                padding: 14px;
+            }
+
             .event-item {
                 grid-template-columns: 1fr;
                 gap: 10px;
@@ -773,6 +823,21 @@
                 </div>
                 <img class="ongoing-thumb" src="img/MRC_TT.png" alt="목요미식회 프로그램 이미지">
             </article>
+        </section>
+
+        <section class="panel feedback-box" aria-label="익명 의견 및 제보함">
+            <div class="feedback-head">
+                <h3 class="feedback-title">익명 의견/제보함</h3>
+                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe_5FVxb8vuX0hlkrCtBHnBb6diS1hPmRjfO5EB6hFiOd-PyA/viewform?usp=pp_url&amp;entry.1044421644=%EB%82%B4%EC%9A%A9" target="_blank" rel="noopener noreferrer">익명 의견 접수</a>
+            </div>
+            <p class="feedback-text">안녕하세요, 모두의러닝 여러분! 항상 열심히 함께해 주셔서 감사합니다. 크루가 더 건강하고 즐겁게 운영될 수 있도록 익명 의견/제보함을 만들었습니다.</p>
+            <p class="feedback-text">작은 불편, 개선 아이디어, 운영에 대한 건의, 칭찬과 응원의 메시지까지 어떤 내용이든 편하게 남겨주세요.</p>
+            <p class="feedback-text">남겨주신 내용은 운영진이 주기적으로 확인하고, 내부 논의 후 반영 가능한 부분은 순차적으로 적용하겠습니다.</p>
+            <ul class="feedback-notes">
+                <li>익명성을 위해 실명/연락처/카톡ID 등 개인 식별 정보는 적지 말아주세요.</li>
+                <li>욕설/비방/허위사실/신상 공유성 내용은 처리되지 않을 수 있습니다.</li>
+            </ul>
+            <p class="feedback-end">건설적인 의견은 언제나 환영합니다 🙂 감사합니다!</p>
         </section>
 
         <footer class="site-footer">
