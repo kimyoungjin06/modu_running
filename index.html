@@ -159,6 +159,16 @@
             text-transform: none;
         }
 
+        .name-en {
+            display: block;
+            margin-top: 6px;
+            font-size: clamp(1.12rem, 2.3vw, 1.62rem);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: rgba(31, 23, 2, 0.78);
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
         .keyphrase {
             margin: 10px 0 8px;
             font-family: "Do Hyeon", sans-serif;
@@ -447,6 +457,30 @@
             background: rgba(72, 13, 13, 0.4);
         }
 
+        .site-footer {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .site-footer-image {
+            display: block;
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+            border-radius: 16px;
+            border: none;
+            box-shadow: none;
+        }
+
+        .site-credit {
+            margin: 10px 0 0;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: rgba(247, 251, 255, 0.86);
+            letter-spacing: 0.03em;
+            text-transform: lowercase;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -547,8 +581,8 @@
             <div class="panel hero-copy">
                 <div class="hero-copy-main">
                     <div class="hero-head">
-                        <p class="brand">모두의러닝</p>
-                        <h1>모두의러닝 (Modu Running Crew)</h1>
+                        <p class="brand">중랑구/광진구 러닝크루</p>
+                        <h1>모두의러닝<span class="name-en">Modu Running Crew</span></h1>
                         <p class="keyphrase">우리의 달리기에는 마침표가 없다</p>
                         <p class="lead">No Period in our Running.</p>
                     </div>
@@ -618,6 +652,11 @@
                 <li class="loading">일정을 불러오는 중입니다...</li>
             </ul>
         </section>
+
+        <footer class="site-footer">
+            <img class="site-footer-image" src="img/footer.png" alt="MODU RUNNING footer">
+            <p class="site-credit">made by kimyoungjin06</p>
+        </footer>
     </main>
 
     <script>
