@@ -542,7 +542,7 @@
             font-size: 0.98rem;
             line-height: 1.82;
             font-weight: 600;
-            max-width: 62ch;
+            max-width: 100%;
             word-break: keep-all;
             letter-spacing: 0.002em;
         }
@@ -554,7 +554,7 @@
             font-size: 0.92rem;
             line-height: 1.72;
             font-weight: 600;
-            max-width: 62ch;
+            max-width: 100%;
             word-break: keep-all;
         }
 
@@ -567,7 +567,7 @@
             color: rgba(31, 23, 2, 0.9);
             font-size: 0.98rem;
             font-weight: 800;
-            max-width: 62ch;
+            max-width: 100%;
             word-break: keep-all;
         }
 
@@ -575,7 +575,7 @@
             margin-top: 16px;
             display: grid;
             gap: 12px;
-            max-width: 62ch;
+            max-width: 100%;
         }
 
         .feedback-form-label {
@@ -686,9 +686,9 @@
 
         .ongoing-card {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) 196px;
-            gap: 18px;
-            align-items: center;
+            grid-template-columns: minmax(0, 1fr) 182px;
+            gap: 14px;
+            align-items: start;
             padding: 16px;
             border-radius: 16px;
             background: linear-gradient(130deg, rgba(8, 13, 22, 0.92), rgba(25, 34, 50, 0.88));
@@ -747,6 +747,7 @@
             background: rgba(255, 255, 255, 0.04);
             aspect-ratio: 1 / 1;
             justify-self: end;
+            align-self: start;
         }
 
         @keyframes fadeInUp {
