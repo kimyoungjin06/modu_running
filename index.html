@@ -511,6 +511,8 @@
             font-size: 0.96rem;
             line-height: 1.72;
             font-weight: 600;
+            max-width: 76ch;
+            word-break: keep-all;
         }
 
         .feedback-notes {
@@ -520,6 +522,12 @@
             font-size: 0.92rem;
             line-height: 1.68;
             font-weight: 600;
+            max-width: 76ch;
+            word-break: keep-all;
+        }
+
+        .feedback-notes li + li {
+            margin-top: 6px;
         }
 
         .feedback-end {
@@ -527,6 +535,76 @@
             color: rgba(31, 23, 2, 0.9);
             font-size: 0.96rem;
             font-weight: 700;
+            max-width: 76ch;
+            word-break: keep-all;
+        }
+
+        .feedback-form {
+            margin-top: 12px;
+            display: grid;
+            gap: 10px;
+            max-width: 76ch;
+        }
+
+        .feedback-form-label {
+            margin: 0;
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: rgba(31, 23, 2, 0.88);
+        }
+
+        .feedback-input {
+            width: 100%;
+            min-height: 132px;
+            resize: vertical;
+            border-radius: 12px;
+            border: 1px solid rgba(31, 23, 2, 0.22);
+            background: rgba(255, 250, 230, 0.62);
+            color: #241900;
+            font: inherit;
+            font-size: 0.94rem;
+            line-height: 1.55;
+            padding: 12px;
+        }
+
+        .feedback-input:focus {
+            outline: none;
+            border-color: rgba(31, 23, 2, 0.5);
+            box-shadow: 0 0 0 3px rgba(31, 23, 2, 0.12);
+        }
+
+        .feedback-form-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .feedback-submit {
+            min-width: 116px;
+            cursor: pointer;
+        }
+
+        .feedback-submit:disabled {
+            opacity: 0.72;
+            cursor: wait;
+            transform: none;
+        }
+
+        .feedback-status {
+            margin: 0;
+            min-height: 1.3em;
+            color: rgba(31, 23, 2, 0.84);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .feedback-iframe {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 0;
+            visibility: hidden;
         }
 
         .ongoing-program {
@@ -712,6 +790,10 @@
                 padding: 14px;
             }
 
+            .feedback-input {
+                min-height: 116px;
+            }
+
             .event-item {
                 grid-template-columns: 1fr;
                 gap: 10px;
@@ -828,11 +910,19 @@
         <section class="panel feedback-box" aria-label="익명 의견 및 제보함">
             <div class="feedback-head">
                 <h3 class="feedback-title">익명 의견/제보함</h3>
-                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe_5FVxb8vuX0hlkrCtBHnBb6diS1hPmRjfO5EB6hFiOd-PyA/viewform?usp=pp_url&amp;entry.1044421644=%EB%82%B4%EC%9A%A9" target="_blank" rel="noopener noreferrer">익명 의견 접수</a>
             </div>
-            <p class="feedback-text">안녕하세요, 모두의러닝 여러분! 항상 열심히 함께해 주셔서 감사합니다. 크루가 더 건강하고 즐겁게 운영될 수 있도록 익명 의견/제보함을 만들었습니다.</p>
-            <p class="feedback-text">작은 불편, 개선 아이디어, 운영에 대한 건의, 칭찬과 응원의 메시지까지 어떤 내용이든 편하게 남겨주세요.</p>
-            <p class="feedback-text">남겨주신 내용은 운영진이 주기적으로 확인하고, 내부 논의 후 반영 가능한 부분은 순차적으로 적용하겠습니다.</p>
+            <p class="feedback-text">안녕하세요, 모두의러닝 여러분!<br>항상 열심히 함께해 주셔서 감사합니다.<br>크루가 더 건강하고 즐겁게 운영될 수 있도록 익명 의견/제보함을 만들었습니다.</p>
+            <p class="feedback-text">작은 불편, 개선 아이디어,<br>운영에 대한 건의, 칭찬과 응원의 메시지까지<br>어떤 내용이든 편하게 남겨주세요.</p>
+            <p class="feedback-text">남겨주신 내용은 운영진이 주기적으로 확인하고,<br>내부 논의 후 반영 가능한 부분은<br>순차적으로 적용하겠습니다.</p>
+            <form id="anonymous-feedback-form" class="feedback-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe_5FVxb8vuX0hlkrCtBHnBb6diS1hPmRjfO5EB6hFiOd-PyA/formResponse" method="post" target="feedback-submit-frame" accept-charset="UTF-8">
+                <label class="feedback-form-label" for="feedback-content">익명 의견 작성</label>
+                <textarea id="feedback-content" class="feedback-input" name="entry.1044421644" placeholder="작은 불편, 개선 아이디어, 칭찬/응원 메시지를 자유롭게 남겨주세요." required></textarea>
+                <div class="feedback-form-actions">
+                    <button id="feedback-submit" class="btn btn-primary feedback-submit" type="submit">발송하기</button>
+                    <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+            <iframe id="feedback-submit-frame" class="feedback-iframe" name="feedback-submit-frame" title="익명 의견 제출"></iframe>
             <ul class="feedback-notes">
                 <li>익명성을 위해 실명/연락처/카톡ID 등 개인 식별 정보는 적지 말아주세요.</li>
                 <li>욕설/비방/허위사실/신상 공유성 내용은 처리되지 않을 수 있습니다.</li>
@@ -860,9 +950,14 @@
             const albumTrackWrap = document.getElementById("album-track-wrap");
             const albumSlides = Array.from(document.querySelectorAll(".album-slide"));
             const albumDots = Array.from(document.querySelectorAll(".album-dot"));
+            const feedbackForm = document.getElementById("anonymous-feedback-form");
+            const feedbackSubmit = document.getElementById("feedback-submit");
+            const feedbackStatus = document.getElementById("feedback-status");
+            const feedbackIframe = document.getElementById("feedback-submit-frame");
 
             let albumIndex = 0;
             let albumTimer = null;
+            let feedbackPending = false;
 
             const now = new Date();
             const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -1078,6 +1173,29 @@
                 }
             }
 
+            function setupFeedbackForm() {
+                if (!feedbackForm || !feedbackSubmit || !feedbackStatus || !feedbackIframe) {
+                    return;
+                }
+
+                feedbackForm.addEventListener("submit", () => {
+                    feedbackPending = true;
+                    feedbackSubmit.disabled = true;
+                    feedbackStatus.textContent = "의견을 전송하고 있습니다...";
+                });
+
+                feedbackIframe.addEventListener("load", () => {
+                    if (!feedbackPending) {
+                        return;
+                    }
+
+                    feedbackPending = false;
+                    feedbackSubmit.disabled = false;
+                    feedbackForm.reset();
+                    feedbackStatus.textContent = "의견이 접수되었습니다. 감사합니다.";
+                });
+            }
+
             if (albumTrack && albumSlides.length) {
                 albumDots.forEach((dot) => {
                     dot.addEventListener("click", () => {
@@ -1096,6 +1214,7 @@
                 startAlbumAutoplay();
             }
 
+            setupFeedbackForm();
             fetchCalendarEvents();
         })();
     </script>
