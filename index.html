@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="중랑구/광진구 러닝크루 모두의러닝. 우리의 달리기에는 마침표가 없다. 다가오는 한 달 일정, 현재 진행 중 프로그램, 익명 의견 접수 안내.">
+    <meta name="theme-color" content="#f5bc00">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="모두의러닝 | 우리의 달리기에는 마침표가 없다">
+    <meta property="og:description" content="중랑구/광진구 러닝크루 모두의러닝의 한 달 일정과 프로그램, 익명 의견 접수 안내를 확인하세요.">
+    <meta property="og:image" content="img/3rd_comp.jpg">
+    <meta property="og:image:alt" content="모두의러닝 자체대회 단체 사진">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
     <title>MODU RUNNING | 우리의 달리기에는 마침표가 없다</title>
     <link rel="icon" type="image/png" href="img/icon1.png">
     <link rel="shortcut icon" href="img/icon1.png">
@@ -240,6 +249,16 @@
             transform: translateY(-1px);
         }
 
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(42, 154, 187, 0.85);
+            outline-offset: 2px;
+        }
+
+        .btn:focus-visible {
+            transform: none;
+        }
+
         .btn-primary {
             color: #fff8de;
             background: var(--brand-ink);
@@ -339,6 +358,15 @@
             background: rgba(31, 23, 2, 0.3);
             cursor: pointer;
             transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .album-dot:hover {
+            background: rgba(31, 23, 2, 0.5);
+        }
+
+        .album-dot:focus-visible {
+            background: rgba(31, 23, 2, 0.65);
+            transform: scale(1.35);
         }
 
         .album-dot.is-active {
@@ -571,6 +599,11 @@
             outline: none;
             border-color: rgba(31, 23, 2, 0.5);
             box-shadow: 0 0 0 3px rgba(31, 23, 2, 0.12);
+        }
+
+        .feedback-input:focus-visible {
+            outline: 3px solid rgba(42, 154, 187, 0.62);
+            outline-offset: 2px;
         }
 
         .feedback-form-actions {
@@ -807,6 +840,18 @@
                 justify-self: start;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .bg-video {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -943,6 +988,7 @@
             const DAYS_AHEAD = 30;
             const TIME_ZONE = "Asia/Seoul";
             const ALBUM_DELAY = 3600;
+            const DAY_MS = 86400000;
 
             const eventListElement = document.getElementById("event-list");
             const dateWindowElement = document.getElementById("date-window");
@@ -951,18 +997,24 @@
             const albumSlides = Array.from(document.querySelectorAll(".album-slide"));
             const albumDots = Array.from(document.querySelectorAll(".album-dot"));
             const feedbackForm = document.getElementById("anonymous-feedback-form");
+            const feedbackInput = document.getElementById("feedback-content");
             const feedbackSubmit = document.getElementById("feedback-submit");
             const feedbackStatus = document.getElementById("feedback-status");
             const feedbackIframe = document.getElementById("feedback-submit-frame");
+            const bgVideo = document.querySelector(".bg-video");
+            const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
             let albumIndex = 0;
             let albumTimer = null;
             let feedbackPending = false;
+            let feedbackTimeout = null;
 
-            const now = new Date();
-            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-            const end = new Date(today);
-            end.setDate(end.getDate() + DAYS_AHEAD);
+            const seoulYmdFormatter = new Intl.DateTimeFormat("en-CA", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                timeZone: TIME_ZONE
+            });
 
             const dayFormatter = new Intl.DateTimeFormat("ko-KR", {
                 month: "numeric",
@@ -985,7 +1037,32 @@
                 timeZone: TIME_ZONE
             });
 
-            dateWindowElement.textContent = `${rangeFormatter.format(today)} - ${rangeFormatter.format(end)}`;
+            function toSeoulDayStamp(date) {
+                const [year, month, day] = seoulYmdFormatter.format(date).split("-").map(Number);
+                return Date.UTC(year, month - 1, day) / DAY_MS;
+            }
+
+            function stampToDate(stamp) {
+                return new Date(stamp * DAY_MS);
+            }
+
+            function toKstBoundaryIso(stamp, endOfDay) {
+                const date = stampToDate(stamp);
+                const year = date.getUTCFullYear();
+                const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+                const day = String(date.getUTCDate()).padStart(2, "0");
+                const time = endOfDay ? "23:59:59" : "00:00:00";
+                return `${year}-${month}-${day}T${time}+09:00`;
+            }
+
+            const todayStamp = toSeoulDayStamp(new Date());
+            const endStamp = todayStamp + DAYS_AHEAD;
+            const todayDisplayDate = stampToDate(todayStamp);
+            const endDisplayDate = stampToDate(endStamp);
+            const timeMin = toKstBoundaryIso(todayStamp, false);
+            const timeMax = toKstBoundaryIso(endStamp, true);
+
+            dateWindowElement.textContent = `${rangeFormatter.format(todayDisplayDate)} - ${rangeFormatter.format(endDisplayDate)}`;
 
             function getEventStart(event) {
                 if (!event?.start) {
@@ -993,11 +1070,7 @@
                 }
 
                 if (event.start.date) {
-                    const parts = event.start.date.split("-").map(Number);
-                    if (parts.length !== 3) {
-                        return null;
-                    }
-                    return new Date(parts[0], parts[1] - 1, parts[2], 0, 0, 0);
+                    return new Date(`${event.start.date}T00:00:00+09:00`);
                 }
 
                 if (event.start.dateTime) {
@@ -1008,8 +1081,7 @@
             }
 
             function getDdayLabel(eventDate) {
-                const target = new Date(eventDate.getFullYear(), eventDate.getMonth(), eventDate.getDate());
-                const diffDays = Math.round((target - today) / 86400000);
+                const diffDays = toSeoulDayStamp(eventDate) - todayStamp;
 
                 if (diffDays <= 0) {
                     return "오늘";
@@ -1072,7 +1144,7 @@
                     return;
                 }
 
-                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                if (reduceMotionQuery.matches) {
                     return;
                 }
 
@@ -1144,8 +1216,9 @@
                     key: API_KEY,
                     singleEvents: "true",
                     orderBy: "startTime",
-                    timeMin: today.toISOString(),
-                    timeMax: end.toISOString(),
+                    timeMin,
+                    timeMax,
+                    timeZone: TIME_ZONE,
                     maxResults: "100"
                 });
 
@@ -1161,7 +1234,12 @@
                     const items = (data.items || [])
                         .filter((event) => {
                             const start = getEventStart(event);
-                            return start && start >= today && start <= end;
+                            if (!start || Number.isNaN(start.getTime())) {
+                                return false;
+                            }
+
+                            const stamp = toSeoulDayStamp(start);
+                            return stamp >= todayStamp && stamp <= endStamp;
                         })
                         .sort((a, b) => getEventStart(a) - getEventStart(b));
 
@@ -1178,10 +1256,31 @@
                     return;
                 }
 
-                feedbackForm.addEventListener("submit", () => {
+                feedbackForm.addEventListener("submit", (event) => {
+                    if (!feedbackInput || !feedbackInput.value.trim()) {
+                        event.preventDefault();
+                        feedbackStatus.textContent = "의견 내용을 입력해 주세요.";
+                        return;
+                    }
+
+                    feedbackInput.value = feedbackInput.value.trim();
                     feedbackPending = true;
                     feedbackSubmit.disabled = true;
-                    feedbackStatus.textContent = "의견을 전송하고 있습니다...";
+                    feedbackStatus.textContent = "의견 전송을 요청했습니다. 접수 반영까지 잠시 시간이 걸릴 수 있습니다.";
+
+                    if (feedbackTimeout) {
+                        window.clearTimeout(feedbackTimeout);
+                    }
+
+                    feedbackTimeout = window.setTimeout(() => {
+                        if (!feedbackPending) {
+                            return;
+                        }
+
+                        feedbackPending = false;
+                        feedbackSubmit.disabled = false;
+                        feedbackStatus.textContent = "전송 확인이 지연되고 있습니다. 잠시 후 다시 시도해 주세요.";
+                    }, 8000);
                 });
 
                 feedbackIframe.addEventListener("load", () => {
@@ -1190,9 +1289,13 @@
                     }
 
                     feedbackPending = false;
+                    if (feedbackTimeout) {
+                        window.clearTimeout(feedbackTimeout);
+                        feedbackTimeout = null;
+                    }
                     feedbackSubmit.disabled = false;
                     feedbackForm.reset();
-                    feedbackStatus.textContent = "의견이 접수되었습니다. 감사합니다.";
+                    feedbackStatus.textContent = "의견 전송 요청이 접수되었습니다. 감사합니다.";
                 });
             }
 
@@ -1212,6 +1315,31 @@
 
                 setAlbumSlide(0);
                 startAlbumAutoplay();
+            }
+
+            if (reduceMotionQuery.matches && bgVideo) {
+                bgVideo.pause();
+            }
+
+            const handleMotionPreferenceChange = (event) => {
+                if (event.matches) {
+                    stopAlbumAutoplay();
+                    if (bgVideo) {
+                        bgVideo.pause();
+                    }
+                    return;
+                }
+
+                if (bgVideo) {
+                    bgVideo.play().catch(() => {});
+                }
+                startAlbumAutoplay();
+            };
+
+            if (typeof reduceMotionQuery.addEventListener === "function") {
+                reduceMotionQuery.addEventListener("change", handleMotionPreferenceChange);
+            } else if (typeof reduceMotionQuery.addListener === "function") {
+                reduceMotionQuery.addListener(handleMotionPreferenceChange);
             }
 
             setupFeedbackForm();
