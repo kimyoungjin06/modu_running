@@ -151,6 +151,23 @@
             filter: drop-shadow(0 8px 14px rgba(31, 23, 2, 0.18));
         }
 
+        @media (min-width: 901px) {
+            .hero-head {
+                padding-right: clamp(230px, 32vw, 390px);
+            }
+
+            .hero-icon-wrap {
+                top: 12px;
+                right: 12px;
+                bottom: 12px;
+                width: clamp(210px, 30vw, 350px);
+            }
+
+            .hero-icon {
+                transform: scale(1.24);
+            }
+        }
+
         .brand {
             margin: 0 0 8px;
             color: rgba(31, 23, 2, 0.72);
