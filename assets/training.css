@@ -434,6 +434,212 @@ body.training-page {
     font-weight: 800;
 }
 
+.article-detail {
+    background: #fffdf6;
+}
+
+.article-head {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+    align-items: stretch;
+    min-height: 520px;
+    background: var(--yellow);
+}
+
+.article-head-copy {
+    padding: clamp(34px, 6vw, 68px);
+    align-self: center;
+}
+
+.article-source {
+    margin: 22px 0 8px;
+    color: rgba(31, 23, 2, 0.7);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.article-hero-figure {
+    min-width: 0;
+    min-height: 420px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.article-hero-figure img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.article-layout {
+    padding: clamp(34px, 6vw, 68px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(250px, 0.65fr);
+    align-items: start;
+    gap: clamp(36px, 6vw, 72px);
+}
+
+.article-body {
+    min-width: 0;
+}
+
+.article-section + .article-section {
+    margin-top: 64px;
+    padding-top: 56px;
+    border-top: 1px solid #ded6c2;
+}
+
+.article-section > h2 {
+    margin: 0 0 22px;
+    color: var(--ink);
+    font-family: "Do Hyeon", sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.08;
+}
+
+.article-section > p {
+    margin: 0;
+    color: #4f493b;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.article-section > p + p {
+    margin-top: 16px;
+}
+
+.article-item-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.article-item {
+    padding: 22px;
+    background: #f4eddb;
+    border: 1px solid #e3dac4;
+    border-radius: 17px;
+}
+
+.article-item h3 {
+    margin: 0 0 9px;
+    color: var(--ink);
+    font-size: 1rem;
+}
+
+.article-item p {
+    margin: 0;
+    color: #5b5444;
+    font-size: 0.9rem;
+    line-height: 1.72;
+}
+
+.article-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: article-step;
+}
+
+.article-steps li {
+    position: relative;
+    min-height: 54px;
+    padding: 14px 12px 14px 58px;
+    color: #4f493b;
+    line-height: 1.75;
+    border-bottom: 1px solid #ded6c2;
+    counter-increment: article-step;
+}
+
+.article-steps li::before {
+    content: counter(article-step);
+    position: absolute;
+    left: 8px;
+    top: 11px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: var(--ink);
+    background: var(--yellow);
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.article-formula {
+    margin-bottom: 22px !important;
+    padding: 20px 22px;
+    color: var(--ink) !important;
+    background: var(--yellow);
+    border-radius: 15px;
+    font-size: clamp(1.1rem, 3vw, 1.4rem) !important;
+    font-weight: 900;
+    text-align: center;
+}
+
+.article-callout {
+    margin-top: 24px;
+    padding: 22px;
+    color: #254b56;
+    background: #e3f3f7;
+    border-left: 5px solid var(--blue);
+    border-radius: 15px;
+    line-height: 1.75;
+    font-weight: 700;
+}
+
+.article-aside-inner {
+    position: sticky;
+    top: 92px;
+    overflow: hidden;
+    background: #17191f;
+    border-radius: 20px;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+
+.article-aside section {
+    padding: 22px;
+}
+
+.article-aside section + section {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.article-aside h2 {
+    margin: 0 0 10px;
+    color: var(--yellow);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+}
+
+.article-aside p,
+.article-aside li {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+.article-aside p,
+.article-aside ul {
+    margin: 0;
+}
+
+.article-aside ul {
+    padding-left: 1.1rem;
+}
+
+.article-aside li + li {
+    margin-top: 8px;
+}
+
+.article-aside .tag {
+    color: #1f1702;
+    background: var(--yellow);
+}
+
 @media (max-width: 850px) {
     .training-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -521,6 +727,27 @@ body.training-page {
     .detail-section + .detail-section {
         margin-top: 0;
     }
+
+    .article-head {
+        grid-template-columns: 1fr;
+    }
+
+    .article-hero-figure {
+        min-height: 320px;
+        order: -1;
+    }
+
+    .article-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .article-aside {
+        order: -1;
+    }
+
+    .article-aside-inner {
+        position: static;
+    }
 }
 
 @media (max-width: 580px) {
@@ -535,6 +762,24 @@ body.training-page {
 
     .training-card {
         min-height: 290px;
+    }
+
+    .article-head-copy,
+    .article-layout {
+        padding: 26px 22px;
+    }
+
+    .article-hero-figure {
+        min-height: 230px;
+    }
+
+    .article-item-list {
+        grid-template-columns: 1fr;
+    }
+
+    .article-section + .article-section {
+        margin-top: 46px;
+        padding-top: 40px;
     }
 
     .table-scroll {

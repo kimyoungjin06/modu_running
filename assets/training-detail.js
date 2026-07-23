@@ -5,6 +5,77 @@
 
     const renderList = items => items.map(item => `<li>${item}</li>`).join("");
 
+    const renderArticleSection = section => `
+        <section class="article-section">
+            <h2>${section.title}</h2>
+            ${section.formula ? `<p class="article-formula">${section.formula}</p>` : ""}
+            ${(section.paragraphs || []).map(paragraph => `<p>${paragraph}</p>`).join("")}
+            ${section.items ? `
+                <div class="article-item-list">
+                    ${section.items.map(item => `
+                        <article class="article-item">
+                            <h3>${item.heading}</h3>
+                            <p>${item.text}</p>
+                        </article>
+                    `).join("")}
+                </div>
+            ` : ""}
+            ${section.steps ? `<ol class="article-steps">${renderList(section.steps)}</ol>` : ""}
+            ${section.callout ? `<aside class="article-callout">${section.callout}</aside>` : ""}
+        </section>
+    `;
+
+    const renderArticle = training => {
+        document.title = `${training.title} | MODU RUNNING`;
+        document.querySelector('meta[name="description"]').content = training.summary;
+        breadcrumb.textContent = training.title;
+
+        detail.classList.add("article-detail");
+        detail.innerHTML = `
+            <header class="article-head">
+                <div class="article-head-copy">
+                    <p class="detail-category">${training.category}</p>
+                    <p class="article-source">${training.sourceLabel}</p>
+                    <h1 class="detail-title">${training.title}</h1>
+                    <p class="detail-summary">${training.summary}</p>
+                    <div class="detail-meta">
+                        <span>${training.level}</span>
+                        <span>${training.duration}</span>
+                        <span>원문 작성 ${training.updated}</span>
+                    </div>
+                </div>
+                <figure class="article-hero-figure">
+                    <img src="${training.heroImage}" alt="${training.heroAlt}">
+                </figure>
+            </header>
+            <div class="article-layout">
+                <article class="article-body">
+                    ${(training.articleSections || []).map(renderArticleSection).join("")}
+                </article>
+                <aside class="article-aside">
+                    <div class="article-aside-inner">
+                        <section>
+                            <h2>이 글에 대해</h2>
+                            <p>${training.authorNote}</p>
+                        </section>
+                        ${training.keyPoints ? `
+                            <section>
+                                <h2>먼저 기억할 것</h2>
+                                <ul>${renderList(training.keyPoints)}</ul>
+                            </section>
+                        ` : ""}
+                        <section>
+                            <h2>핵심 키워드</h2>
+                            <div class="detail-tags">
+                                ${training.purposeTags.map(tag => `<span class="tag"># ${tag}</span>`).join("")}
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+            </div>
+        `;
+    };
+
     const renderPaceTables = training => {
         if (!training.paceTable || !training.splitTable) {
             return "";
@@ -70,6 +141,11 @@
     };
 
     const renderDetail = training => {
+        if (training.type === "article") {
+            renderArticle(training);
+            return;
+        }
+
         document.title = `${training.title} | MODU RUNNING`;
         document.querySelector('meta[name="description"]').content = training.summary;
         breadcrumb.textContent = training.title;
