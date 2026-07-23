@@ -461,6 +461,7 @@ body.training-page {
 }
 
 .article-hero-figure {
+    position: relative;
     min-width: 0;
     min-height: 420px;
     margin: 0;
@@ -472,6 +473,19 @@ body.training-page {
     height: 100%;
     display: block;
     object-fit: cover;
+}
+
+.article-hero-figure figcaption {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    padding: 6px 9px;
+    color: rgba(255, 255, 255, 0.86);
+    background: rgba(15, 17, 23, 0.72);
+    border-radius: 8px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
 }
 
 .article-layout {
