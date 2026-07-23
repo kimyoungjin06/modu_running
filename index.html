@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/navigation.css">
     <style>
         :root {
             --brand-main: #f5bc00;
@@ -900,6 +901,25 @@
         <source src="img/bgr2.mp4" type="video/mp4">
     </video>
 
+    <header class="site-header" data-site-header>
+        <a class="site-brand" href="index.html" aria-label="모두의러닝 홈">
+            <img src="img/icon1.png" alt="">
+            <span>MODU RUNNING</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+            <span class="sr-only">메뉴 열기</span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-navigation" id="site-navigation" aria-label="주요 메뉴">
+            <a href="index.html" aria-current="page">홈</a>
+            <a href="index.html#schedule">일정</a>
+            <a class="nav-highlight" href="training.html">훈련 노트</a>
+            <a href="index.html#feedback">소통</a>
+        </nav>
+    </header>
+
     <main>
         <section class="hero">
             <div class="panel hero-copy">
@@ -964,7 +984,7 @@
             </div>
         </section>
 
-        <section class="panel schedule">
+        <section class="panel schedule" id="schedule">
             <div class="schedule-head">
                 <div>
                     <h2>다가오는 한 달 일정</h2>
@@ -992,7 +1012,7 @@
             </article>
         </section>
 
-        <section class="panel feedback-box" aria-label="익명 의견 및 제보함">
+        <section class="panel feedback-box" id="feedback" aria-label="익명 의견 및 제보함">
             <div class="feedback-head">
                 <h3 class="feedback-title">익명 의견/제보함</h3>
             </div>
@@ -1386,5 +1406,6 @@
             fetchCalendarEvents();
         })();
     </script>
+    <script src="assets/navigation.js"></script>
 </body>
 </html>
