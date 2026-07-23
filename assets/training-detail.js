@@ -10,6 +10,12 @@
             <h2>${section.title}</h2>
             ${section.formula ? `<p class="article-formula">${section.formula}</p>` : ""}
             ${(section.paragraphs || []).map(paragraph => `<p>${paragraph}</p>`).join("")}
+            ${section.image ? `
+                <figure class="article-inline-figure">
+                    <img src="${section.image}" alt="${section.imageAlt}" loading="lazy" decoding="async">
+                    ${section.imageCaption ? `<figcaption>${section.imageCaption}</figcaption>` : ""}
+                </figure>
+            ` : ""}
             ${section.items ? `
                 <div class="article-item-list">
                     ${section.items.map(item => `
@@ -39,6 +45,7 @@
                     <h1 class="detail-title">${training.title}</h1>
                     <p class="detail-summary">${training.summary}</p>
                     <div class="detail-meta">
+                        <span>작성 ${training.author}</span>
                         <span>${training.level}</span>
                         <span>${training.duration}</span>
                         <span>원문 작성 ${training.updated}</span>
@@ -57,6 +64,10 @@
                     <div class="article-aside-inner">
                         <section>
                             <h2>이 글에 대해</h2>
+                            <div class="article-author">
+                                <img src="${training.authorImage}" alt="${training.authorImageAlt}">
+                                <strong>${training.author}</strong>
+                            </div>
                             <p>${training.authorNote}</p>
                         </section>
                         ${training.keyPoints ? `
