@@ -46,6 +46,7 @@
                 </div>
                 <figure class="article-hero-figure">
                     <img src="${training.heroImage}" alt="${training.heroAlt}">
+                    ${training.heroCredit ? `<figcaption>${training.heroCredit}</figcaption>` : ""}
                 </figure>
             </header>
             <div class="article-layout">
