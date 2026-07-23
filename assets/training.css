@@ -254,8 +254,27 @@ body.training-page {
 .detail-content {
     padding: clamp(30px, 6vw, 64px);
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.8fr);
-    gap: 48px;
+    grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.75fr);
+    align-items: start;
+    gap: clamp(32px, 5vw, 58px);
+}
+
+.detail-main {
+    min-width: 0;
+}
+
+.detail-sidebar {
+    min-width: 0;
+}
+
+.detail-sidebar-inner {
+    position: sticky;
+    top: 92px;
+    overflow: hidden;
+    background: #f3ecd9;
+    border: 1px solid #ded6c2;
+    border-radius: 22px;
+    box-shadow: 0 14px 34px rgba(67, 53, 18, 0.1);
 }
 
 .detail-section + .detail-section {
@@ -272,6 +291,49 @@ body.training-page {
 .detail-section li {
     color: #554f40;
     line-height: 1.8;
+}
+
+.sidebar-section {
+    padding: 22px;
+}
+
+.sidebar-section + .sidebar-section {
+    margin-top: 0;
+    border-top: 1px solid #ded6c2;
+}
+
+.sidebar-section h2 {
+    margin-bottom: 8px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #746c58;
+}
+
+.sidebar-section p {
+    margin: 0;
+    color: #393528;
+    font-size: 0.92rem;
+    line-height: 1.72;
+}
+
+.sidebar-section .detail-tags {
+    margin-top: 14px;
+}
+
+.compact-list {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.compact-list li {
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+.compact-list li + li {
+    margin-top: 6px;
 }
 
 .workout-steps {
@@ -348,18 +410,17 @@ body.training-page {
 
 .coach-note,
 .caution-note {
-    padding: 24px;
-    border-radius: 18px;
+    border-radius: 0;
 }
 
 .coach-note {
     background: #e3f3f7;
-    border-left: 5px solid var(--blue);
+    border-left: 4px solid var(--blue);
 }
 
 .caution-note {
     background: #fff0d2;
-    border-left: 5px solid var(--yellow);
+    border-left: 4px solid var(--yellow);
 }
 
 .back-link {
@@ -381,6 +442,85 @@ body.training-page {
     .detail-content {
         grid-template-columns: 1fr;
     }
+
+    .detail-main,
+    .detail-sidebar,
+    .detail-sidebar-inner {
+        display: contents;
+    }
+
+    .detail-sidebar-inner {
+        position: static;
+    }
+
+    .detail-content > *,
+    .detail-content .detail-section {
+        min-width: 0;
+    }
+
+    .purpose-note {
+        order: 1;
+    }
+
+    .target-note {
+        order: 2;
+    }
+
+    .intensity-note {
+        order: 3;
+    }
+
+    .workout-section {
+        order: 4;
+    }
+
+    .pace-section {
+        order: 5;
+    }
+
+    .split-section {
+        order: 6;
+    }
+
+    .mistakes-note {
+        order: 7;
+    }
+
+    .coach-note {
+        order: 8;
+    }
+
+    .caution-note {
+        order: 9;
+    }
+
+    .sidebar-section {
+        margin: 0;
+        border: 1px solid #ded6c2;
+        border-radius: 18px;
+        background: #f3ecd9;
+    }
+
+    .sidebar-section + .sidebar-section {
+        margin-top: 0;
+        border-top: 1px solid #ded6c2;
+    }
+
+    .coach-note {
+        background: #e3f3f7;
+        border-left: 4px solid var(--blue);
+        border-radius: 18px;
+    }
+
+    .caution-note {
+        background: #fff0d2;
+        border-left: 4px solid var(--yellow);
+        border-radius: 18px;
+    }
+
+    .detail-section + .detail-section {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 580px) {
@@ -395,5 +535,85 @@ body.training-page {
 
     .training-card {
         min-height: 290px;
+    }
+
+    .table-scroll {
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .pace-table,
+    .pace-table.compact {
+        min-width: 0;
+        border-collapse: separate;
+        border-spacing: 0 12px;
+        background: transparent;
+    }
+
+    .pace-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .pace-table tbody,
+    .pace-table tr,
+    .pace-table th,
+    .pace-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .pace-table tr {
+        overflow: hidden;
+        background: #fffdf6;
+        border: 1px solid #ded6c2;
+        border-radius: 14px;
+        box-shadow: 0 8px 18px rgba(67, 53, 18, 0.08);
+    }
+
+    .pace-table tbody th,
+    .pace-table tbody td {
+        min-height: 43px;
+        padding: 11px 13px;
+        display: grid;
+        grid-template-columns: minmax(90px, 0.8fr) minmax(0, 1.2fr);
+        align-items: center;
+        gap: 12px;
+        text-align: right;
+        white-space: normal;
+        border-bottom: 1px solid #ebe3cf;
+    }
+
+    .pace-table tbody th {
+        color: var(--ink);
+        background: var(--yellow);
+        font-size: 1rem;
+        text-align: right;
+    }
+
+    .pace-table tbody th::before,
+    .pace-table tbody td::before {
+        content: attr(data-label);
+        color: #766e5a;
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+
+    .pace-table tbody th::before {
+        color: rgba(31, 23, 2, 0.68);
+    }
+
+    .pace-table tbody tr > :last-child {
+        border-bottom: 0;
     }
 }

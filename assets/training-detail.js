@@ -11,7 +11,7 @@
         }
 
         return `
-            <section class="detail-section">
+            <section class="detail-section pace-section">
                 <h2>그룹별 메인 페이스</h2>
                 <div class="table-scroll">
                     <table class="pace-table">
@@ -28,19 +28,19 @@
                         <tbody>
                             ${training.paceTable.map(row => `
                                 <tr>
-                                    <th>${row.group}</th>
-                                    <td>${row.goal}</td>
-                                    <td><strong>${row.fast}</strong></td>
-                                    <td>${row.pace}</td>
-                                    <td>${row.recovery}</td>
-                                    <td>${row.total}</td>
+                                    <th data-label="그룹">${row.group}</th>
+                                    <td data-label="목표 마라톤">${row.goal}</td>
+                                    <td data-label="600m 질주"><strong>${row.fast}</strong></td>
+                                    <td data-label="1km 환산">${row.pace}</td>
+                                    <td data-label="200m 조깅">${row.recovery}</td>
+                                    <td data-label="1세트">${row.total}</td>
                                 </tr>
                             `).join("")}
                         </tbody>
                     </table>
                 </div>
             </section>
-            <section class="detail-section">
+            <section class="detail-section split-section">
                 <h2>트랙 스플릿 체크</h2>
                 <div class="table-scroll">
                     <table class="pace-table compact">
@@ -55,10 +55,10 @@
                         <tbody>
                             ${training.splitTable.map(row => `
                                 <tr>
-                                    <th>${row.group}</th>
-                                    <td>${row.m200}</td>
-                                    <td>${row.m400}</td>
-                                    <td><strong>${row.m600}</strong></td>
+                                    <th data-label="그룹">${row.group}</th>
+                                    <td data-label="200m">${row.m200}</td>
+                                    <td data-label="400m">${row.m400}</td>
+                                    <td data-label="600m"><strong>${row.m600}</strong></td>
                                 </tr>
                             `).join("")}
                         </tbody>
@@ -86,41 +86,43 @@
                 </div>
             </header>
             <div class="detail-content">
-                <div>
-                    <section class="detail-section">
-                        <h2>이 훈련의 목적</h2>
+                <div class="detail-main">
+                    <section class="detail-section workout-section">
+                        <h2>이렇게 진행해요</h2>
+                        <ol class="workout-steps">${renderList(training.structure)}</ol>
+                    </section>
+                    ${renderPaceTables(training)}
+                </div>
+                <aside class="detail-sidebar" aria-label="훈련 핵심 안내">
+                    <div class="detail-sidebar-inner">
+                    <section class="detail-section sidebar-section purpose-note">
+                        <h2>훈련 목적</h2>
                         <p>${training.purpose}</p>
                         <div class="detail-tags">
                             ${training.purposeTags.map(tag => `<span class="tag"># ${tag}</span>`).join("")}
                         </div>
                     </section>
-                    <section class="detail-section">
-                        <h2>이렇게 진행해요</h2>
-                        <ol class="workout-steps">${renderList(training.structure)}</ol>
-                    </section>
-                    <section class="detail-section">
-                        <h2>강도 기준</h2>
-                        <p>${training.intensity}</p>
-                    </section>
-                    ${renderPaceTables(training)}
-                    <section class="detail-section">
-                        <h2>자주 하는 실수</h2>
-                        <ul>${renderList(training.mistakes)}</ul>
-                    </section>
-                </div>
-                <aside>
-                    <section class="detail-section">
+                    <section class="detail-section sidebar-section target-note">
                         <h2>추천 대상</h2>
                         <p>${training.recommendedFor}</p>
                     </section>
-                    <section class="detail-section coach-note">
+                    <section class="detail-section sidebar-section intensity-note">
+                        <h2>강도 기준</h2>
+                        <p>${training.intensity}</p>
+                    </section>
+                    <section class="detail-section sidebar-section mistakes-note">
+                        <h2>자주 하는 실수</h2>
+                        <ul class="compact-list">${renderList(training.mistakes)}</ul>
+                    </section>
+                    <section class="detail-section sidebar-section coach-note">
                         <h2>코치 노트</h2>
                         <p>${training.coachNote}</p>
                     </section>
-                    <section class="detail-section caution-note">
+                    <section class="detail-section sidebar-section caution-note">
                         <h2>주의사항</h2>
                         <p>${training.caution}</p>
                     </section>
+                    </div>
                 </aside>
             </div>
         `;
