@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="모두의러닝이 함께 쌓아가는 인터벌, 보강운동, 테이퍼링 훈련 노하우를 살펴보세요.">
+    <meta name="description" content="MRC의 런트립, 연중 행사, 정기 프로그램과 크루의 순간을 모아둔 아카이브입니다.">
     <meta name="theme-color" content="#f5bc00">
-    <title>훈련 노트 | MODU RUNNING</title>
+    <title>MRC 아카이브 | MODU RUNNING</title>
     <link rel="icon" type="image/png" href="img/icon1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/navigation.css">
-    <link rel="stylesheet" href="assets/training.css">
+    <link rel="stylesheet" href="assets/archive.css">
 </head>
-<body class="training-page">
+<body class="archive-page">
     <header class="site-header" data-site-header>
         <a class="site-brand" href="index.html" aria-label="모두의러닝 홈">
             <img src="img/icon1.png" alt="">
@@ -28,31 +28,34 @@
         <nav class="site-navigation" id="site-navigation" aria-label="주요 메뉴">
             <a href="index.html">홈</a>
             <a href="index.html#schedule">일정</a>
-            <a class="nav-highlight" href="training.html" aria-current="page">훈련 노트</a>
-            <a href="archive.html">기록</a>
+            <a href="training.html">훈련 노트</a>
+            <a class="nav-highlight" href="archive.html" aria-current="page">기록</a>
             <a href="index.html#feedback">소통</a>
         </nav>
     </header>
 
-    <main class="training-main">
-        <section class="training-hero">
-            <p class="eyebrow">MODU TRAINING NOTE</p>
-            <h1>잘 달리기 위한<br>우리의 방법</h1>
-            <p>무작정 힘들게 달리기보다 왜 하는지 알고 달립니다. 모두의러닝이 직접 경험하고 다듬은 훈련 노하우를 차곡차곡 기록합니다.</p>
+    <main class="archive-main">
+        <section class="archive-hero">
+            <p class="archive-eyebrow">MRC ARCHIVE</p>
+            <h1>달려온 시간도<br>우리의 코스다</h1>
+            <p>런트립, 연중 행사, 정기 프로그램과 함께 달린 순간을 기록합니다. 끝난 일정도 다음 러닝을 만드는 MRC의 경험으로 남깁니다.</p>
         </section>
 
-        <section aria-labelledby="training-list-title">
-            <h2 class="sr-only" id="training-list-title">훈련 노트 목록</h2>
-            <div class="training-toolbar">
-                <div class="filter-list" id="training-filters" aria-label="훈련 유형 필터"></div>
+        <section class="archive-browser" aria-labelledby="archive-list-title">
+            <div class="archive-toolbar">
+                <div>
+                    <p class="archive-kicker">OUR RUNNING HISTORY</p>
+                    <h2 id="archive-list-title">MRC가 함께 만든 기록</h2>
+                </div>
+                <div class="archive-filters" id="archive-filters" aria-label="아카이브 유형 필터"></div>
             </div>
-            <div class="training-grid" id="training-grid" aria-live="polite">
-                <p class="loading-state">훈련 노트를 불러오는 중입니다.</p>
+            <div class="archive-grid" id="archive-grid" aria-live="polite">
+                <p class="archive-message">기록을 불러오는 중입니다.</p>
             </div>
         </section>
     </main>
 
     <script src="assets/navigation.js"></script>
-    <script src="assets/training-list.js"></script>
+    <script src="assets/archive.js"></script>
 </body>
 </html>

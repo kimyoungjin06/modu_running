@@ -1,0 +1,316 @@
+:root {
+    --archive-yellow: #f5bc00;
+    --archive-ink: #18140a;
+    --archive-paper: #fff8e3;
+    --archive-blue: #2a9abb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.archive-page {
+    min-height: 100vh;
+    margin: 0;
+    color: #fff8e3;
+    background:
+        linear-gradient(rgba(15, 17, 23, 0.84), rgba(15, 17, 23, 0.96)),
+        radial-gradient(circle at 12% 20%, rgba(245, 188, 0, 0.28), transparent 28rem),
+        #0f1117;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.archive-main {
+    width: min(calc(100% - 36px), 1044px);
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+.archive-hero {
+    position: relative;
+    min-height: 430px;
+    padding: clamp(36px, 7vw, 74px);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+    color: var(--archive-ink);
+    background:
+        linear-gradient(120deg, rgba(245, 188, 0, 0.98), rgba(255, 218, 91, 0.82)),
+        url("../img/3rd_comp.jpg") center 42% / cover;
+    border-radius: 30px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+}
+
+.archive-hero::after {
+    content: "SINCE 2018";
+    position: absolute;
+    top: 30px;
+    right: 34px;
+    color: rgba(31, 23, 2, 0.38);
+    font-weight: 900;
+    letter-spacing: 0.14em;
+}
+
+.archive-eyebrow,
+.archive-kicker {
+    margin: 0 0 10px;
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+}
+
+.archive-hero h1 {
+    max-width: 720px;
+    margin: 0;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+}
+
+.archive-hero > p:last-child {
+    max-width: 650px;
+    margin: 22px 0 0;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.archive-browser {
+    margin-top: 56px;
+}
+
+.archive-toolbar {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.archive-toolbar h2 {
+    margin: 0;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.archive-kicker {
+    color: var(--archive-yellow);
+}
+
+.archive-filters {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.archive-filter {
+    flex: 0 0 auto;
+    padding: 9px 14px;
+    color: rgba(255, 255, 255, 0.74);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.archive-filter:hover,
+.archive-filter:focus-visible,
+.archive-filter.is-active {
+    color: var(--archive-ink);
+    background: var(--archive-yellow);
+    border-color: var(--archive-yellow);
+}
+
+.archive-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.archive-card {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.2fr);
+    overflow: hidden;
+    color: var(--archive-ink);
+    background: var(--archive-paper);
+    border-radius: 26px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
+}
+
+.archive-card-media {
+    position: relative;
+    min-height: 390px;
+    margin: 0;
+    background: #1b1d23;
+}
+
+.archive-card-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.archive-status {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 8px 11px;
+    color: #fff;
+    background: rgba(15, 17, 23, 0.84);
+    border-radius: 9px;
+    font-size: 0.74rem;
+    font-weight: 900;
+    backdrop-filter: blur(8px);
+}
+
+.archive-card-body {
+    padding: clamp(26px, 5vw, 48px);
+}
+
+.archive-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.archive-card-meta span,
+.archive-tags span {
+    padding: 6px 9px;
+    color: #4e4736;
+    background: #eee5cf;
+    border-radius: 8px;
+    font-size: 0.74rem;
+    font-weight: 800;
+}
+
+.archive-card h3 {
+    margin: 20px 0 12px;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: clamp(2.3rem, 5vw, 3.6rem);
+    line-height: 1;
+}
+
+.archive-summary {
+    margin: 0;
+    color: #5c5442;
+    line-height: 1.75;
+}
+
+.archive-facts {
+    margin: 24px 0;
+    display: grid;
+    gap: 8px;
+}
+
+.archive-facts div {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 12px;
+}
+
+.archive-facts dt {
+    color: #7a725f;
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+
+.archive-facts dd {
+    margin: 0;
+    color: #393326;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.archive-story {
+    border-top: 1px solid #ded5bf;
+}
+
+.archive-story summary {
+    padding: 18px 0 0;
+    color: #292316;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.archive-story-copy {
+    padding-top: 16px;
+}
+
+.archive-story-copy p {
+    color: #5c5442;
+    line-height: 1.78;
+}
+
+.archive-story-copy p + p {
+    margin-top: 12px;
+}
+
+.archive-tags {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.archive-story-copy a {
+    display: inline-flex;
+    margin-top: 22px;
+    color: #176a83;
+    font-weight: 900;
+}
+
+.archive-message {
+    padding: 54px 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px dashed rgba(255, 255, 255, 0.24);
+    border-radius: 20px;
+}
+
+@media (max-width: 760px) {
+    .archive-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .archive-card {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-card-media {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 580px) {
+    .archive-main {
+        width: calc(100% - 24px);
+        padding-top: 42px;
+    }
+
+    .archive-hero {
+        min-height: 400px;
+        padding: 28px 22px;
+    }
+
+    .archive-hero::after {
+        top: 20px;
+        right: 20px;
+        font-size: 0.7rem;
+    }
+
+    .archive-card-media {
+        min-height: 250px;
+    }
+
+    .archive-card-body {
+        padding: 24px 20px;
+    }
+}
