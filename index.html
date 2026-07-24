@@ -673,101 +673,6 @@
             visibility: hidden;
         }
 
-        .ongoing-program {
-            margin-top: 24px;
-            padding: 18px;
-        }
-
-        .ongoing-head {
-            margin: 0 0 12px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-family: "Do Hyeon", sans-serif;
-            font-size: 1.42rem;
-            color: #241900;
-            letter-spacing: 0.01em;
-        }
-
-        .ongoing-head::before {
-            content: "NOW";
-            display: inline-block;
-            font-family: "Noto Sans KR", sans-serif;
-            font-size: 0.66rem;
-            font-weight: 900;
-            letter-spacing: 0.09em;
-            color: #fff8de;
-            background: #241900;
-            border-radius: 999px;
-            padding: 4px 8px;
-        }
-
-        .ongoing-card {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 182px;
-            gap: 14px;
-            align-items: start;
-            padding: 16px;
-            border-radius: 16px;
-            background: linear-gradient(130deg, rgba(8, 13, 22, 0.92), rgba(25, 34, 50, 0.88));
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-        }
-
-        .ongoing-title {
-            margin: 0;
-            font-family: "Do Hyeon", sans-serif;
-            font-size: 1.72rem;
-            color: #fff2bf;
-            letter-spacing: 0.01em;
-        }
-
-        .ongoing-badges {
-            margin: 8px 0 2px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .ongoing-badge {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 26px;
-            padding: 0 10px;
-            border-radius: 999px;
-            font-size: 0.78rem;
-            font-weight: 800;
-            letter-spacing: 0.02em;
-            color: #fff2bf;
-            border: 1px solid rgba(245, 188, 0, 0.44);
-            background: rgba(245, 188, 0, 0.12);
-        }
-
-        .ongoing-meta {
-            margin: 7px 0 0;
-            color: #d7e3f8;
-            font-size: 1.02rem;
-            line-height: 1.6;
-            font-weight: 600;
-        }
-
-        .ongoing-meta strong {
-            color: #ffd44f;
-            font-weight: 900;
-        }
-
-        .ongoing-thumb {
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.28);
-            object-fit: cover;
-            background: rgba(255, 255, 255, 0.04);
-            aspect-ratio: 1 / 1;
-            justify-self: end;
-            align-self: start;
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -843,20 +748,6 @@
                 height: 220px;
             }
 
-            .ongoing-program {
-                padding: 14px;
-            }
-
-            .ongoing-card {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-
-            .ongoing-thumb {
-                max-width: 220px;
-                justify-self: center;
-            }
-
             .feedback-box {
                 padding: 14px;
             }
@@ -916,6 +807,7 @@
             <a href="index.html" aria-current="page">홈</a>
             <a href="index.html#schedule">일정</a>
             <a class="nav-highlight" href="training.html">훈련 노트</a>
+            <a href="archive.html">기록</a>
             <a href="index.html#feedback">소통</a>
         </nav>
     </header>
@@ -994,22 +886,6 @@
             <ul id="event-list" class="event-list">
                 <li class="loading">일정을 불러오는 중입니다...</li>
             </ul>
-        </section>
-
-        <section class="panel ongoing-program" aria-label="현재 진행 중 이벤트">
-            <h3 class="ongoing-head">현재 진행 중</h3>
-            <article class="ongoing-card">
-                <div>
-                    <p class="ongoing-title">목요미식회</p>
-                    <div class="ongoing-badges" aria-label="훈련 일정 정보">
-                        <span class="ongoing-badge">매주 목요일</span>
-                        <span class="ongoing-badge">20:00</span>
-                    </div>
-                    <p class="ongoing-meta"><strong>훈련:</strong> 인터벌 등 포인트 훈련 + 보강운동</p>
-                    <p class="ongoing-meta"><strong>장소:</strong> 공릉 서울과기대</p>
-                </div>
-                <img class="ongoing-thumb" src="img/MRC_TT.png" alt="목요미식회 프로그램 이미지">
-            </article>
         </section>
 
         <section class="panel feedback-box" id="feedback" aria-label="익명 의견 및 제보함">
