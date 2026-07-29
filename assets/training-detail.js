@@ -39,8 +39,8 @@
         return `
             <section class="article-section archive-section">
                 <p class="archive-eyebrow">MRC ARCHIVE</p>
-                <h2>함께 달린 기록</h2>
-                <p class="archive-intro">훈련은 숫자뿐 아니라 함께한 장소와 사람으로도 남습니다.</p>
+                <h2>MRC 활동 영상</h2>
+                <p class="archive-intro">런트립과 여름훈련 등 MRC가 함께한 활동을 영상으로 볼 수 있습니다.</p>
                 <div class="archive-grid">
                     ${items.map(item => `
                         <article class="archive-card">
