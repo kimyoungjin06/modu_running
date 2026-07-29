@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="10K, 하프, 풀 마라톤의 대회일과 접수 일정을 살펴보는 MRC 대회 캘린더입니다.">
+    <meta name="theme-color" content="#f5bc00">
+    <title>대회 캘린더 | MODU RUNNING</title>
+    <link rel="icon" type="image/png" href="img/icon1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/navigation.css">
+    <link rel="stylesheet" href="assets/races.css">
+</head>
+<body class="race-calendar-page">
+    <header class="site-header" data-site-header>
+        <a class="site-brand" href="index.html" aria-label="모두의러닝 홈">
+            <img src="img/icon1.png" alt="">
+            <span>MODU RUNNING</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+            <span class="sr-only">메뉴 열기</span>
+            <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <nav class="site-navigation" id="site-navigation" aria-label="주요 메뉴">
+            <a href="index.html">홈</a>
+            <a href="index.html#schedule">일정</a>
+            <a class="nav-highlight" href="training.html">훈련 노트</a>
+            <a href="pace-calculator.html">계산기</a>
+            <a href="races.html" aria-current="page">대회</a>
+            <a href="archive.html">기록</a>
+            <a href="index.html#feedback">소통</a>
+        </nav>
+    </header>
+
+    <main class="race-calendar-main">
+        <section class="calendar-heading">
+            <div>
+                <p class="calendar-eyebrow">MRC RACE CALENDAR</p>
+                <h1>다음 출발선을<br>미리 만나다</h1>
+                <p>10K, 하프, 풀 마라톤의 대회일과 접수 일정을 살펴보세요. 목표 대회를 정했다면 페이스 계산기에서 레이스 계획까지 이어갈 수 있습니다.</p>
+            </div>
+            <a class="calendar-dday" href="pace-calculator.html">레이스 계획 만들기 →</a>
+        </section>
+
+        <section aria-labelledby="race-list-title">
+            <div class="race-filter-panel">
+                <input id="race-search" type="search" placeholder="대회명 또는 지역 검색" aria-label="대회 검색">
+                <select id="race-course-filter" aria-label="종목 필터">
+                    <option value="all">전체 종목</option>
+                    <option value="10km">10K</option>
+                    <option value="half">HALF</option>
+                    <option value="full">FULL</option>
+                </select>
+                <select id="race-region-filter" aria-label="지역 필터"><option value="all">전체 지역</option></select>
+                <select id="race-status-filter" aria-label="접수 상태 필터">
+                    <option value="all">전체 접수 상태</option>
+                    <option value="before">접수 예정</option>
+                    <option value="open">접수 중</option>
+                </select>
+            </div>
+            <div class="race-list-head">
+                <h2 id="race-list-title">다가오는 대회</h2>
+                <span id="race-result-count">불러오는 중</span>
+            </div>
+            <div class="race-calendar-list" id="race-calendar-list" data-race-loading>
+                <p class="race-empty">대회 일정을 불러오는 중입니다.</p>
+            </div>
+        </section>
+
+        <p class="calendar-source">
+            일정 출처: <a href="https://marathongo.co.kr/raceSchedule/domestic" target="_blank" rel="noopener noreferrer">마라톤GO</a>
+            · 최종 갱신 <span id="calendar-source-date">확인 중</span><br>
+            일정과 접수 상태는 변경될 수 있습니다. 참가 신청 전 반드시 대회 공식 안내를 다시 확인해 주세요.
+        </p>
+    </main>
+
+    <script src="assets/navigation.js"></script>
+    <script src="assets/races.js"></script>
+</body>
+</html>

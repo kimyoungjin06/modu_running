@@ -1,0 +1,2807 @@
+{
+  "source": {
+    "name": "마라톤GO",
+    "url": "https://marathongo.co.kr/raceSchedule/domestic",
+    "retrievedAt": "2026-07-29T15:53:33+09:00",
+    "notice": "일정은 변경될 수 있으므로 참가 전 공식 대회 안내를 확인해 주세요."
+  },
+  "races": [
+    {
+      "id": "saunarun-seokchonlake-june2026",
+      "name": "사우나런 in 석촌호수",
+      "raceDate": "2026-07-31",
+      "registrationOpen": "2026-06-01",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "석촌 호수 인근",
+      "start": "상시 집결",
+      "host": "사우나런",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/saunarun-seokchonlake-june2026"
+    },
+    {
+      "id": "saunarun-olympicpark-2026-07-31",
+      "name": "사우나런 in 올림픽공원",
+      "raceDate": "2026-07-31",
+      "registrationOpen": "2026-06-12",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "올림픽 공원 인근",
+      "start": "상시 집결",
+      "host": "사우나런",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/saunarun-olympicpark-2026-07-31"
+    },
+    {
+      "id": "2026-insiderun-s-10km-race-aug01",
+      "name": "2026 인사이더런 S",
+      "raceDate": "2026-08-01",
+      "registrationOpen": "2026-03-26",
+      "registrationClose": "2026-07-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km"
+      ],
+      "region": "서울",
+      "place": "일산 킨텍스 제2전시장 7,8",
+      "start": "09:30 집결",
+      "host": "러너블",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-insiderun-s-10km-race-aug01"
+    },
+    {
+      "id": "2026-anyangcheon-moonlight-nightrun",
+      "name": "2026 안양천 달빛 나이트런",
+      "raceDate": "2026-08-15",
+      "registrationOpen": "2026-06-05",
+      "registrationClose": "2026-08-06",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "신정교 하부 영롱이 억새구장",
+      "start": "18:30 집결",
+      "host": "(사)대한이에스지협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-anyangcheon-moonlight-nightrun"
+    },
+    {
+      "id": "2026-jeonmahyeop-gwangbokjeol-free-invitation-marathon",
+      "name": "2026 전마협 광복절 무료 초청 마라톤",
+      "raceDate": "2026-08-15",
+      "registrationOpen": "2026-06-15",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "대전",
+      "place": "대전엑스포다리 밑",
+      "start": "오전 6시 집결",
+      "host": "전국마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jeonmahyeop-gwangbokjeol-free-invitation-marathon"
+    },
+    {
+      "id": "2026-happy700-pyeongchang-daegwallyeong-national-half-marathon",
+      "name": "2026Happy700평창대관령전국하프마라톤",
+      "raceDate": "2026-08-16",
+      "registrationOpen": "2026-06-10",
+      "registrationClose": "2026-07-25",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "강원",
+      "place": "2018 평창동계올림픽 기념관",
+      "start": "08:00 집결",
+      "host": "한국실업육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-happy700-pyeongchang-daegwallyeong-national-half-marathon"
+    },
+    {
+      "id": "2026-daegu-world-masters-10km-marathon",
+      "name": "2026 대구세계마스터즈 10km마라톤",
+      "raceDate": "2026-08-23",
+      "registrationOpen": "2025-12-23",
+      "registrationClose": "2026-06-23",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km"
+      ],
+      "region": "대구",
+      "place": "대구스타디움 일원",
+      "start": "７：００ 집결",
+      "host": "대구광역시, 세계마스터즈육상연",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-daegu-world-masters-10km-marathon"
+    },
+    {
+      "id": "2026-daegu-world-masters-10km",
+      "name": "2026대구세계마스터즈 10km대회",
+      "raceDate": "2026-08-23",
+      "registrationOpen": "2025-12-23",
+      "registrationClose": "2026-06-23",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km",
+        "35세이상일반인",
+        "3000명"
+      ],
+      "region": "대구",
+      "place": "대구스타디움 일원",
+      "start": "７：００ 집결",
+      "host": "대구광역시,세계마스터즈육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-daegu-world-masters-10km"
+    },
+    {
+      "id": "2026-danyang-moonlight-race",
+      "name": "2026 단양달빛레이스",
+      "raceDate": "2026-08-29",
+      "registrationOpen": "2026-06-10",
+      "registrationClose": "2026-07-17",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "충북",
+      "place": "단양생태체육공원",
+      "start": "19:00 집결",
+      "host": "단양군육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-danyang-moonlight-race"
+    },
+    {
+      "id": "2026-jeonmahyeop-jeungpyeong-free-marathon",
+      "name": "2026 전마협 증평 무료 마라톤",
+      "raceDate": "2026-08-29",
+      "registrationOpen": "2026-06-08",
+      "registrationClose": "2026-07-29",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km"
+      ],
+      "region": "충북",
+      "place": "증평군 다목적운동장 일원",
+      "start": "오전 7시 집결",
+      "host": "전국마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jeonmahyeop-jeungpyeong-free-marathon"
+    },
+    {
+      "id": "baekbeom-kim-gu-150th-son-gi-jeong-river-marathon-2026",
+      "name": "백범김구선생 탄생150주년기념 손기정하천마라톤",
+      "raceDate": "2026-08-29",
+      "registrationOpen": "2026-07-25",
+      "registrationClose": "2026-08-21",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "의정부시 동막교 인라인광장",
+      "start": "08시 집결",
+      "host": "플랜인",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/baekbeom-kim-gu-150th-son-gi-jeong-river-marathon-2026"
+    },
+    {
+      "id": "2026-daegu-world-masters-half-marathon",
+      "name": "2026 대구세계마스터즈 하프마라톤대회",
+      "raceDate": "2026-08-30",
+      "registrationOpen": "2025-12-23",
+      "registrationClose": "2026-06-23",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half"
+      ],
+      "region": "대구",
+      "place": "신천동로 일원",
+      "start": "07:00 집결",
+      "host": "대구광역시, 세계마스터즈육상연맹(WMA)",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-daegu-world-masters-half-marathon"
+    },
+    {
+      "id": "2026-daegu-world-masters-athletics-championship-half-marathon",
+      "name": "2026 대구세계마스터즈육상경기대회",
+      "raceDate": "2026-08-30",
+      "registrationOpen": "2025-12-23",
+      "registrationClose": "2026-06-23",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "트랙",
+        "필드등34개종목(35세이상)"
+      ],
+      "region": "대구",
+      "place": "신천동로 일원",
+      "start": "07:00 집결",
+      "host": "대구광역시, 세계마스터즈육상연맹(WMA)",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-daegu-world-masters-athletics-championship-half-marathon"
+    },
+    {
+      "id": "16th-seongbuk-gu-mayor-marathon-2026",
+      "name": "제16회 성북구청장배육상대회",
+      "raceDate": "2026-08-30",
+      "registrationOpen": "2026-07-15",
+      "registrationClose": "2026-08-10",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "성북구 중랑천 체육공원",
+      "start": "08:00 집결",
+      "host": "성북구육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/16th-seongbuk-gu-mayor-marathon-2026"
+    },
+    {
+      "id": "3rd-go-daegwallyeong-international-trailrun-2026",
+      "name": "제3회 GO대관령 국제 트레일런",
+      "raceDate": "2026-08-30",
+      "registrationOpen": "2026-05-22",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "20.18km",
+        "44km"
+      ],
+      "region": "강원",
+      "place": "평창동계올림픽기념공원",
+      "start": "07:30 집결",
+      "host": "국대레포츠, 대관령면체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/3rd-go-daegwallyeong-international-trailrun-2026"
+    },
+    {
+      "id": "3rd-hangang-seoul-half-marathon-2026-08-30",
+      "name": "제3회 한강 서울 하프 마라톤",
+      "raceDate": "2026-08-30",
+      "registrationOpen": "2026-05-13",
+      "registrationClose": "2026-08-23",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "여의도 한강공원 물빛광장",
+      "start": "08:00 집결",
+      "host": "(사)국민성공시대",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/3rd-hangang-seoul-half-marathon-2026-08-30"
+    },
+    {
+      "id": "saunarun-2026-08-31-ttukseom-hangang-park",
+      "name": "사우나런 in 뚝섬한강공원",
+      "raceDate": "2026-08-31",
+      "registrationOpen": "2026-07-06",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "뚝섬한강공원 인근",
+      "start": "상시 집결",
+      "host": "사우나런",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/saunarun-2026-08-31-ttukseom-hangang-park"
+    },
+    {
+      "id": "2026-ileelseon-marathon",
+      "name": "2026 이일선마라톤",
+      "raceDate": "2026-09-05",
+      "registrationOpen": "2026-07-14",
+      "registrationClose": "2026-08-18",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "4.4km걷기"
+      ],
+      "region": "경북",
+      "place": "울릉도내 나리분지",
+      "start": "16:30 집결",
+      "host": "이일선기념사업회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-ileelseon-marathon"
+    },
+    {
+      "id": "just-run10-sejong-2026-fall",
+      "name": "2026 하반기 JUST RUN10 세종",
+      "raceDate": "2026-09-05",
+      "registrationOpen": "2026-06-19",
+      "registrationClose": "2026-07-15",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "세종",
+      "place": "세종마루공원 밑 금강변",
+      "start": "08:00 집결",
+      "host": "(주)러닝브레이커, 전국러닝협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/just-run10-sejong-2026-fall"
+    },
+    {
+      "id": "12th-i-love-broadcast-marathon-2026",
+      "name": "제12회 I LOVE 방송대 마라톤",
+      "raceDate": "2026-09-05",
+      "registrationOpen": "2026-06-30",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "상암동 평화광장",
+      "start": "08:00 집결",
+      "host": "한국방송통신대학교 전국 총동문",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/12th-i-love-broadcast-marathon-2026"
+    },
+    {
+      "id": "23rd-cheorwon-dmz-international-peace-marathon-2026",
+      "name": "제23회 철원DMZ국제평화마라톤",
+      "raceDate": "2026-09-05",
+      "registrationOpen": "2026-02-02",
+      "registrationClose": "2026-02-27",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "걷기"
+      ],
+      "region": "강원",
+      "place": "철원 고석정",
+      "start": "오전 9시 집결",
+      "host": "철원군, 한국일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/23rd-cheorwon-dmz-international-peace-marathon-2026"
+    },
+    {
+      "id": "2nd-2026-vrun-marathon",
+      "name": "제2회 2026 Vrun",
+      "raceDate": "2026-09-05",
+      "registrationOpen": "2026-05-26",
+      "registrationClose": "2026-08-12",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "신정교하부육상트랙구장",
+      "start": "09:00 집결",
+      "host": "(사)대한생활체육마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2nd-2026-vrun-marathon"
+    },
+    {
+      "id": "2026-ytn-seoul-tour-marathon",
+      "name": "2026 YTN 서울투어마라톤",
+      "raceDate": "2026-09-06",
+      "registrationOpen": "2026-06-17",
+      "registrationClose": "2026-07-15",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "11km"
+      ],
+      "region": "서울",
+      "place": "서울광장",
+      "start": "07:30",
+      "host": "YTN",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-ytn-seoul-tour-marathon"
+    },
+    {
+      "id": "2026-bonghwa-songi-national-marathon",
+      "name": "2026 봉화송이 전국마라톤",
+      "raceDate": "2026-09-06",
+      "registrationOpen": "2026-02-03",
+      "registrationClose": "2026-07-27",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "봉화공설운동장",
+      "start": "10:00 집결",
+      "host": "봉화군체육회, 매일신문사",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-bonghwa-songi-national-marathon"
+    },
+    {
+      "id": "2026-jeonmahyeop-cheongju-marathon",
+      "name": "2026 전마협회장배 청주마라톤",
+      "raceDate": "2026-09-06",
+      "registrationOpen": "2026-06-10",
+      "registrationClose": "2026-08-06",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "충북",
+      "place": "청주 무심천 체육공원",
+      "start": "오전 7시 30분 집결",
+      "host": "전국마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jeonmahyeop-cheongju-marathon"
+    },
+    {
+      "id": "11th-kim-dae-jung-peace-marathon-2026",
+      "name": "제11회 김대중 평화 마라톤 대회",
+      "raceDate": "2026-09-06",
+      "registrationOpen": "2026-05-13",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "뚝섬 한강공원 수변무대",
+      "start": "08:00 집결",
+      "host": "김대중재단",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/11th-kim-dae-jung-peace-marathon-2026"
+    },
+    {
+      "id": "9th-incheon-seogu-mayor-short-marathon-2026",
+      "name": "제9회 인천 서구청장배 단축마라톤",
+      "raceDate": "2026-09-06",
+      "registrationOpen": "2026-06-10",
+      "registrationClose": "2026-08-10",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "4.3km"
+      ],
+      "region": "인천",
+      "place": "청라호수공원 멀티프라자 트랙",
+      "start": "08시30분 집결",
+      "host": "인천광역시 체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/9th-incheon-seogu-mayor-short-marathon-2026"
+    },
+    {
+      "id": "hope-dream-23rd-dawn-riverside-international-marathon-2026-06-07-charity",
+      "name": "희망드림 제23회 새벽강변 국제마라톤",
+      "raceDate": "2026-09-06",
+      "registrationOpen": "2026-05-12",
+      "registrationClose": "2026-06-30",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "여의도 물빛광장（예정）",
+      "start": "07:30 집결",
+      "host": "(사)한국마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/hope-dream-23rd-dawn-riverside-international-marathon-2026-06-07-charity"
+    },
+    {
+      "id": "2026-goodneighbors-race-seoul-charity-running",
+      "name": "2026 굿네이버스 레이스",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-07-27",
+      "registrationClose": "2026-08-12",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "여의도 한강공원 물빛무대 앞",
+      "start": "08:00 집결, 09:00 출발",
+      "host": "굿네이버스",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-goodneighbors-race-seoul-charity-running"
+    },
+    {
+      "id": "2026-nightrun-plus-chungju",
+      "name": "2026 나이트런 플러스 청주",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-05-21",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "충북",
+      "place": "무심천 체육공원",
+      "start": "18:00",
+      "host": "나이트런 플러스",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-nightrun-plus-chungju"
+    },
+    {
+      "id": "2026-yangyang-riverside-national-marathon",
+      "name": "2026 양양 강변 전국 마라톤",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-02-27",
+      "registrationClose": "2026-03-20",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "강원",
+      "place": "강원도 양양군 웰컴센터",
+      "start": "오전 10시 집결",
+      "host": "G1방송, 양양군",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-yangyang-riverside-national-marathon"
+    },
+    {
+      "id": "hero-race-2026-energy-hero-run",
+      "name": "2026 에너지 히어로 레이스",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-07-27",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "서울월드컵경기장 평화광장",
+      "start": "08시 집결",
+      "host": "굿피플",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/hero-race-2026-energy-hero-run"
+    },
+    {
+      "id": "2026-energy-hero-race",
+      "name": "2026 에너지 히어로 레이스",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-07-20",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "서울월드컵경기장 평화광장",
+      "start": "08시 집결",
+      "host": "굿피플",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-energy-hero-race"
+    },
+    {
+      "id": "2026-jangsu-red-food-race",
+      "name": "2026 장수 레드푸드레이스",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-07-16",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km",
+        "16km"
+      ],
+      "region": "전북",
+      "place": "장수말역사체험관",
+      "start": "8:00 집결",
+      "host": "주식회사 락앤런",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jangsu-red-food-race"
+    },
+    {
+      "id": "bbangtrailrun-2026-09-12",
+      "name": "빵트레일런 2026",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-03-31",
+      "registrationClose": "2026-09-12",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "30k",
+        "20k"
+      ],
+      "region": "강원",
+      "place": "정선 하이원 리조트",
+      "start": "08:00 집결",
+      "host": "1986프로덕션",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/bbangtrailrun-2026-09-12"
+    },
+    {
+      "id": "2nd-green-umbrella-runway-marathon-2026-09-12",
+      "name": "제2회 초록우산 런웨이 마라톤",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-04-13",
+      "registrationClose": "2026-08-01",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "3km걷기",
+        "3km걷기(어린이)"
+      ],
+      "region": "대전",
+      "place": "대전엑스포시민광장",
+      "start": "오전8시 집결",
+      "host": "초록우산 대전세종지역본부",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2nd-green-umbrella-runway-marathon-2026-09-12"
+    },
+    {
+      "id": "2nd-whiterun-donation-marathon-2026-09-12",
+      "name": "제2회 화이트런 생리대 기부마라톤",
+      "raceDate": "2026-09-12",
+      "registrationOpen": "2026-04-27",
+      "registrationClose": "2026-08-14",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km",
+        "걷기"
+      ],
+      "region": "서울",
+      "place": "영등포구 신정교하부 육상트랙구",
+      "start": "09:00 집결",
+      "host": "청년일보, (주)소풍",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2nd-whiterun-donation-marathon-2026-09-12"
+    },
+    {
+      "id": "2026-runseoulrun-registration-firstcome",
+      "name": "2026 런서울런",
+      "raceDate": "2026-09-13",
+      "registrationOpen": "2026-06-29",
+      "registrationClose": "2026-07-29",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "서울",
+      "place": "서울 광장",
+      "start": "7시30분 집결",
+      "host": "일간스포츠",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-runseoulrun-registration-firstcome"
+    },
+    {
+      "id": "2026-uljin-geumgangsong-healing-marathon",
+      "name": "2026 울진 금강송배 힐링마라톤",
+      "raceDate": "2026-09-13",
+      "registrationOpen": "2026-01-01",
+      "registrationClose": "2026-05-31",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "7인1조단체전"
+      ],
+      "region": "경북",
+      "place": "울진종합운동장",
+      "start": "09:00 집결",
+      "host": "울진군",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-uljin-geumgangsong-healing-marathon"
+    },
+    {
+      "id": "2026-pohang-secondary-battery-national-marathon",
+      "name": "2026포항이차전지전국마라톤",
+      "raceDate": "2026-09-13",
+      "registrationOpen": "2026-06-29",
+      "registrationClose": "2026-07-20",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "포항운하관주차장",
+      "start": "08:00 집결",
+      "host": "매일신문사",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-pohang-secondary-battery-national-marathon"
+    },
+    {
+      "id": "running-world-10km-run-2026-09-13",
+      "name": "달리는 세상 10km 런",
+      "raceDate": "2026-09-13",
+      "registrationOpen": "2026-07-15",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "대전",
+      "place": "대전엑스포시민광장",
+      "start": "오전 7시 30분 집결",
+      "host": "월드런",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/running-world-10km-run-2026-09-13"
+    },
+    {
+      "id": "16th-smile-run-festival-2026-09-13",
+      "name": "제16회 스마일 런 페스티벌",
+      "raceDate": "2026-09-13",
+      "registrationOpen": "2026-07-01",
+      "registrationClose": "2026-08-01",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "걷기"
+      ],
+      "region": "서울",
+      "place": "상암동 평화의공원 평화광장",
+      "start": "08:30 집결",
+      "host": "(사)대한치과의사협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/16th-smile-run-festival-2026-09-13"
+    },
+    {
+      "id": "19th-guro-mayor-anyangcheon-autumn-run-2026-09-13",
+      "name": "제19회 구로구청장배 안양천 단풍마라톤",
+      "raceDate": "2026-09-13",
+      "registrationOpen": "2026-08-03",
+      "registrationClose": "2026-08-14",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "구일역 하부 인라인스케이트장",
+      "start": "09:30 집결",
+      "host": "구로구육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/19th-guro-mayor-anyangcheon-autumn-run-2026-09-13"
+    },
+    {
+      "id": "26th-ganghwa-beach-marathon-2026-09-13",
+      "name": "제26회 강화해변마라톤대회",
+      "raceDate": "2026-09-13",
+      "registrationOpen": "2026-06-08",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "인천",
+      "place": "강화함상공원",
+      "start": "08:30 집결",
+      "host": "인천일보,(사)인천마라톤조직위",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/26th-ganghwa-beach-marathon-2026-09-13"
+    },
+    {
+      "id": "2026-just-run10-gimhae-daedong",
+      "name": "2026 JUST RUN10 김해 대동",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-07-03",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경남",
+      "place": "김해 대동생태체육공원 축구장",
+      "start": "08:00 집결",
+      "host": "(주)러닝브레이커, 전국러닝협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-just-run10-gimhae-daedong"
+    },
+    {
+      "id": "2026-geumsan-ginseng-festival-marathon",
+      "name": "2026 금산인삼축제 마라톤",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-04-17",
+      "registrationClose": "2026-08-19",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "4km"
+      ],
+      "region": "충남",
+      "place": "금산세계인삼엑스포주차장",
+      "start": "오전 8시 30 집결",
+      "host": "전마협",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-geumsan-ginseng-festival-marathon"
+    },
+    {
+      "id": "2026-infinite-run-in-kyungjoo",
+      "name": "2026 무한도전 Run in 경주",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-07-30",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "경북",
+      "place": "경주시민운동장",
+      "start": "16:30",
+      "host": "쿠팡플레이",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-infinite-run-in-kyungjoo"
+    },
+    {
+      "id": "2026-anyangcheon-half-marathon",
+      "name": "2026 안양천 하프 마라톤",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-07-06",
+      "registrationClose": "2026-09-10",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "신정교 하부 영롱이 억새구장",
+      "start": "08:00 집결",
+      "host": "(사)행복한가게",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-anyangcheon-half-marathon"
+    },
+    {
+      "id": "sipore-run-fit-discovery-2026-09-19",
+      "name": "시포레 RUN & FIT with 디스커버리",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-07-16",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "+운동프로그램"
+      ],
+      "region": "경기",
+      "place": "고양시 일산호수공원",
+      "start": "08시 집결",
+      "host": "HLL중앙 / 코틴스포츠",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/sipore-run-fit-discovery-2026-09-19"
+    },
+    {
+      "id": "18th-cyber-territory-marathon-2026",
+      "name": "제18회 사이버 영토 수호 마라톤",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-06-17",
+      "registrationClose": "2026-08-03",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "걷기3km"
+      ],
+      "region": "서울",
+      "place": "여의도 물빛무대 앞 광",
+      "start": "오전 8시 출발 집결",
+      "host": "(사)21세기경제사회연구원",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/18th-cyber-territory-marathon-2026"
+    },
+    {
+      "id": "2nd-gyeonggi-newspaper-seaside-marathon-2026",
+      "name": "제2회 경기신문 씨사이드 마라톤",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-07-13",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "인천",
+      "place": "영종구 씨사이드파크 일원",
+      "start": "오전 8시 30분 집결",
+      "host": "경기신문",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2nd-gyeonggi-newspaper-seaside-marathon-2026"
+    },
+    {
+      "id": "4th-mungyeong-omijarun-2026",
+      "name": "제4회 문경 오미자런",
+      "raceDate": "2026-09-19",
+      "registrationOpen": "2026-07-13",
+      "registrationClose": "2026-08-03",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "문경종합온천",
+      "start": "17시 집결",
+      "host": "문경시, 문경시 청년센터",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/4th-mungyeong-omijarun-2026"
+    },
+    {
+      "id": "2026-gongju-marathon",
+      "name": "2026 공주마라톤",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-05-14",
+      "registrationClose": "2026-05-21",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "32km"
+      ],
+      "region": "충남",
+      "place": "공주시민운동장",
+      "start": "08:00 집결",
+      "host": "동아일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gongju-marathon"
+    },
+    {
+      "id": "2026-dongdaemun-marathon",
+      "name": "2026 동대문마라톤",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-06-10",
+      "registrationClose": "2026-08-10",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "중랑천 제1수변공원",
+      "start": "08:30 집결",
+      "host": "동대문구육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-dongdaemun-marathon"
+    },
+    {
+      "id": "2026-ansan-marathon",
+      "name": "2026 안산마라톤",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-07-06",
+      "registrationClose": "2026-07-20",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "대부향기테마파크",
+      "start": "오전 9시 00분 집결",
+      "host": "안산시체육",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-ansan-marathon"
+    },
+    {
+      "id": "2026-ulsan-namgu-athletics-short-marathon",
+      "name": "2026 울산남구육상연맹 회장배 단축마라톤",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-07-15",
+      "registrationClose": "2026-07-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "울산",
+      "place": "태화강국가정원 내 왕버들 공연",
+      "start": "08:00 집결",
+      "host": "울산광역시 남구 육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-ulsan-namgu-athletics-short-marathon"
+    },
+    {
+      "id": "2026-incheon-songdo-international-half-marathon",
+      "name": "2026 인천송도국제하프마라톤",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-07-08",
+      "registrationClose": "2026-08-07",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "인천",
+      "place": "송도인천대캠퍼스 정문앞",
+      "start": "08:00 집결",
+      "host": "(주)경인일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-incheon-songdo-international-half-marathon"
+    },
+    {
+      "id": "2026-handonrun-running-festival",
+      "name": "2026 한돈런",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-07-02",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "미사 조정경기장",
+      "start": "08:00 집결",
+      "host": "한돈자조금위원회, 런코리아",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-handonrun-running-festival"
+    },
+    {
+      "id": "2026-20th-sunsa-marathon-festival-internet-registration",
+      "name": "2026(20회) 선사마라톤 축제",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-06-08",
+      "registrationClose": "2026-06-11",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "5km걷기"
+      ],
+      "region": "서울",
+      "place": "서울 암사동 유적앞 특설무대",
+      "start": "09:00 집결",
+      "host": "강동구 육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-20th-sunsa-marathon-festival-internet-registration"
+    },
+    {
+      "id": "19th-gapyeong-jaraseom-national-marathon-2026",
+      "name": "제19회 가평자라섬 전국마라톤",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-04-01",
+      "registrationClose": "2026-05-30",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "5km가족런"
+      ],
+      "region": "경기",
+      "place": "가평종합운동장(경기)",
+      "start": "08:30 집결",
+      "host": "가평군체육회, 세계일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/19th-gapyeong-jaraseom-national-marathon-2026"
+    },
+    {
+      "id": "2nd-mapogu-mayor-marathon-2026-09-20",
+      "name": "제2회 마포구청장배 마라톤 대회",
+      "raceDate": "2026-09-20",
+      "registrationOpen": "2026-06-23",
+      "registrationClose": "2026-08-20",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "평화의 공원 평화광장",
+      "start": "오전 8시 30분 집결",
+      "host": "마포구체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2nd-mapogu-mayor-marathon-2026-09-20"
+    },
+    {
+      "id": "2026-just-run10-cheongju-pb-easy-official-second",
+      "name": "2026 JUST RUN10 청주 (하반기)",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-07-14",
+      "registrationClose": "2026-08-14",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "충북",
+      "place": "무심천체육공원",
+      "start": "08:30 집결",
+      "host": "(주)러닝브레이커, 전국러닝협",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-just-run10-cheongju-pb-easy-official-second"
+    },
+    {
+      "id": "2026-global-6k-for-water-busan",
+      "name": "2026 글로벌 6K 포 워터 부산",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-04-13",
+      "registrationClose": "2026-04-30",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "6km",
+        "10km"
+      ],
+      "region": "부산",
+      "place": "부산 다대포 해변공원",
+      "start": "09:00",
+      "host": "월드비전",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-global-6k-for-water-busan"
+    },
+    {
+      "id": "2026-masters-half-marathon",
+      "name": "2026 마스터즈 하프 마라톤",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-07-07",
+      "registrationClose": "2026-09-21",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "상암 월드컵공원 평화광장",
+      "start": "08:00 집결",
+      "host": "(사)사회안전예방중앙회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-masters-half-marathon"
+    },
+    {
+      "id": "2026-seosan-cosmos-golden-fields-marathon",
+      "name": "2026 서산 코스모스 황금들녘 마라톤 대회",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-03-20",
+      "registrationClose": "2026-09-03",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "충남",
+      "place": "서산스포츠테마파크",
+      "start": "오전 9시 집결",
+      "host": "서산시체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-seosan-cosmos-golden-fields-marathon"
+    },
+    {
+      "id": "2026-cheonsaday-dongducheon-angel-marathon",
+      "name": "2026 천사데이기념 동두천천사마라톤",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-06-04",
+      "registrationClose": "2026-09-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km",
+        "걷기2km"
+      ],
+      "region": "경기",
+      "place": "경기도 동두천시 캠프보산",
+      "start": "9:00 집결",
+      "host": "(사)희망지킴이 천사운동본부",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-cheonsaday-dongducheon-angel-marathon"
+    },
+    {
+      "id": "2026-chuncheon-united-marathon",
+      "name": "2026 춘천연합마라톤",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-07-16",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "강원",
+      "place": "춘천시 엘리시안 강촌",
+      "start": "9:00 집결",
+      "host": "연합뉴스, 춘천시육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-chuncheon-united-marathon"
+    },
+    {
+      "id": "2026-smtown-run-club",
+      "name": "SMTOWN RUN CLUB 26",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-08-06",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km"
+      ],
+      "region": "인천",
+      "place": "인천 영종도 왕산마리나항",
+      "start": "16:30",
+      "host": "SM, KREAM",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-smtown-run-club"
+    },
+    {
+      "id": "25th-kimje-saemangeum-horizon-national-marathon-2026",
+      "name": "제25회 김제새만금 지평선 전국마라톤",
+      "raceDate": "2026-10-03",
+      "registrationOpen": "2026-05-20",
+      "registrationClose": "2026-06-20",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "전북",
+      "place": "김제시민운동장 일원",
+      "start": "09:00 집결",
+      "host": "김제스포츠클럽",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/25th-kimje-saemangeum-horizon-national-marathon-2026"
+    },
+    {
+      "id": "2026-run-your-way-seoul-10k",
+      "name": "2026 Run Your Way Seoul 10K",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-07-31",
+      "registrationClose": "2026-08-02",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km"
+      ],
+      "region": "서울",
+      "place": "여의도공원 문화의 광장",
+      "start": "07:30 집결",
+      "host": "뉴발란스",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-run-your-way-seoul-10k"
+    },
+    {
+      "id": "2026-soil-gamdong-marathon",
+      "name": "2026 S오일 감동의 마라톤",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-08-01",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "상암동 평화의 광장",
+      "start": "07:00 집결",
+      "host": "더윙, S오일",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-soil-gamdong-marathon"
+    },
+    {
+      "id": "2026-andong-marathon",
+      "name": "2026 안동마라톤",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-05-06",
+      "registrationClose": "2026-05-31",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "안동시민운동장",
+      "start": "8시 집결",
+      "host": "안동시, 매일신문사",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-andong-marathon"
+    },
+    {
+      "id": "2026-paju-bukcity-marathon",
+      "name": "2026 파주북시티마라톤",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-05-04",
+      "registrationClose": "2026-08-10",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km",
+        "3km(거북이마라톤)"
+      ],
+      "region": "경기",
+      "place": "파주출판도시",
+      "start": "08:40 집결",
+      "host": "(사)파주출판도시입주기업체협의",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-paju-bukcity-marathon"
+    },
+    {
+      "id": "2026-hongcheon-sarang-marathon",
+      "name": "2026 홍천사랑마라톤",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-05-19",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "강원",
+      "place": "홍천종합운동장",
+      "start": "09:00 집결",
+      "host": "홍천시체육회, 홍천육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-hongcheon-sarang-marathon"
+    },
+    {
+      "id": "14th-gwangmyeong-mayor-health-run-2026-10-04",
+      "name": "제14회 광명시장배건강달리기",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-07-20",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "광명 찬빛광장(안양천)",
+      "start": "09:00 집결",
+      "host": "광명시육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/14th-gwangmyeong-mayor-health-run-2026-10-04"
+    },
+    {
+      "id": "20th-dalseo-half-marathon-2026",
+      "name": "제20회 달서하프마라톤",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-05-20",
+      "registrationClose": "2026-06-30",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "대구",
+      "place": "대구 달서구 호림강나루공원",
+      "start": "08:30 집결",
+      "host": "달서구체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/20th-dalseo-half-marathon-2026"
+    },
+    {
+      "id": "23rd-gyeongnam-marathon-2026-10-04",
+      "name": "제23회 경남마라톤",
+      "raceDate": "2026-10-04",
+      "registrationOpen": "2026-07-13",
+      "registrationClose": "2026-08-29",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "3km"
+      ],
+      "region": "경남",
+      "place": "창원종합운동장 보조경기장",
+      "start": "08:30 집결",
+      "host": "(주)경남신문사",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/23rd-gyeongnam-marathon-2026-10-04"
+    },
+    {
+      "id": "2026-seoul-open-marathon",
+      "name": "2026 서울오픈마라톤",
+      "raceDate": "2026-10-05",
+      "registrationOpen": "2026-04-24",
+      "registrationClose": "2026-05-10",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "서울",
+      "place": "광화문광장(예정)",
+      "start": "07:30~ 집결",
+      "host": "(사)한국체육개발원 등",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-seoul-open-marathon"
+    },
+    {
+      "id": "2026-hankyung-seoul-marathon",
+      "name": "2026 한경서울마라톤",
+      "raceDate": "2026-10-05",
+      "registrationOpen": "2026-07-14",
+      "registrationClose": "2026-09-14",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "여의도 문화의공원 일원",
+      "start": "07:30 집결",
+      "host": "한경닷컴/런코리아",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-hankyung-seoul-marathon"
+    },
+    {
+      "id": "runsense-2026-10-05-5k-10k",
+      "name": "런센스 2026",
+      "raceDate": "2026-10-05",
+      "registrationOpen": "2026-07-08",
+      "registrationClose": "2026-08-27",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "상암동 평화의공원 평화광장",
+      "start": "08:00 집결",
+      "host": "(주)일요신문사 (주)비즈한국",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/runsense-2026-10-05-5k-10k"
+    },
+    {
+      "id": "12th-siheung-national-half-marathon-2026-10-05",
+      "name": "제12회 시흥시 전국하프마라톤",
+      "raceDate": "2026-10-05",
+      "registrationOpen": "2026-07-22",
+      "registrationClose": "2026-07-22",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "한국공학대학교 제2캠퍼스",
+      "start": "09:00 집결",
+      "host": "경기일보, 시흥시체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/12th-siheung-national-half-marathon-2026-10-05"
+    },
+    {
+      "id": "wyd-life-love-marathon-walking-2026-10-09",
+      "name": "WYD와 함께하는 생명사랑 마라톤/걷기 대회",
+      "raceDate": "2026-10-09",
+      "registrationOpen": "2026-08-02",
+      "registrationClose": "2026-08-23",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km",
+        "5km",
+        "5km걷기"
+      ],
+      "region": "경기",
+      "place": "안성 미리내 성지",
+      "start": "08:30 집결",
+      "host": "마라톤선교연합회/천주교수원교구",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/wyd-life-love-marathon-walking-2026-10-09"
+    },
+    {
+      "id": "26th-hongseong-marathon-2026-10-09-leebongju-boston-marathon-celebration",
+      "name": "제26회 홍성마라톤",
+      "raceDate": "2026-10-09",
+      "registrationOpen": "2026-03-25",
+      "registrationClose": "2026-05-29",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "5km가족런",
+        "10km단체런(5인)"
+      ],
+      "region": "충남",
+      "place": "홍주 종합경기장",
+      "start": "08:00 집결",
+      "host": "홍성군체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/26th-hongseong-marathon-2026-10-09-leebongju-boston-marathon-celebration"
+    },
+    {
+      "id": "2026-gyeongpo-marathon",
+      "name": "2026 경포마라톤",
+      "raceDate": "2026-10-10",
+      "registrationOpen": "2026-05-18",
+      "registrationClose": "2026-06-23",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "강원",
+      "place": "강원특별자치도 강릉시",
+      "start": "08 : 30 집결",
+      "host": "(주)강원도민일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gyeongpo-marathon"
+    },
+    {
+      "id": "3rd-seongdong-marathon-2026",
+      "name": "제3회 성동구연맹회장기 마라톤",
+      "raceDate": "2026-10-10",
+      "registrationOpen": "2026-07-10",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "살곶이대운동장(축구장)",
+      "start": "09:00 집결",
+      "host": "성동구체육회 / 성동구육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/3rd-seongdong-marathon-2026"
+    },
+    {
+      "id": "4th-gangseo-heojun-run-2026",
+      "name": "제4회 강서허준런(RUN)",
+      "raceDate": "2026-10-10",
+      "registrationOpen": "2026-07-09",
+      "registrationClose": "2026-07-17",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km",
+        "5km",
+        "3km패밀리런"
+      ],
+      "region": "서울",
+      "place": "서울식물원 초지원",
+      "start": "오전 7시 30분 집결",
+      "host": "강서구",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/4th-gangseo-heojun-run-2026"
+    },
+    {
+      "id": "5th-gumi-mayor-gumosan-trail-race-2026-10-10",
+      "name": "제5회 구미시장배 금오산트레일 레이스",
+      "raceDate": "2026-10-10",
+      "registrationOpen": "2026-06-01",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "18k",
+        "23k"
+      ],
+      "region": "경북",
+      "place": "금오산 공영 대주차장",
+      "start": "08시 집결",
+      "host": "구미시산악연맹, 구미트레일런",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/5th-gumi-mayor-gumosan-trail-race-2026-10-10"
+    },
+    {
+      "id": "5th-mudeungsan-geo-marathon-2026",
+      "name": "제5회 무등산지오마라톤",
+      "raceDate": "2026-10-10",
+      "registrationOpen": "2026-05-18",
+      "registrationClose": "2026-06-18",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "30km"
+      ],
+      "region": "전남",
+      "place": "화순 금호스파리조트",
+      "start": "07:00 집결",
+      "host": "광주,전라남도,담양군,화순군",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/5th-mudeungsan-geo-marathon-2026"
+    },
+    {
+      "id": "jeju-windmill-run-2026-10-10",
+      "name": "제주풍차런",
+      "raceDate": "2026-10-10",
+      "registrationOpen": "2026-07-08",
+      "registrationClose": "2026-09-04",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "제주",
+      "place": "한림수협다목적어업인종합지원센터",
+      "start": "09:00 집결",
+      "host": "주식회사 어디감수광, 수원리",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/jeju-windmill-run-2026-10-10"
+    },
+    {
+      "id": "chungju-angseong-binaegil-marathon-2026",
+      "name": "충주 앙성 비내길 마라톤 대회",
+      "raceDate": "2026-10-10",
+      "registrationOpen": "2026-07-15",
+      "registrationClose": "2026-09-10",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "충북",
+      "place": "충주앙성온천광장",
+      "start": "오전 9시 집결",
+      "host": "앙성면체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/chungju-angseong-binaegil-marathon-2026"
+    },
+    {
+      "id": "2026-mbn-naju-marathon",
+      "name": "2026 MBN 전국 나주 마라톤대회",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-05-15",
+      "registrationClose": "2026-07-19",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "전남",
+      "place": "나주종합스포츠파크",
+      "start": "08:00 집결",
+      "host": "나주시, MBN, 매일경제",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-mbn-naju-marathon"
+    },
+    {
+      "id": "2026-mungyeong-omija-halfmarathon",
+      "name": "2026 문경 오미자 하프마라톤",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-07-10",
+      "registrationClose": "2026-08-28",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "문경시민운동장",
+      "start": "09:00 집결",
+      "host": "영남일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-mungyeong-omija-halfmarathon"
+    },
+    {
+      "id": "2026-seoul-race",
+      "name": "2026 서울레이스",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-05-11",
+      "registrationClose": "2026-05-27",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "서울",
+      "place": "서울광장",
+      "start": "07:30 집결",
+      "host": "동아일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-seoul-race"
+    },
+    {
+      "id": "2026-ulsan-marathon-asanro-road-race",
+      "name": "2026 울산마라톤대회",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-07-27",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "울산",
+      "place": "울산종합운동장",
+      "start": "08시 집결",
+      "host": "울산광역시 육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-ulsan-marathon-asanro-road-race"
+    },
+    {
+      "id": "2026-pyeongtaek-port-marathon-closed",
+      "name": "2026 평택항마라톤[마감]",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-06-15",
+      "registrationClose": "2026-06-13",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "평택항 엠에스로지스틱 일원",
+      "start": "9시 출발 집결",
+      "host": "평택시체육회, 경인일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-pyeongtaek-port-marathon-closed"
+    },
+    {
+      "id": "2026-pinkrun",
+      "name": "2026 핑크런",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-07-27",
+      "registrationClose": "2026-08-07",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "상암월드컵공원 평화광장",
+      "start": "08시 집결",
+      "host": "한국유방건강재단",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-pinkrun"
+    },
+    {
+      "id": "10th-autumn-wildfire-prevention-marathon-2026",
+      "name": "제10회 가을철 산불조심마라톤",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-02-23",
+      "registrationClose": "2026-09-15",
+      "registrationStatus": "접수중",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "5km",
+        "31km"
+      ],
+      "region": "서울",
+      "place": "광평교운동장",
+      "start": "08:00 집결",
+      "host": "한국트레일러너연맹(사)한국산악마라톤연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/10th-autumn-wildfire-prevention-marathon-2026"
+    },
+    {
+      "id": "5th-cheonan-leebongju-marathon",
+      "name": "제5회 천안이봉주마라톤대회",
+      "raceDate": "2026-10-11",
+      "registrationOpen": "2026-07-31",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "충남",
+      "place": "천안종합운동장",
+      "start": "09:00",
+      "host": "-",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/5th-cheonan-leebongju-marathon"
+    },
+    {
+      "id": "2026-gyeongju-marathon",
+      "name": "2026 경주마라톤",
+      "raceDate": "2026-10-17",
+      "registrationOpen": "2026-05-26",
+      "registrationClose": "2026-05-28",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "half",
+        "10km"
+      ],
+      "region": "경북",
+      "place": "경주시민운동장",
+      "start": "08:00 집결",
+      "host": "동아일보,경북도,KAAF",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gyeongju-marathon"
+    },
+    {
+      "id": "2026-gyeongcheong-marathon",
+      "name": "2026 경청마라톤",
+      "raceDate": "2026-10-17",
+      "registrationOpen": "2026-07-07",
+      "registrationClose": "2026-10-07",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "신정교 하부 영롱이 억새구장",
+      "start": "09:00 집결",
+      "host": "(사)행복한동행",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gyeongcheong-marathon"
+    },
+    {
+      "id": "2026-jeonnam-gwangju-namgu-marathon",
+      "name": "2026 전남광주통합특별시 남구청장배 마라톤",
+      "raceDate": "2026-10-17",
+      "registrationOpen": "2026-07-10",
+      "registrationClose": "2026-09-17",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "광주",
+      "place": "광주공원앞 광주천변 광주교",
+      "start": "09:00 집결",
+      "host": "전남광주통합특별시남구육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jeonnam-gwangju-namgu-marathon"
+    },
+    {
+      "id": "2026-jeongseon-donggang-marathon",
+      "name": "2026 정선동강 마라톤",
+      "raceDate": "2026-10-17",
+      "registrationOpen": "2026-06-23",
+      "registrationClose": "2026-07-22",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "커플런5km",
+        "가족런5km"
+      ],
+      "region": "강원",
+      "place": "정선생태체험학습장",
+      "start": "오전 9시 00분 집결",
+      "host": "정선군",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jeongseon-donggang-marathon"
+    },
+    {
+      "id": "24th-cheongwon-life-rice-daecheongho-marathon-2026-10-17",
+      "name": "제24회 청원생명쌀대청호마라톤",
+      "raceDate": "2026-10-17",
+      "registrationOpen": "2026-05-04",
+      "registrationClose": "2026-06-12",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "충북",
+      "place": "문의체육공원",
+      "start": "08:40 집결",
+      "host": "청주시체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/24th-cheongwon-life-rice-daecheongho-marathon-2026-10-17"
+    },
+    {
+      "id": "7th-chungcheongnam-do-taean-inclusive-marathon-2026",
+      "name": "제7회 충청남도 태안 전국어울림마라톤",
+      "raceDate": "2026-10-17",
+      "registrationOpen": "2026-07-22",
+      "registrationClose": "2026-09-17",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "장애인부"
+      ],
+      "region": "충남",
+      "place": "태안군 안면읍 꽃지해수욕장 일",
+      "start": "09:00 집결",
+      "host": "충청남도장애인체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/7th-chungcheongnam-do-taean-inclusive-marathon-2026"
+    },
+    {
+      "id": "2026-asia-open-marathon",
+      "name": "2026 아시아 오픈 마라톤",
+      "raceDate": "2026-10-18",
+      "registrationOpen": "2026-04-21",
+      "registrationClose": "2026-09-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "서울",
+      "place": "서울 광화문 광장",
+      "start": "08:00 출발 (07:30 집결)",
+      "host": "아시아투데이",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-asia-open-marathon"
+    },
+    {
+      "id": "greenstep-2026-10-18-haenam-solasido",
+      "name": "그린스텝 2026",
+      "raceDate": "2026-10-18",
+      "registrationOpen": "2026-07-01",
+      "registrationClose": "2026-07-24",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "전남",
+      "place": "전라남도 해남군 솔라시도",
+      "start": "09:00 집결",
+      "host": "목포MBC / 마라톤세상",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/greenstep-2026-10-18-haenam-solasido"
+    },
+    {
+      "id": "19th-jungnang-mayor-rose-marathon-2026",
+      "name": "제19회 중랑구청장배 장미 마라톤 준비중",
+      "raceDate": "2026-10-18",
+      "registrationOpen": "2026-07-30",
+      "registrationClose": "2026-10-11",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "중화체육공원",
+      "start": "09:00 집결",
+      "host": "중랑구육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/19th-jungnang-mayor-rose-marathon-2026"
+    },
+    {
+      "id": "22nd-daegu-bukgu-sarang-marathon-2026",
+      "name": "제22회 대구 북구사랑 마라톤",
+      "raceDate": "2026-10-18",
+      "registrationOpen": "2026-08-03",
+      "registrationClose": "2026-08-24",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "대구",
+      "place": "금호강 산격야영장",
+      "start": "09:00 집결",
+      "host": "대구광역시북구체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/22nd-daegu-bukgu-sarang-marathon-2026"
+    },
+    {
+      "id": "23rd-yeoju-sejong-daewang-marathon-2026",
+      "name": "제23회 여주 세종대왕 마라톤",
+      "raceDate": "2026-10-18",
+      "registrationOpen": "2026-06-02",
+      "registrationClose": "2026-09-18",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "4km",
+        "1km(휠체어)"
+      ],
+      "region": "경기",
+      "place": "여주 현암지구공원",
+      "start": "오전 8시30분 집결",
+      "host": "여주시육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/23rd-yeoju-sejong-daewang-marathon-2026"
+    },
+    {
+      "id": "25th-daecheongho-marathon-2026",
+      "name": "제25회 대청호마라톤",
+      "raceDate": "2026-10-18",
+      "registrationOpen": "2026-06-10",
+      "registrationClose": "2026-07-13",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "대전",
+      "place": "대청공원",
+      "start": "09:00 집결",
+      "host": "대덕구",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/25th-daecheongho-marathon-2026"
+    },
+    {
+      "id": "2026-gtws-muju-trail",
+      "name": "2026 GTWS 무주 트레일",
+      "raceDate": "2026-10-24",
+      "registrationOpen": "2026-04-30",
+      "registrationClose": "2026-05-30",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "26km",
+        "18km",
+        "10km"
+      ],
+      "region": "전북",
+      "place": "전북 무주 덕유산 리조트",
+      "start": "-",
+      "host": "전북",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gtws-muju-trail"
+    },
+    {
+      "id": "2026-gyeonggi-old-road-together-run",
+      "name": "2026 경기옛길 함께RUN",
+      "raceDate": "2026-10-24",
+      "registrationOpen": "2026-07-09",
+      "registrationClose": "2026-08-08",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "도농체육공원",
+      "start": "9시 집결",
+      "host": "경기도",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gyeonggi-old-road-together-run"
+    },
+    {
+      "id": "2026-iksan-donation-run",
+      "name": "2026 익산 기부런",
+      "raceDate": "2026-10-24",
+      "registrationOpen": "2026-07-14",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "6.4km"
+      ],
+      "region": "전북",
+      "place": "익산시종합운동장",
+      "start": "09:00 집결",
+      "host": "(사)크레파스",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-iksan-donation-run"
+    },
+    {
+      "id": "2026-3rd-gamseong-run-retro-festival",
+      "name": "2026 제3회 감성런",
+      "raceDate": "2026-10-24",
+      "registrationOpen": "2026-06-18",
+      "registrationClose": "2026-09-07",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "신정교하부육상트랙구장",
+      "start": "09:00 집결",
+      "host": "(사)대한생활체육마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-3rd-gamseong-run-retro-festival"
+    },
+    {
+      "id": "2026-hanam-autumn-family-marathon",
+      "name": "2026 하남 어텀 패밀리 마라톤",
+      "raceDate": "2026-10-24",
+      "registrationOpen": "2026-07-07",
+      "registrationClose": "2026-10-14",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "하남 미사 경정 공원",
+      "start": "09:00 집결",
+      "host": "청운의꿈(주)",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-hanam-autumn-family-marathon"
+    },
+    {
+      "id": "run-music-festival-andong-2026",
+      "name": "RUN&MUSIC FESTIVAL in 안동",
+      "raceDate": "2026-10-24",
+      "registrationOpen": "2026-07-28",
+      "registrationClose": "2026-08-10",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "경북",
+      "place": "안동시민운동장",
+      "start": "08:30 집결",
+      "host": "기후에너지환경부,안동시",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/run-music-festival-andong-2026"
+    },
+    {
+      "id": "2026-sejongrun-with-naver-works",
+      "name": "네이버웍스와 함께하는 세종런 26",
+      "raceDate": "2026-10-24",
+      "registrationOpen": "2026-07-31",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "충남",
+      "place": "세종중앙공원 도시축제마당 일원",
+      "start": "미정",
+      "host": "세종시 육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-sejongrun-with-naver-works"
+    },
+    {
+      "id": "2026-gwangmyeong-peace-marathon",
+      "name": "2026 광명평화마라톤",
+      "raceDate": "2026-10-25",
+      "registrationOpen": "2026-07-01",
+      "registrationClose": "2026-07-13",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "가족런2~5인",
+        "5km커플런"
+      ],
+      "region": "경기",
+      "place": "광명역 일원",
+      "start": "오전 8시 00분 집결",
+      "host": "광명시체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gwangmyeong-peace-marathon"
+    },
+    {
+      "id": "busan-ocean-marathon-2026",
+      "name": "2026 부산바다마라톤",
+      "raceDate": "2026-10-25",
+      "registrationOpen": "2026-07-28",
+      "registrationClose": "2026-08-18",
+      "registrationStatus": "접수중",
+      "courses": [
+        "15km",
+        "10km",
+        "5km"
+      ],
+      "region": "부산",
+      "place": "부산 벡스코 일원",
+      "start": "오전 8시 20분 집결",
+      "host": "부산일보사",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/busan-ocean-marathon-2026"
+    },
+    {
+      "id": "2026-cheongsong-apple-trailrun",
+      "name": "2026 청송사과트레일런",
+      "raceDate": "2026-10-25",
+      "registrationOpen": "2026-03-16",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "청송군민운동장",
+      "start": "10시 집결",
+      "host": "청송군, 매일신문",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-cheongsong-apple-trailrun"
+    },
+    {
+      "id": "2026-chuncheon-marathon-general-registration",
+      "name": "2026 춘천마라톤",
+      "raceDate": "2026-10-25",
+      "registrationOpen": "2026-06-16",
+      "registrationClose": "2026-07-23",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "10km"
+      ],
+      "region": "강원",
+      "place": "춘천 공지천공원",
+      "start": "09:00 집결",
+      "host": "조선일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-chuncheon-marathon-general-registration"
+    },
+    {
+      "id": "k-run-challenge-2026-10-25",
+      "name": "K-RUN 챌린지",
+      "raceDate": "2026-10-25",
+      "registrationOpen": "2026-06-22",
+      "registrationClose": "2026-09-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "마니아"
+      ],
+      "region": "서울",
+      "place": "서울 뚝섬한강공원 수변광장",
+      "start": "AM 09:00 집결",
+      "host": "K-RUN챌린지조직위",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/k-run-challenge-2026-10-25"
+    },
+    {
+      "id": "19th-cheongdo-bansi-national-marathon-2026",
+      "name": "제19회 청도반시 전국마라톤",
+      "raceDate": "2026-10-25",
+      "registrationOpen": "2026-07-20",
+      "registrationClose": "2026-08-28",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5.9km"
+      ],
+      "region": "경북",
+      "place": "청도공설운동장",
+      "start": "09:30 집결",
+      "host": "청도군체육회, 대구일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/19th-cheongdo-bansi-national-marathon-2026"
+    },
+    {
+      "id": "2026-dmz-open-peace-marathon",
+      "name": "2026 DMZ OPEN 평화마라톤",
+      "raceDate": "2026-11-01",
+      "registrationOpen": "2026-08-01",
+      "registrationClose": "2026-08-01",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "경기",
+      "place": "파주 임진각 평화누리 일원",
+      "start": "09:00 집결",
+      "host": "경기도",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-dmz-open-peace-marathon"
+    },
+    {
+      "id": "2026-jtbc-marathon-entry-fee",
+      "name": "2026 jtbc 마라톤",
+      "raceDate": "2026-11-01",
+      "registrationOpen": "2026-04-17",
+      "registrationClose": "2026-04-21",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "10km"
+      ],
+      "region": "서울",
+      "place": "상암동 평화의 광장",
+      "start": "08:00 집결",
+      "host": "jtbc",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jtbc-marathon-entry-fee"
+    },
+    {
+      "id": "2026-gimcheon-national-marathon",
+      "name": "2026 김천전국마라톤대회",
+      "raceDate": "2026-11-01",
+      "registrationOpen": "2026-07-06",
+      "registrationClose": "2026-09-18",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "김천종합스포츠타운",
+      "start": "09:30 집결",
+      "host": "김천시체육회, 매일신문사",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gimcheon-national-marathon"
+    },
+    {
+      "id": "2026-muan-coastal-sunset-walk-marathon",
+      "name": "2026 무안 해안 노을길 걷기 및 마라톤",
+      "raceDate": "2026-11-01",
+      "registrationOpen": "2026-06-15",
+      "registrationClose": "2026-10-01",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "전남",
+      "place": "무안낙지공원",
+      "start": "오전 9시 집결",
+      "host": "무안군체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-muan-coastal-sunset-walk-marathon"
+    },
+    {
+      "id": "21st-ulsan-human-rights-marathon-2026",
+      "name": "제21회 울산인권마라톤",
+      "raceDate": "2026-11-01",
+      "registrationOpen": "2026-08-18",
+      "registrationClose": "2026-09-18",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "울산",
+      "place": "태화강 둔치",
+      "start": "09:30 집결",
+      "host": "울산인권마라톤대회 조직위원회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/21st-ulsan-human-rights-marathon-2026"
+    },
+    {
+      "id": "2nd-daejeon-shinchaeho-marathon-2026",
+      "name": "제2회 대전 신채호 마라톤",
+      "raceDate": "2026-11-01",
+      "registrationOpen": "2026-07-10",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "패밀리런"
+      ],
+      "region": "대전",
+      "place": "대전 뿌리공원 잔디광장",
+      "start": "08:30 집결",
+      "host": "대전시 중구 육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2nd-daejeon-shinchaeho-marathon-2026"
+    },
+    {
+      "id": "2026-yeongcheon-dam-marathon",
+      "name": "2026 영천댐 마라톤",
+      "raceDate": "2026-11-07",
+      "registrationOpen": "2026-09-01",
+      "registrationClose": "2026-09-30",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "영천댐 하류공원",
+      "start": "09:40 집결",
+      "host": "영천시육상연맹, 채널경북",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-yeongcheon-dam-marathon"
+    },
+    {
+      "id": "2026-busan-maritime-run-festa",
+      "name": "2026 해양수도 부산 런페스타",
+      "raceDate": "2026-11-07",
+      "registrationOpen": "2026-07-27",
+      "registrationClose": "2026-10-16",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km"
+      ],
+      "region": "부산",
+      "place": "부산 북항친수공원",
+      "start": "08:30 집결",
+      "host": "한국해운신문, 부산항발전협의회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-busan-maritime-run-festa"
+    },
+    {
+      "id": "15th-buyeo-goodtre-marathon-2026",
+      "name": "제15회 부여 굿뜨래 마라톤 대회",
+      "raceDate": "2026-11-07",
+      "registrationOpen": "2026-06-30",
+      "registrationClose": "2026-10-07",
+      "registrationStatus": "접수중",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "충남",
+      "place": "부여 구드래나루터 선착장",
+      "start": "오전 8시 30분 집결",
+      "host": "부여군마라톤연합회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/15th-buyeo-goodtre-marathon-2026"
+    },
+    {
+      "id": "2026-gwacheon-marathon",
+      "name": "2026 과천마라톤",
+      "raceDate": "2026-11-08",
+      "registrationOpen": "2026-07-20",
+      "registrationClose": "2026-07-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경기",
+      "place": "관문체육공원",
+      "start": "08:00 집결",
+      "host": "과천시체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-gwacheon-marathon"
+    },
+    {
+      "id": "2026-busan-heritage-run",
+      "name": "2026 부산 헤리티지 런",
+      "raceDate": "2026-11-08",
+      "registrationOpen": "2026-08-11",
+      "registrationClose": "2026-09-30",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "부산",
+      "place": "다대포 해수욕장",
+      "start": "8시 출발",
+      "host": "아시아경제",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-busan-heritage-run"
+    },
+    {
+      "id": "2026-yangsan-baenaegol-apple-run",
+      "name": "2026 양산 배내골 애플 런",
+      "raceDate": "2026-11-08",
+      "registrationOpen": "2026-06-15",
+      "registrationClose": "2026-07-15",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경남",
+      "place": "장선마을 회관 앞 운동장",
+      "start": "09:00 집결",
+      "host": "배내골 주민자치위원회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-yangsan-baenaegol-apple-run"
+    },
+    {
+      "id": "gyeongju-athletic-federation-marathon-2026",
+      "name": "경주시육상연맹회장배 마라톤대회",
+      "raceDate": "2026-11-08",
+      "registrationOpen": "2026-07-21",
+      "registrationClose": "2026-10-08",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "경주서천둔치(생활체육광장)",
+      "start": "09시 집결",
+      "host": "경주시육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/gyeongju-athletic-federation-marathon-2026"
+    },
+    {
+      "id": "11th-songpa-mayor-marathon-2026",
+      "name": "제11회 송파구청장배 마라톤",
+      "raceDate": "2026-11-08",
+      "registrationOpen": "2026-07-01",
+      "registrationClose": "2026-10-05",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "송파구 여성축구장",
+      "start": "09:00 집결",
+      "host": "송파구육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/11th-songpa-mayor-marathon-2026"
+    },
+    {
+      "id": "20th-volunteer-love-goodfun-marathon-2026-11-08",
+      "name": "제20회 자원봉사 사랑 굿펀 마라톤",
+      "raceDate": "2026-11-08",
+      "registrationOpen": "2026-07-27",
+      "registrationClose": "2026-10-18",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "신정교하부육상트랙구장",
+      "start": "09:00 집결",
+      "host": "(사)대한생활체육마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/20th-volunteer-love-goodfun-marathon-2026-11-08"
+    },
+    {
+      "id": "2026-pohang-marathon-championship",
+      "name": "2026 포항마라톤챔피언십",
+      "raceDate": "2026-11-14",
+      "registrationOpen": "2026-04-13",
+      "registrationClose": "2026-06-01",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "경북",
+      "place": "영일대해상누각",
+      "start": "09:00 집결",
+      "host": "kthcn",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-pohang-marathon-championship"
+    },
+    {
+      "id": "26th-suncheon-namseungryong-marathon-2026",
+      "name": "제26회 순천 남승룡마라톤대회",
+      "raceDate": "2026-11-14",
+      "registrationOpen": "2026-08-03",
+      "registrationClose": "2026-10-16",
+      "registrationStatus": "접수전",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "전남",
+      "place": "전남광주 순천시 팔마로 333",
+      "start": "08:20 집결",
+      "host": "순천시체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/26th-suncheon-namseungryong-marathon-2026"
+    },
+    {
+      "id": "2026-seoul-peace-marathon-9th",
+      "name": "2026 9회 서울평화마라톤",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-07-08",
+      "registrationClose": "2026-10-16",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "신정교하부육상트랙구장",
+      "start": "9시 30분 집결",
+      "host": "서울자주통일평화연대",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-seoul-peace-marathon-9th"
+    },
+    {
+      "id": "2026-mbn-seoul-marathon",
+      "name": "2026 MBN 서울마라톤",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-06-22",
+      "registrationClose": "2026-06-25",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "서울",
+      "place": "광화문 광장, 잠실종합운동장",
+      "start": "08:00 집결",
+      "host": "MBN, 매일경제",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-mbn-seoul-marathon"
+    },
+    {
+      "id": "2026-garminrun-korea",
+      "name": "2026 가민런 코리아",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-07-01",
+      "registrationClose": "2026-07-03",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "half",
+        "10km"
+      ],
+      "region": "경기",
+      "place": "고양종합운동장",
+      "start": "08:00 집결",
+      "host": "가민,러너블",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-garminrun-korea"
+    },
+    {
+      "id": "2026-jeju-citrus-marathon",
+      "name": "2026 제주감귤마라톤",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-07-06",
+      "registrationClose": "2026-09-11",
+      "registrationStatus": "접수중",
+      "courses": [
+        "full",
+        "half",
+        "10km"
+      ],
+      "region": "제주",
+      "place": "조천운동장",
+      "start": "09:00 집결",
+      "host": "한라일보",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-jeju-citrus-marathon"
+    },
+    {
+      "id": "24th-gochang-gointdol-marathon-2026",
+      "name": "제24회 고창고인돌마라톤",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-07-01",
+      "registrationClose": "2026-08-31",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "전북",
+      "place": "고창공설운동장",
+      "start": "10:00 집결",
+      "host": "고창군체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/24th-gochang-gointdol-marathon-2026"
+    },
+    {
+      "id": "24th-daemosan-guryongsan-trailrun-2026-11-15",
+      "name": "제24회 대모산,구룡산 트레일런",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-04-01",
+      "registrationClose": "2026-10-30",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km"
+      ],
+      "region": "서울",
+      "place": "수서역 7번출구광장",
+      "start": "09:00 집결",
+      "host": "(사)한국산악마라톤연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/24th-daemosan-guryongsan-trailrun-2026-11-15"
+    },
+    {
+      "id": "24th-sangju-gotgam-marathon-2026",
+      "name": "제24회 상주 곶감 마라톤 대회",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-05-06",
+      "registrationClose": "2026-10-15",
+      "registrationStatus": "접수중",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "4.4km"
+      ],
+      "region": "경북",
+      "place": "상주시민운동장",
+      "start": "오전 9시 집결",
+      "host": "전국마라톤협회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/24th-sangju-gotgam-marathon-2026"
+    },
+    {
+      "id": "28th-busan-international-news-marathon",
+      "name": "제28회 부산국제마라톤대회",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-07-02",
+      "registrationClose": "2026-09-18",
+      "registrationStatus": "접수중",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "부산",
+      "place": "사하구 다대포해수욕장",
+      "start": "9시",
+      "host": "국제신문",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/28th-busan-international-news-marathon"
+    },
+    {
+      "id": "2nd-sejong-national-marathon-2026",
+      "name": "제2회 세종특별자치시 전국 마라톤",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-06-20",
+      "registrationClose": "2026-07-29",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km",
+        "학생부5km초등부",
+        "학생부5km중.고등부"
+      ],
+      "region": "세종",
+      "place": "세종시민운동장",
+      "start": "09:30 집결",
+      "host": "세종특별자치시육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2nd-sejong-national-marathon-2026"
+    },
+    {
+      "id": "4th-yeongnam-alps-national-half-marathon-2026",
+      "name": "제4회 영남알프스 전국 하프마라톤",
+      "raceDate": "2026-11-15",
+      "registrationOpen": "2026-09-01",
+      "registrationClose": "2026-10-31",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "울산",
+      "place": "울주군 영남알프스 일원",
+      "start": "09:00 집결",
+      "host": "울산광역시 울주군육상연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/4th-yeongnam-alps-national-half-marathon-2026"
+    },
+    {
+      "id": "2026-sejong-autumn-breeze-eurunning-festa",
+      "name": "2026 세정 가을바람 유러닝페스타",
+      "raceDate": "2026-11-21",
+      "registrationOpen": "2026-07-08",
+      "registrationClose": "2026-11-07",
+      "registrationStatus": "접수중",
+      "courses": [
+        "10km",
+        "5km",
+        "10k커플런",
+        "10k단체전(5인1조)"
+      ],
+      "region": "경기",
+      "place": "하남 미사리 조정경기장",
+      "start": "08:30 집결",
+      "host": "주식회사 세정",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-sejong-autumn-breeze-eurunning-festa"
+    },
+    {
+      "id": "2026-namwon-chunhyang-national-marathon",
+      "name": "2026 남원 춘향 전국 마라톤대회",
+      "raceDate": "2026-11-28",
+      "registrationOpen": "2026-07-07",
+      "registrationClose": "2026-10-28",
+      "registrationStatus": "접수중",
+      "courses": [
+        "full",
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "전북",
+      "place": "남원 종합스포츠타운 운동장",
+      "start": "오전 8시 40분 집결",
+      "host": "남원시체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-namwon-chunhyang-national-marathon"
+    },
+    {
+      "id": "mokyokrun-2026-nov28",
+      "name": "목욕런 2026",
+      "raceDate": "2026-11-28",
+      "registrationOpen": "2026-08-10",
+      "registrationClose": "2026-08-30",
+      "registrationStatus": "접수전",
+      "courses": [
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "월드컵공원 평화의 광장",
+      "start": "7:30 집결",
+      "host": "사우나 민족",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/mokyokrun-2026-nov28"
+    },
+    {
+      "id": "23rd-hangang-citizen-marathon-2026",
+      "name": "제23회 한강시민마라톤",
+      "raceDate": "2026-12-05",
+      "registrationOpen": "2026-08-01",
+      "registrationClose": "2026-10-28",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km"
+      ],
+      "region": "서울",
+      "place": "여의도 물빛무대 앞 광장",
+      "start": "09:00 집결",
+      "host": "(사)대한생활체육회",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/23rd-hangang-citizen-marathon-2026"
+    },
+    {
+      "id": "2026-busan-bridge-marathon",
+      "name": "2026 부산브릿지 마라톤",
+      "raceDate": "2026-12-06",
+      "registrationOpen": "2026-08-01",
+      "registrationClose": "2026-08-16",
+      "registrationStatus": "접수전",
+      "courses": [
+        "full",
+        "10km"
+      ],
+      "region": "부산",
+      "place": "부산 벡스코 제1전시장",
+      "start": "08:00 집결",
+      "host": "KNN,부산시",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-busan-bridge-marathon"
+    },
+    {
+      "id": "hope-dream-24th-winter-marathon-2027",
+      "name": "희망드림 제24회 동계마라톤대회",
+      "raceDate": "2027-02-14",
+      "registrationOpen": "2026-10-12",
+      "registrationClose": "2027-01-10",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "5km",
+        "32km"
+      ],
+      "region": "서울",
+      "place": "여의도 한강 물빛광장",
+      "start": "08:00 집결",
+      "host": "(사)한국마라톤연맹",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/hope-dream-24th-winter-marathon-2027"
+    },
+    {
+      "id": "2027-seoul-international-marathon",
+      "name": "2027 서울마라톤",
+      "raceDate": "2027-03-21",
+      "registrationOpen": "2026-06-08",
+      "registrationClose": "2026-06-18",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "full",
+        "10km"
+      ],
+      "region": "서울",
+      "place": "광화문광장",
+      "start": "07:30 집결",
+      "host": "동아일보,서울시",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2027-seoul-international-marathon"
+    },
+    {
+      "id": "9th-oceanview-gijang-sea-marathon-2027",
+      "name": "제9회 오션뷰 기장바다마라톤",
+      "raceDate": "2027-04-18",
+      "registrationOpen": "2026-11-01",
+      "registrationClose": "2026-12-31",
+      "registrationStatus": "접수전",
+      "courses": [
+        "half",
+        "10km",
+        "3km슬로우조깅"
+      ],
+      "region": "부산",
+      "place": "오시리아 동부산관광9로",
+      "start": "07:30 집결",
+      "host": "기장바다마라톤조직위",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/9th-oceanview-gijang-sea-marathon-2027"
+    }
+  ]
+}

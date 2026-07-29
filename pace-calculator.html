@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="거리와 목표시간 또는 페이스로 완주시간, 구간별 스플릿과 예상 기록을 계산하는 MRC 러닝 페이스 계산기입니다.">
+    <meta name="theme-color" content="#f5bc00">
+    <title>페이스 계산기 | MODU RUNNING</title>
+    <link rel="icon" type="image/png" href="img/icon1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/navigation.css">
+    <link rel="stylesheet" href="assets/pace-calculator.css">
+</head>
+<body class="calculator-page">
+    <header class="site-header" data-site-header>
+        <a class="site-brand" href="index.html" aria-label="모두의러닝 홈">
+            <img src="img/icon1.png" alt="">
+            <span>MODU RUNNING</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+            <span class="sr-only">메뉴 열기</span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-navigation" id="site-navigation" aria-label="주요 메뉴">
+            <a href="index.html">홈</a>
+            <a href="index.html#schedule">일정</a>
+            <a href="training.html">훈련 노트</a>
+            <a class="nav-highlight" href="pace-calculator.html" aria-current="page">계산기</a>
+            <a href="races.html">대회</a>
+            <a href="archive.html">기록</a>
+            <a href="index.html#feedback">소통</a>
+        </nav>
+    </header>
+
+    <main class="calculator-main">
+        <section class="calculator-intro">
+            <p class="calculator-eyebrow">MRC PACE LAB</p>
+            <h1>목표를 숫자로,<br>훈련을 구체적으로</h1>
+            <p>목표시간과 페이스를 서로 계산하고, 트랙 스플릿부터 예상 레이스 기록까지 한 번에 확인하세요.</p>
+        </section>
+
+        <div class="calculator-layout">
+            <section class="calculator-panel input-panel" aria-labelledby="calculator-form-title">
+                <div class="panel-heading">
+                    <p>01 · INPUT</p>
+                    <h2 id="calculator-form-title">무엇을 계산할까요?</h2>
+                </div>
+
+                <form id="pace-form" novalidate>
+                    <fieldset class="mode-switch">
+                        <legend class="sr-only">계산 방식</legend>
+                        <label>
+                            <input type="radio" name="mode" value="time" checked>
+                            <span>목표시간 → 페이스</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="mode" value="pace">
+                            <span>페이스 → 완주시간</span>
+                        </label>
+                    </fieldset>
+
+                    <div class="quick-distances" aria-label="주요 거리 빠른 선택">
+                        <button type="button" data-distance="10" class="is-active">10K</button>
+                        <button type="button" data-distance="21.0975">하프</button>
+                        <button type="button" data-distance="42.195">풀</button>
+                    </div>
+
+                    <label class="field-block" for="distance">
+                        <span>거리</span>
+                        <span class="input-with-unit">
+                            <input id="distance" name="distance" type="number" min="0.1" max="1000" step="0.0001" value="10" inputmode="decimal" required>
+                            <b>km</b>
+                        </span>
+                    </label>
+
+                    <div class="time-fields" id="target-time-fields">
+                        <p class="field-label">목표시간</p>
+                        <div class="time-input-grid">
+                            <label><input id="target-hours" name="hours" type="number" min="0" max="99" value="0" inputmode="numeric"><span>시간</span></label>
+                            <label><input id="target-minutes" name="minutes" type="number" min="0" max="59" value="45" inputmode="numeric"><span>분</span></label>
+                            <label><input id="target-seconds" name="seconds" type="number" min="0" max="59" value="0" inputmode="numeric"><span>초</span></label>
+                        </div>
+                    </div>
+
+                    <div class="pace-fields" id="target-pace-fields" hidden>
+                        <p class="field-label">1km 목표 페이스</p>
+                        <div class="time-input-grid pace-input-grid">
+                            <label><input id="pace-minutes" name="paceMinutes" type="number" min="0" max="59" value="4" inputmode="numeric"><span>분</span></label>
+                            <label><input id="pace-seconds" name="paceSeconds" type="number" min="0" max="59" value="30" inputmode="numeric"><span>초 / km</span></label>
+                        </div>
+                    </div>
+
+                    <p class="form-error" id="form-error" role="alert"></p>
+                    <button class="calculate-button" type="submit">계산하기 <span aria-hidden="true">→</span></button>
+                </form>
+            </section>
+
+            <section class="calculator-panel result-panel" aria-labelledby="result-title">
+                <div class="panel-heading result-heading">
+                    <div>
+                        <p>02 · RESULT</p>
+                        <h2 id="result-title">계산 결과</h2>
+                    </div>
+                    <div class="result-actions">
+                        <button id="copy-result" type="button">결과 복사</button>
+                        <button id="share-result" type="button">링크 공유</button>
+                    </div>
+                </div>
+
+                <div class="primary-result" aria-live="polite">
+                    <p>평균 페이스</p>
+                    <strong id="result-pace">4′30″</strong>
+                    <span>/ km</span>
+                </div>
+
+                <div class="result-summary">
+                    <div><span>예상 완주시간</span><strong id="result-time">45:00</strong></div>
+                    <div><span>평균 속도</span><strong id="result-speed">13.33 km/h</strong></div>
+                    <div><span>계산 거리</span><strong id="result-distance">10 km</strong></div>
+                </div>
+
+                <section class="result-section" aria-labelledby="split-title">
+                    <div class="section-title-row">
+                        <h3 id="split-title">구간별 스플릿</h3>
+                        <span>동일 페이스 기준</span>
+                    </div>
+                    <div class="split-grid" id="split-grid"></div>
+                </section>
+
+                <section class="result-section" aria-labelledby="prediction-title">
+                    <div class="section-title-row">
+                        <h3 id="prediction-title">예상 레이스 기록</h3>
+                        <span>Riegel 공식 · 지수 1.06</span>
+                    </div>
+                    <div class="prediction-grid" id="prediction-grid"></div>
+                    <p class="prediction-note">훈련 수준, 코스, 날씨와 지구력에 따라 실제 기록은 달라질 수 있습니다.</p>
+                </section>
+
+                <p class="action-status" id="action-status" role="status" aria-live="polite"></p>
+            </section>
+        </div>
+
+        <section class="training-tools" aria-labelledby="training-tools-title">
+            <div class="tools-heading">
+                <p class="calculator-eyebrow">MRC TRAINING TOOLS</p>
+                <h2 id="training-tools-title">계산한 페이스를 훈련 계획으로</h2>
+                <p>목표 페이스를 기준으로 랩 계획과 인터벌 세션을 만들고, 카카오톡 공지까지 바로 준비할 수 있습니다.</p>
+            </div>
+
+            <div class="tool-grid">
+                <section class="tool-card lap-card" aria-labelledby="lap-title">
+                    <div class="tool-card-heading">
+                        <div>
+                            <p>03 · LAP PLAN</p>
+                            <h3 id="lap-title">1km 누적 랩표</h3>
+                        </div>
+                        <label class="compact-select">운영 전략
+                            <select id="lap-strategy">
+                                <option value="even">일정 페이스</option>
+                                <option value="negative">네거티브 스플릿</option>
+                            </select>
+                        </label>
+                    </div>
+                    <p class="tool-description" id="lap-description">처음부터 끝까지 같은 페이스를 유지하는 계획입니다.</p>
+                    <div class="lap-table-wrap">
+                        <table class="lap-table">
+                            <thead><tr><th>지점</th><th>구간</th><th>누적</th></tr></thead>
+                            <tbody id="lap-table-body"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="tool-card interval-card" aria-labelledby="interval-title">
+                    <div class="tool-card-heading">
+                        <div>
+                            <p>04 · INTERVAL BUILDER</p>
+                            <h3 id="interval-title">인터벌 세션 설계</h3>
+                        </div>
+                        <span class="linked-pace">목표 <strong id="interval-pace">4′30″/km</strong></span>
+                    </div>
+                    <div class="interval-fields">
+                        <label>질주 거리<span><input id="repeat-distance" type="number" min="100" max="5000" step="50" value="600"><b>m</b></span></label>
+                        <label>반복 횟수<span><input id="repeat-count" type="number" min="1" max="50" step="1" value="8"><b>회</b></span></label>
+                        <label>회복 거리<span><input id="recovery-distance" type="number" min="0" max="3000" step="50" value="200"><b>m</b></span></label>
+                        <label>회복 페이스
+                            <span class="dual-input">
+                                <input id="recovery-minutes" type="number" min="0" max="59" value="6" aria-label="회복 페이스 분"><b>분</b>
+                                <input id="recovery-seconds" type="number" min="0" max="59" value="0" aria-label="회복 페이스 초"><b>초</b>
+                            </span>
+                        </label>
+                    </div>
+                    <p class="tool-description">회복 구간은 마지막 질주 뒤를 제외한 <strong>반복 횟수 − 1회</strong>로 계산합니다.</p>
+                    <div class="interval-summary" id="interval-summary" aria-live="polite"></div>
+                </section>
+            </div>
+
+            <div class="tool-grid tool-grid-bottom">
+                <section class="tool-card notice-card" aria-labelledby="notice-title">
+                    <div class="tool-card-heading">
+                        <div>
+                            <p>05 · SHARE</p>
+                            <h3 id="notice-title">카카오톡 훈련 공지</h3>
+                        </div>
+                        <button class="tool-button" id="copy-notice" type="button">공지 복사</button>
+                    </div>
+                    <textarea id="training-notice" rows="9" aria-label="카카오톡 훈련 공지 내용"></textarea>
+                    <p class="action-status" id="notice-status" role="status" aria-live="polite"></p>
+                </section>
+
+                <aside class="tool-card related-card" aria-labelledby="related-title">
+                    <div class="tool-card-heading">
+                        <div>
+                            <p>06 · READ NEXT</p>
+                            <h3 id="related-title">함께 읽을 훈련 노트</h3>
+                        </div>
+                    </div>
+                    <nav class="related-links" aria-label="관련 훈련 노트">
+                        <a href="training-detail.html?id=600m-cruise-interval"><span>인터벌</span><strong>600m 크루즈 인터벌</strong><b>→</b></a>
+                        <a href="training-detail.html?id=beginner-running-wish-list"><span>기초</span><strong>초보 러너의 러닝 위시리스트</strong><b>→</b></a>
+                        <a href="training-detail.html?id=running-form-foot-stride"><span>러닝 폼</span><strong>발과 보폭을 점검하는 법</strong><b>→</b></a>
+                    </nav>
+                </aside>
+            </div>
+
+            <section class="race-prep" aria-labelledby="race-prep-title">
+                <div class="tools-heading">
+                    <p class="calculator-eyebrow">MRC RACE DAY</p>
+                    <h2 id="race-prep-title">출발선까지 계획하기</h2>
+                    <p>5km 단위 운영표와 보급 시점, 출발 시각에서 역산한 당일 일정을 한 번에 확인합니다.</p>
+                </div>
+
+                <div class="race-prep-grid">
+                    <section class="tool-card race-split-card" aria-labelledby="race-split-title">
+                        <div class="tool-card-heading">
+                            <div>
+                                <p>07 · RACE SPLIT</p>
+                                <h3 id="race-split-title">5km 레이스 운영표</h3>
+                            </div>
+                            <span class="linked-pace">목표 <strong id="race-plan-pace">4′30″/km</strong></span>
+                        </div>
+                        <div class="lap-table-wrap race-table-wrap">
+                            <table class="lap-table">
+                                <thead><tr><th>지점</th><th>구간 기록</th><th>누적 기록</th></tr></thead>
+                                <tbody id="race-split-body"></tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="tool-card fueling-card" aria-labelledby="fueling-title">
+                        <div class="tool-card-heading">
+                            <div>
+                                <p>08 · FUELING</p>
+                                <h3 id="fueling-title">급수·보급 계획</h3>
+                            </div>
+                        </div>
+                        <div class="fueling-controls">
+                            <label>젤 섭취 간격
+                                <select id="gel-interval">
+                                    <option value="30">30분</option>
+                                    <option value="40">40분</option>
+                                    <option value="45" selected>45분</option>
+                                    <option value="50">50분</option>
+                                    <option value="60">60분</option>
+                                </select>
+                            </label>
+                            <label>첫 젤
+                                <select id="first-gel">
+                                    <option value="0">출발 직전</option>
+                                    <option value="30" selected>30분</option>
+                                    <option value="40">40분</option>
+                                    <option value="45">45분</option>
+                                </select>
+                            </label>
+                        </div>
+                        <ol class="fueling-list" id="fueling-list"></ol>
+                        <p class="tool-description">제품 권장량과 개인 적응 여부가 우선입니다. 대회에서 처음 먹는 제품은 사용하지 마세요.</p>
+                    </section>
+
+                    <section class="tool-card timeline-card" aria-labelledby="timeline-title">
+                        <div class="tool-card-heading">
+                            <div>
+                                <p>09 · TIMELINE</p>
+                                <h3 id="timeline-title">대회 당일 타임라인</h3>
+                            </div>
+                            <label class="start-time-label">출발 시각
+                                <input id="race-start-time" type="time" value="08:00">
+                            </label>
+                        </div>
+                        <ol class="race-timeline" id="race-timeline"></ol>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="assets/navigation.js"></script>
+    <script src="assets/pace-calculator.js"></script>
+</body>
+</html>
