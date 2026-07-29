@@ -293,6 +293,68 @@ body.training-page {
     line-height: 1.8;
 }
 
+.references-section {
+    padding-top: 28px;
+    border-top: 4px solid var(--ink);
+}
+
+.references-kicker {
+    margin: 0 0 8px;
+    color: #7a6d4a;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.references-section .evidence-note {
+    margin: 0 0 24px;
+    padding: 16px 18px;
+    border-left: 4px solid var(--yellow);
+    background: #f7f0dc;
+    color: #514934;
+}
+
+.reference-list {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+.reference-list li + li {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid #ded6c2;
+}
+
+.reference-citation,
+.reference-supports {
+    margin: 0;
+}
+
+.reference-citation a {
+    color: var(--blue);
+    font-weight: 800;
+    text-underline-offset: 3px;
+}
+
+.reference-citation span {
+    display: block;
+    margin-top: 4px;
+    color: #766e5a;
+    font-size: 0.82rem;
+}
+
+.reference-supports {
+    margin-top: 10px;
+    color: #5d5542;
+    font-size: 0.88rem;
+}
+
+.reference-supports strong {
+    display: block;
+    color: var(--ink);
+    font-size: 0.75rem;
+}
+
 .sidebar-section {
     padding: 22px;
 }
@@ -652,6 +714,31 @@ body.training-page {
     letter-spacing: 0.08em;
 }
 
+.term-list,
+.term-list div,
+.term-list dd {
+    margin: 0;
+}
+
+.term-list div + div {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #ded6c2;
+}
+
+.term-list dt {
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 900;
+}
+
+.term-list dd {
+    margin-top: 3px;
+    color: #645d4c;
+    font-size: 0.82rem;
+    line-height: 1.65;
+}
+
 .article-author {
     margin-bottom: 14px;
     display: grid;
@@ -693,6 +780,38 @@ body.training-page {
 
 .article-aside li + li {
     margin-top: 8px;
+}
+
+.article-glossary {
+    margin: 0;
+}
+
+.article-glossary > div + div {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-glossary dt {
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1.45;
+}
+
+.article-glossary dt span {
+    margin-top: 2px;
+    display: block;
+    color: var(--yellow);
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.article-glossary dd {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.78rem;
+    line-height: 1.65;
 }
 
 .article-aside .tag {
@@ -749,15 +868,23 @@ body.training-page {
     }
 
     .mistakes-note {
-        order: 7;
-    }
-
-    .coach-note {
         order: 8;
     }
 
-    .caution-note {
+    .coach-note {
         order: 9;
+    }
+
+    .caution-note {
+        order: 10;
+    }
+
+    .terms-note {
+        order: 7;
+    }
+
+    .references-section {
+        order: 11;
     }
 
     .sidebar-section {

@@ -5,6 +5,32 @@
 
     const renderList = items => items.map(item => `<li>${item}</li>`).join("");
 
+    const renderReferences = training => {
+        if (!training.references?.length) {
+            return "";
+        }
+
+        return `
+            <section class="detail-section references-section">
+                <h2>근거와 참고 자료</h2>
+                ${training.evidenceNote ? `<p class="evidence-note">${training.evidenceNote}</p>` : ""}
+                <ol class="reference-list">
+                    ${training.references.map(reference => `
+                        <li>
+                            <p class="reference-citation">
+                                ${reference.authors}.
+                                <a href="${reference.url}" target="_blank" rel="noopener noreferrer">${reference.title}</a>.
+                                <em>${reference.journal}</em> (${reference.year}).
+                                ${reference.doi ? `<span>DOI: ${reference.doi}</span>` : ""}
+                            </p>
+                            <p class="reference-supports"><strong>이 글에서 참고한 내용</strong>${reference.supports}</p>
+                        </li>
+                    `).join("")}
+                </ol>
+            </section>
+        `;
+    };
+
     const renderArticleSection = section => `
         <section class="article-section">
             <h2>${section.title}</h2>
@@ -74,6 +100,19 @@
                             <section>
                                 <h2>먼저 기억할 것</h2>
                                 <ul>${renderList(training.keyPoints)}</ul>
+                            </section>
+                        ` : ""}
+                        ${training.glossary?.length ? `
+                            <section>
+                                <h2>용어 주석</h2>
+                                <dl class="article-glossary">
+                                    ${training.glossary.map(item => `
+                                        <div>
+                                            <dt>${item.term}<span>${item.english}</span></dt>
+                                            <dd>${item.definition}</dd>
+                                        </div>
+                                    `).join("")}
+                                </dl>
                             </section>
                         ` : ""}
                         <section>
@@ -176,10 +215,11 @@
             <div class="detail-content">
                 <div class="detail-main">
                     <section class="detail-section workout-section">
-                        <h2>이렇게 진행해요</h2>
+                        <h2>훈련 구성</h2>
                         <ol class="workout-steps">${renderList(training.structure)}</ol>
                     </section>
                     ${renderPaceTables(training)}
+                    ${renderReferences(training)}
                 </div>
                 <aside class="detail-sidebar" aria-label="훈련 핵심 안내">
                     <div class="detail-sidebar-inner">
@@ -198,6 +238,19 @@
                         <h2>강도 기준</h2>
                         <p>${training.intensity}</p>
                     </section>
+                    ${training.termNotes ? `
+                        <section class="detail-section sidebar-section terms-note">
+                            <h2>용어 주석</h2>
+                            <dl class="term-list">
+                                ${training.termNotes.map(term => `
+                                    <div>
+                                        <dt>${term.term}</dt>
+                                        <dd>${term.description}</dd>
+                                    </div>
+                                `).join("")}
+                            </dl>
+                        </section>
+                    ` : ""}
                     <section class="detail-section sidebar-section mistakes-note">
                         <h2>자주 하는 실수</h2>
                         <ul class="compact-list">${renderList(training.mistakes)}</ul>
