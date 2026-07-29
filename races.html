@@ -38,10 +38,10 @@
         <section class="calendar-heading">
             <div>
                 <p class="calendar-eyebrow">MRC RACE CALENDAR</p>
-                <h1>다음 출발선을<br>미리 만나다</h1>
-                <p>10K, 하프, 풀 마라톤의 대회일과 접수 일정을 살펴보세요. 목표 대회를 정했다면 페이스 계산기에서 레이스 계획까지 이어갈 수 있습니다.</p>
+                <h1>대회 일정과<br>접수 정보를 한눈에</h1>
+                <p>10K, 하프, 풀 마라톤의 개최일과 접수 기간을 확인할 수 있습니다. 참가할 대회를 정했다면 페이스 계산기에서 목표 기록과 운영 계획을 준비해 보세요.</p>
             </div>
-            <a class="calendar-dday" href="pace-calculator.html">레이스 계획 만들기 →</a>
+            <a class="calendar-dday" href="pace-calculator.html">페이스 계산하기 →</a>
         </section>
 
         <section aria-labelledby="race-list-title">
@@ -61,11 +61,18 @@
                 </select>
             </div>
             <div class="race-list-head">
-                <h2 id="race-list-title">다가오는 대회</h2>
+                <h2 id="race-list-title">대회 목록</h2>
                 <span id="race-result-count">불러오는 중</span>
             </div>
-            <div class="race-calendar-list" id="race-calendar-list" data-race-loading>
-                <p class="race-empty">대회 일정을 불러오는 중입니다.</p>
+            <div class="race-pager" data-race-loading>
+                <div class="race-calendar-list" id="race-calendar-list">
+                    <p class="race-empty">대회 일정을 불러오는 중입니다.</p>
+                </div>
+                <div class="race-pager-controls" id="race-pager-controls" hidden>
+                    <button id="race-page-prev" type="button" aria-label="이전 대회 페이지">←</button>
+                    <div class="race-page-dots" id="race-page-dots" aria-label="대회 페이지 선택"></div>
+                    <button id="race-page-next" type="button" aria-label="다음 대회 페이지">→</button>
+                </div>
             </div>
         </section>
 

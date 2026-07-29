@@ -24,7 +24,7 @@
                     <div><dt>장소</dt><dd>${record.location}</dd></div>
                 </dl>
                 <details class="archive-story">
-                    <summary>이 기록 더 보기</summary>
+                    <summary>자세히 보기</summary>
                     <div class="archive-story-copy">
                         ${record.story.map(paragraph => `<p>${paragraph}</p>`).join("")}
                         <div class="archive-tags">
@@ -45,7 +45,7 @@
 
         grid.innerHTML = "";
         if (!visibleRecords.length) {
-            grid.innerHTML = '<p class="archive-message">아직 정리된 기록이 없습니다.</p>';
+            grid.innerHTML = '<p class="archive-message">아직 등록된 활동이 없습니다.</p>';
             return;
         }
 
@@ -89,6 +89,6 @@
             renderRecords();
         })
         .catch(() => {
-            grid.innerHTML = '<p class="archive-message">기록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
+            grid.innerHTML = '<p class="archive-message">활동을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
         });
 })();

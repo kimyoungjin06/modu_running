@@ -29,12 +29,12 @@
         "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
     }[character]));
 
-    const raceCard = (race, compact = false) => {
+    const raceCard = (race, compact = false, registrationFocus = false) => {
         const state = registrationState(race);
         const dDay = daysUntil(race.raceDate);
         return `<article class="race-card${compact ? " is-compact" : ""}">
             <div class="race-card-top">
-                <time datetime="${race.raceDate}">${formatDate(race.raceDate)}</time>
+                <time datetime="${registrationFocus ? race.registrationOpen : race.raceDate}">${registrationFocus ? `접수 ${formatShortDate(race.registrationOpen)}` : formatDate(race.raceDate)}</time>
                 <span class="race-status ${state.className}">${state.label}</span>
             </div>
             <h3>${safe(race.name)}</h3>
@@ -77,17 +77,14 @@
             .slice(0, 3);
 
         registrationElement.innerHTML = registration.length
-            ? registration.map(race => {
-                const openDays = daysUntil(race.registrationOpen);
-                return `<li><time>${openDays === 0 ? "오늘" : `D-${openDays}`}</time><a href="${safe(race.sourceUrl)}" target="_blank" rel="noopener noreferrer"><strong>${safe(race.name)}</strong><span>${formatShortDate(race.registrationOpen)} 접수 시작</span></a></li>`;
-            }).join("")
-            : "<li class=\"race-empty\">예정된 접수 일정이 없습니다.</li>";
+            ? registration.map(race => raceCard(race, true, true)).join("")
+            : "<p class=\"race-empty\">예정된 접수 일정이 없습니다.</p>";
         document.getElementById("four-week-races").innerHTML = withinFourWeeks.length
             ? withinFourWeeks.map(race => raceCard(race, true)).join("")
             : "<p class=\"race-empty\">4주 안에 예정된 10K·하프·풀 대회가 없습니다.</p>";
         document.getElementById("featured-races").innerHTML = featured.length
             ? featured.map(race => raceCard(race, true)).join("")
-            : "<p class=\"race-empty\">주요 대회를 준비 중입니다.</p>";
+            : "<p class=\"race-empty\">등록된 주요 대회가 없습니다.</p>";
         const retrieved = raceData.source.retrievedAt.slice(0, 10).replaceAll("-", ".");
         document.getElementById("race-source-date").textContent = `최종 갱신 ${retrieved}`;
     };
@@ -100,15 +97,55 @@
         const statusFilter = document.getElementById("race-status-filter");
         const searchInput = document.getElementById("race-search");
         const count = document.getElementById("race-result-count");
+        const pagerControls = document.getElementById("race-pager-controls");
+        const pageDots = document.getElementById("race-page-dots");
+        const previousButton = document.getElementById("race-page-prev");
+        const nextButton = document.getElementById("race-page-next");
         const upcoming = raceData.races.filter(race => daysUntil(race.raceDate) >= 0);
+        let filteredRaces = [];
+        let currentPage = 0;
+        let pageSize = window.matchMedia("(max-width: 620px)").matches ? 3 : 6;
 
         [...new Set(upcoming.map(race => race.region))].sort().forEach(region => {
             regionFilter.insertAdjacentHTML("beforeend", `<option value="${safe(region)}">${safe(region)}</option>`);
         });
 
+        const setPage = (page, behavior = "smooth") => {
+            const pages = Array.from(list.querySelectorAll(".race-page"));
+            if (!pages.length) return;
+            currentPage = Math.max(0, Math.min(page, pages.length - 1));
+            pages[currentPage].scrollIntoView({ behavior, block: "nearest", inline: "start" });
+            previousButton.disabled = currentPage === 0;
+            nextButton.disabled = currentPage === pages.length - 1;
+            Array.from(pageDots.children).forEach((dot, index) => {
+                dot.classList.toggle("is-active", index === currentPage);
+                dot.setAttribute("aria-current", index === currentPage ? "page" : "false");
+            });
+        };
+
+        const renderPages = () => {
+            const pageCount = Math.ceil(filteredRaces.length / pageSize);
+            count.textContent = `${filteredRaces.length}개 대회 · ${pageCount || 0}페이지`;
+            if (!filteredRaces.length) {
+                list.innerHTML = "<p class=\"race-empty\">조건에 맞는 대회가 없습니다.</p>";
+                pagerControls.hidden = true;
+                return;
+            }
+            list.innerHTML = Array.from({ length: pageCount }, (_, pageIndex) => {
+                const pageRaces = filteredRaces.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
+                return `<section class="race-page" aria-label="${pageIndex + 1}페이지">${pageRaces.map(race => raceCard(race)).join("")}</section>`;
+            }).join("");
+            pageDots.innerHTML = Array.from({ length: pageCount }, (_, index) =>
+                `<button type="button" aria-label="${index + 1}페이지로 이동" data-page="${index}"></button>`
+            ).join("");
+            pagerControls.hidden = pageCount <= 1;
+            currentPage = 0;
+            requestAnimationFrame(() => setPage(0, "auto"));
+        };
+
         const update = () => {
             const keyword = searchInput.value.trim().toLowerCase();
-            const filtered = upcoming.filter(race => {
+            filteredRaces = upcoming.filter(race => {
                 const courseMatches = courseFilter.value === "all" || race.courses.includes(courseFilter.value);
                 const regionMatches = regionFilter.value === "all" || race.region === regionFilter.value;
                 const state = registrationState(race);
@@ -118,13 +155,37 @@
                 return courseMatches && regionMatches && statusMatches
                     && (!keyword || `${race.name} ${race.place} ${race.host}`.toLowerCase().includes(keyword));
             });
-            count.textContent = `${filtered.length}개 대회`;
-            list.innerHTML = filtered.length
-                ? filtered.map(race => raceCard(race)).join("")
-                : "<p class=\"race-empty\">조건에 맞는 대회가 없습니다.</p>";
+            renderPages();
         };
         [courseFilter, regionFilter, statusFilter].forEach(element => element.addEventListener("change", update));
         searchInput.addEventListener("input", update);
+        previousButton.addEventListener("click", () => setPage(currentPage - 1));
+        nextButton.addEventListener("click", () => setPage(currentPage + 1));
+        pageDots.addEventListener("click", event => {
+            const button = event.target.closest("[data-page]");
+            if (button) setPage(Number(button.dataset.page));
+        });
+        list.addEventListener("scroll", () => {
+            const width = list.clientWidth;
+            if (!width) return;
+            const page = Math.round(list.scrollLeft / width);
+            if (page !== currentPage) {
+                currentPage = page;
+                previousButton.disabled = currentPage === 0;
+                nextButton.disabled = currentPage >= list.children.length - 1;
+                Array.from(pageDots.children).forEach((dot, index) => {
+                    dot.classList.toggle("is-active", index === currentPage);
+                    dot.setAttribute("aria-current", index === currentPage ? "page" : "false");
+                });
+            }
+        }, { passive: true });
+        window.addEventListener("resize", () => {
+            const nextPageSize = window.matchMedia("(max-width: 620px)").matches ? 3 : 6;
+            if (nextPageSize !== pageSize) {
+                pageSize = nextPageSize;
+                renderPages();
+            }
+        });
         document.getElementById("calendar-source-date").textContent = raceData.source.retrievedAt.slice(0, 10).replaceAll("-", ".");
         update();
     };

@@ -44,7 +44,7 @@
 .race-brief-grid {
     margin-top: 24px;
     display: grid;
-    grid-template-columns: 0.82fr 1.18fr 1.18fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
 }
 
@@ -60,55 +60,6 @@
     margin: 0 0 14px;
     font-family: "Do Hyeon", sans-serif;
     font-size: 1.45rem;
-}
-
-.registration-list {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 9px;
-    list-style: none;
-}
-
-.registration-list li {
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 10px;
-    align-items: center;
-}
-
-.registration-list time {
-    padding: 7px 4px;
-    color: #fff;
-    background: var(--race-ink);
-    border-radius: 8px;
-    font-size: 0.68rem;
-    font-weight: 900;
-    text-align: center;
-}
-
-.registration-list a {
-    min-width: 0;
-    display: grid;
-    gap: 2px;
-    color: inherit;
-    text-decoration: none;
-}
-
-.registration-list strong,
-.registration-list span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.registration-list strong {
-    font-size: 0.78rem;
-}
-
-.registration-list span {
-    color: rgba(31, 23, 2, 0.65);
-    font-size: 0.64rem;
 }
 
 .race-brief-cards {
@@ -338,9 +289,87 @@ body.race-calendar-page {
 }
 
 .race-calendar-list {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+}
+
+.race-calendar-list::-webkit-scrollbar {
+    display: none;
+}
+
+.race-page {
+    min-width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
+    align-content: start;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.race-pager-controls {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.race-pager-controls[hidden] {
+    display: none;
+}
+
+.race-pager-controls > button {
+    width: 42px;
+    height: 42px;
+    color: var(--race-ink);
+    background: var(--race-yellow);
+    border: 0;
+    border-radius: 50%;
+    font: inherit;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.race-pager-controls > button:disabled {
+    opacity: 0.28;
+    cursor: default;
+}
+
+.race-page-dots {
+    max-width: min(60vw, 440px);
+    padding: 7px 3px;
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.race-page-dots::-webkit-scrollbar {
+    display: none;
+}
+
+.race-page-dots button {
+    width: 7px;
+    min-width: 7px;
+    height: 7px;
+    padding: 0;
+    background: rgba(255, 249, 232, 0.28);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: width 160ms ease, background 160ms ease;
+}
+
+.race-page-dots button.is-active {
+    width: 24px;
+    background: var(--race-yellow);
 }
 
 .calendar-source {
@@ -366,7 +395,7 @@ body.race-calendar-page {
         grid-column: 1 / -1;
     }
 
-    .race-calendar-list {
+    .race-page {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -378,8 +407,11 @@ body.race-calendar-page {
         flex-direction: column;
     }
 
-    .race-brief-grid,
-    .race-calendar-list {
+    .race-brief-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .race-page {
         grid-template-columns: 1fr;
     }
 
