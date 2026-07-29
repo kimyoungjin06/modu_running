@@ -31,6 +31,43 @@
         </section>
     `;
 
+    const renderArchiveMedia = items => {
+        if (!items?.length) {
+            return "";
+        }
+
+        return `
+            <section class="article-section archive-section">
+                <p class="archive-eyebrow">MRC ARCHIVE</p>
+                <h2>함께 달린 기록</h2>
+                <p class="archive-intro">훈련은 숫자뿐 아니라 함께한 장소와 사람으로도 남습니다.</p>
+                <div class="archive-grid">
+                    ${items.map(item => `
+                        <article class="archive-card">
+                            <div class="reel-frame">
+                                <iframe
+                                    src="${item.embedUrl}"
+                                    title="${item.title} Instagram Reel"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="archive-card-copy">
+                                <p class="archive-platform">${item.platform}</p>
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
+                                <div class="archive-tags">
+                                    ${item.tags.map(tag => `<span>#${tag}</span>`).join("")}
+                                </div>
+                                <a href="${item.url}" target="_blank" rel="noopener noreferrer">Instagram에서 보기 ↗</a>
+                            </div>
+                        </article>
+                    `).join("")}
+                </div>
+            </section>
+        `;
+    };
+
     const renderArticle = training => {
         document.title = `${training.title} | MODU RUNNING`;
         document.querySelector('meta[name="description"]').content = training.summary;
@@ -59,6 +96,7 @@
             <div class="article-layout">
                 <article class="article-body">
                     ${(training.articleSections || []).map(renderArticleSection).join("")}
+                    ${renderArchiveMedia(training.archiveMedia)}
                 </article>
                 <aside class="article-aside">
                     <div class="article-aside-inner">
