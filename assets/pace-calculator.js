@@ -296,12 +296,12 @@
         if (!Number.isFinite(hours) || !Number.isFinite(minutes)) return;
         const start = hours * 60 + minutes;
         const events = [
-            { offset: -210, title: "기상", note: "수분 상태와 몸 상태 확인" },
-            { offset: -180, title: "아침 식사", note: "평소 검증한 탄수화물 중심 식사" },
+            { offset: -210, title: "기상", note: "수분 섭취와 컨디션 확인" },
+            { offset: -180, title: "아침 식사", note: "평소 먹어본 탄수화물 위주의 식사" },
             { offset: -100, title: "대회장 도착", note: "화장실·물품 보관 위치 확인" },
             { offset: -55, title: "워밍업 시작", note: "가벼운 조깅과 동적 스트레칭" },
             { offset: -25, title: "출발 블록 입장", note: "젤·시계·번호표 최종 점검" },
-            { offset: -10, title: "집중", note: "초반 목표 페이스와 운영 전략 확인" },
+            { offset: -10, title: "출발 준비", note: "초반 목표 페이스와 운영 전략 확인" },
             { offset: 0, title: "출발", note: "첫 구간은 계획보다 빠르지 않게" }
         ];
         raceTimeline.innerHTML = events.map(event => `
