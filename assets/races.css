@@ -1,0 +1,410 @@
+:root {
+    --race-yellow: #f5bc00;
+    --race-ink: #18140a;
+    --race-paper: #fff9e8;
+    --race-blue: #2a9abb;
+    --race-line: #ddd3b9;
+}
+
+.race-brief {
+    color: var(--race-ink);
+}
+
+.race-brief-head,
+.calendar-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.race-brief-kicker,
+.calendar-eyebrow {
+    margin: 0 0 7px;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+}
+
+.race-brief h2,
+.calendar-heading h1 {
+    margin: 0;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1;
+}
+
+.race-all-link {
+    color: inherit;
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-underline-offset: 4px;
+}
+
+.race-brief-grid {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr 1.18fr;
+    gap: 14px;
+}
+
+.race-brief-column {
+    min-width: 0;
+    padding: 18px;
+    background: rgba(255, 249, 232, 0.74);
+    border: 1px solid rgba(31, 23, 2, 0.16);
+    border-radius: 18px;
+}
+
+.race-brief-column > h3 {
+    margin: 0 0 14px;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1.45rem;
+}
+
+.registration-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 9px;
+    list-style: none;
+}
+
+.registration-list li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.registration-list time {
+    padding: 7px 4px;
+    color: #fff;
+    background: var(--race-ink);
+    border-radius: 8px;
+    font-size: 0.68rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.registration-list a {
+    min-width: 0;
+    display: grid;
+    gap: 2px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.registration-list strong,
+.registration-list span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.registration-list strong {
+    font-size: 0.78rem;
+}
+
+.registration-list span {
+    color: rgba(31, 23, 2, 0.65);
+    font-size: 0.64rem;
+}
+
+.race-brief-cards {
+    display: grid;
+    gap: 9px;
+}
+
+.race-card {
+    position: relative;
+    min-width: 0;
+    padding: 18px;
+    color: var(--race-ink);
+    background: var(--race-paper);
+    border: 1px solid var(--race-line);
+    border-radius: 15px;
+    transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.race-card:hover {
+    border-color: var(--race-yellow);
+    transform: translateY(-2px);
+}
+
+.race-card > a {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
+.race-card-top,
+.race-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.race-card time {
+    color: #6f6754;
+    font-size: 0.68rem;
+    font-weight: 900;
+}
+
+.race-status {
+    padding: 4px 7px;
+    border-radius: 999px;
+    font-size: 0.6rem;
+    font-weight: 900;
+}
+
+.race-status.is-before {
+    color: #785900;
+    background: #ffe68f;
+}
+
+.race-status.is-open {
+    color: #176a50;
+    background: #d8f4e8;
+}
+
+.race-status.is-closed {
+    color: #716b60;
+    background: #ebe7df;
+}
+
+.race-card h3 {
+    margin: 12px 0 5px;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.race-card p {
+    margin: 0;
+    overflow: hidden;
+    color: #756d59;
+    font-size: 0.7rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.race-card-bottom {
+    margin-top: 14px;
+}
+
+.race-courses {
+    display: flex;
+    gap: 4px;
+}
+
+.race-courses span {
+    padding: 3px 6px;
+    color: #15536a;
+    background: #d9eef4;
+    border-radius: 6px;
+    font-size: 0.58rem;
+    font-weight: 900;
+}
+
+.race-card-bottom > strong {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1.15rem;
+}
+
+.race-card.is-compact {
+    padding: 13px;
+    background: rgba(255, 253, 246, 0.86);
+}
+
+.race-card.is-compact h3 {
+    margin-top: 8px;
+    font-size: 0.8rem;
+}
+
+.race-card.is-compact .race-card-bottom {
+    margin-top: 10px;
+}
+
+.race-source {
+    margin: 16px 0 0;
+    color: rgba(31, 23, 2, 0.65);
+    font-size: 0.65rem;
+    line-height: 1.6;
+}
+
+.race-source a {
+    color: inherit;
+    font-weight: 900;
+}
+
+.race-empty {
+    margin: 0;
+    padding: 18px;
+    color: #756d59;
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+body.race-calendar-page {
+    min-height: 100vh;
+    margin: 0;
+    color: #fff9e8;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(245, 188, 0, 0.2), transparent 28rem),
+        radial-gradient(circle at 88% 34%, rgba(42, 154, 187, 0.15), transparent 30rem),
+        #0f1117;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.race-calendar-main {
+    width: min(calc(100% - 36px), 1100px);
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+.calendar-heading {
+    padding: clamp(32px, 7vw, 68px);
+    align-items: start;
+    color: var(--race-ink);
+    background: linear-gradient(135deg, var(--race-yellow), #ffd963);
+    border-radius: 28px;
+}
+
+.calendar-heading > div > p:last-child {
+    max-width: 650px;
+    margin: 18px 0 0;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.calendar-heading h1 {
+    font-size: clamp(3rem, 8vw, 5.8rem);
+}
+
+.calendar-dday {
+    padding: 14px 16px;
+    color: #fff;
+    background: var(--race-ink);
+    border-radius: 12px;
+    font-size: 0.74rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.race-filter-panel {
+    margin-top: 24px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1.25fr repeat(3, 0.75fr);
+    gap: 10px;
+    color: var(--race-ink);
+    background: var(--race-paper);
+    border-radius: 18px;
+}
+
+.race-filter-panel input,
+.race-filter-panel select {
+    min-width: 0;
+    width: 100%;
+    height: 46px;
+    padding: 0 12px;
+    color: inherit;
+    background: #fffdf6;
+    border: 1px solid var(--race-line);
+    border-radius: 10px;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.race-list-head {
+    margin: 40px 0 16px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.race-list-head h2 {
+    margin: 0;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 2.3rem;
+}
+
+.race-list-head span {
+    color: rgba(255, 249, 232, 0.65);
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.race-calendar-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.calendar-source {
+    margin-top: 28px;
+    padding: 18px;
+    color: rgba(255, 249, 232, 0.7);
+    border: 1px solid rgba(255, 249, 232, 0.15);
+    border-radius: 14px;
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+.calendar-source a {
+    color: var(--race-yellow);
+}
+
+@media (max-width: 900px) {
+    .race-brief-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .race-brief-column:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .race-calendar-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .race-brief-head,
+    .calendar-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .race-brief-grid,
+    .race-calendar-list {
+        grid-template-columns: 1fr;
+    }
+
+    .race-brief-column:first-child {
+        grid-column: auto;
+    }
+
+    .race-calendar-main {
+        width: calc(100% - 24px);
+        padding-top: 42px;
+    }
+
+    .calendar-heading {
+        padding: 28px 22px;
+    }
+
+    .calendar-dday {
+        align-self: start;
+    }
+
+    .race-filter-panel {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .race-filter-panel input {
+        grid-column: 1 / -1;
+    }
+}

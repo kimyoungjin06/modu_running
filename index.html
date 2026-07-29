@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/navigation.css">
+    <link rel="stylesheet" href="assets/races.css">
     <style>
         :root {
             --brand-main: #f5bc00;
@@ -807,6 +808,8 @@
             <a href="index.html" aria-current="page">홈</a>
             <a href="index.html#schedule">일정</a>
             <a class="nav-highlight" href="training.html">훈련 노트</a>
+            <a href="pace-calculator.html">계산기</a>
+            <a href="races.html">대회</a>
             <a href="archive.html">기록</a>
             <a href="index.html#feedback">소통</a>
         </nav>
@@ -874,6 +877,41 @@
                 <button class="album-dot" type="button" data-index="2" aria-label="3번 사진 보기"></button>
                 <button class="album-dot" type="button" data-index="3" aria-label="4번 사진 보기"></button>
             </div>
+        </section>
+
+        <section class="panel race-brief" aria-labelledby="race-brief-title">
+            <div class="race-brief-head">
+                <div>
+                    <p class="race-brief-kicker">MRC RACE BRIEF</p>
+                    <h2 id="race-brief-title">다가오는 출발선</h2>
+                </div>
+                <a class="race-all-link" href="races.html">전체 대회 일정 →</a>
+            </div>
+            <div class="race-brief-grid">
+                <section class="race-brief-column">
+                    <h3>접수 예정 3개</h3>
+                    <ol class="registration-list" id="registration-races" data-race-loading>
+                        <li class="race-empty">접수 일정을 불러오는 중입니다.</li>
+                    </ol>
+                </section>
+                <section class="race-brief-column">
+                    <h3>앞으로 4주</h3>
+                    <div class="race-brief-cards" id="four-week-races" data-race-loading>
+                        <p class="race-empty">대회 일정을 불러오는 중입니다.</p>
+                    </div>
+                </section>
+                <section class="race-brief-column">
+                    <h3>MRC 주요 대회</h3>
+                    <div class="race-brief-cards" id="featured-races" data-race-loading>
+                        <p class="race-empty">주요 대회를 불러오는 중입니다.</p>
+                    </div>
+                </section>
+            </div>
+            <p class="race-source">
+                일정 출처: <a href="https://marathongo.co.kr/raceSchedule/domestic" target="_blank" rel="noopener noreferrer">마라톤GO</a>
+                · <span id="race-source-date">최종 갱신 확인 중</span><br>
+                일정은 변경될 수 있으므로 참가 전 공식 대회 안내를 확인해 주세요.
+            </p>
         </section>
 
         <section class="panel schedule" id="schedule">
@@ -1283,5 +1321,6 @@
         })();
     </script>
     <script src="assets/navigation.js"></script>
+    <script src="assets/races.js"></script>
 </body>
 </html>
