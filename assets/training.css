@@ -628,95 +628,6 @@ body.training-page {
     font-weight: 700;
 }
 
-.archive-eyebrow {
-    margin-bottom: 8px !important;
-    color: var(--blue) !important;
-    font-size: 0.76rem !important;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-}
-
-.archive-intro {
-    margin-bottom: 24px !important;
-}
-
-.archive-grid {
-    display: grid;
-    gap: 18px;
-}
-
-.archive-card {
-    display: grid;
-    grid-template-columns: minmax(260px, 0.72fr) minmax(220px, 1fr);
-    overflow: hidden;
-    background: #17191f;
-    border-radius: 22px;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-}
-
-.reel-frame {
-    min-height: 540px;
-    background: #fff;
-}
-
-.reel-frame iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 540px;
-    display: block;
-    border: 0;
-}
-
-.archive-card-copy {
-    padding: clamp(24px, 5vw, 42px);
-    align-self: center;
-}
-
-.archive-platform {
-    margin: 0 0 10px !important;
-    color: var(--yellow) !important;
-    font-size: 0.72rem !important;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.archive-card h3 {
-    margin: 0 0 14px;
-    color: #fff;
-    font-family: "Do Hyeon", sans-serif;
-    font-size: clamp(1.7rem, 4vw, 2.3rem);
-    line-height: 1.1;
-}
-
-.archive-card-copy > p:not(.archive-platform) {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    line-height: 1.7;
-}
-
-.archive-tags {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
-
-.archive-tags span {
-    padding: 6px 9px;
-    color: #1f1702;
-    background: var(--yellow);
-    border-radius: 999px;
-    font-size: 0.72rem;
-    font-weight: 900;
-}
-
-.archive-card a {
-    color: #fff;
-    font-weight: 900;
-    text-underline-offset: 4px;
-}
-
 .article-aside-inner {
     position: sticky;
     top: 92px;
@@ -898,14 +809,6 @@ body.training-page {
         position: static;
     }
 
-    .archive-card {
-        grid-template-columns: 1fr;
-    }
-
-    .reel-frame,
-    .reel-frame iframe {
-        min-height: 620px;
-    }
 }
 
 @media (max-width: 580px) {
@@ -933,11 +836,6 @@ body.training-page {
 
     .article-item-list {
         grid-template-columns: 1fr;
-    }
-
-    .reel-frame,
-    .reel-frame iframe {
-        min-height: 560px;
     }
 
     .article-section + .article-section {

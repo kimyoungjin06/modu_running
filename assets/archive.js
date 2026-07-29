@@ -1,6 +1,7 @@
 (() => {
     const grid = document.getElementById("archive-grid");
     const filters = document.getElementById("archive-filters");
+    const videoGrid = document.getElementById("archive-video-grid");
     let records = [];
     let activeCategory = "전체";
 
@@ -76,19 +77,50 @@
         });
     };
 
-    fetch("data/archive.json")
-        .then(response => {
-            if (!response.ok) {
+    const renderVideos = media => {
+        if (!media.length) {
+            videoGrid.innerHTML = '<p class="archive-message">아직 등록된 활동 영상이 없습니다.</p>';
+            return;
+        }
+        videoGrid.innerHTML = media.map(item => `
+            <article class="archive-video-card">
+                <div class="archive-reel-frame">
+                    <iframe
+                        src="${item.embedUrl}"
+                        title="${item.title} Instagram Reel"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="archive-video-copy">
+                    <p>${item.platform}</p>
+                    <h3>${item.title}</h3>
+                    <span>${item.description}</span>
+                    <div class="archive-video-tags">${item.tags.map(tag => `<b>#${tag}</b>`).join("")}</div>
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer">Instagram에서 보기 ↗</a>
+                </div>
+            </article>
+        `).join("");
+    };
+
+    Promise.all([
+        fetch("data/archive.json"),
+        fetch("data/archive-media.json")
+    ])
+        .then(async responses => {
+            if (responses.some(response => !response.ok)) {
                 throw new Error("아카이브 데이터를 불러오지 못했습니다.");
             }
-            return response.json();
+            return Promise.all(responses.map(response => response.json()));
         })
-        .then(data => {
-            records = data;
+        .then(([archiveRecords, media]) => {
+            records = archiveRecords;
             renderFilters();
             renderRecords();
+            renderVideos(media);
         })
         .catch(() => {
             grid.innerHTML = '<p class="archive-message">활동을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
+            videoGrid.innerHTML = '<p class="archive-message">활동 영상을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
         });
 })();
