@@ -118,24 +118,6 @@
         "authorImage": "img/training/author-kim-youngjin.webp",
         "authorImageAlt": "MRC 초대 크루장 김영진",
         "authorNote": "10년 넘게 달리기를 즐긴 펀러너이자 데이터 분석가의 경험을 바탕으로 정리했습니다. 과학적 근거와 실제 경험을 함께 살피되, 모든 러너의 몸과 상황이 다르다는 점을 전제로 합니다.",
-        "archiveMedia": [
-            {
-                "platform": "Instagram Reel",
-                "title": "모두의러닝 여름훈련 · 백담사",
-                "description": "함께 달리고 쉬며 쌓은 모두의러닝 여름훈련 기록입니다.",
-                "url": "https://www.instagram.com/reel/DZ1Tt7sSNjc/",
-                "embedUrl": "https://www.instagram.com/reel/DZ1Tt7sSNjc/embed",
-                "tags": ["모두의러닝", "여름훈련", "백담사"]
-            },
-            {
-                "platform": "Instagram Reel",
-                "title": "모두의러닝 런트립 1 · 춘천편",
-                "description": "함께 달리며 새로운 길을 만난 모두의러닝 첫 번째 런트립, 춘천 기록입니다.",
-                "url": "https://www.instagram.com/reel/DX8RmVfykjz/",
-                "embedUrl": "https://www.instagram.com/reel/DX8RmVfykjz/embed",
-                "tags": ["모두의러닝", "런트립", "춘천"]
-            }
-        ],
         "articleSections": [
             {
                 "title": "먼저, 나에게 달리기란?",
