@@ -70,20 +70,18 @@
 }
 
 .site-navigation a:hover,
-.site-navigation a:focus-visible,
-.site-navigation a[aria-current="page"] {
+.site-navigation a:focus-visible {
     color: #fff;
     background: rgba(255, 255, 255, 0.1);
 }
 
-.site-navigation .nav-highlight {
+.site-navigation a[aria-current="page"] {
     color: #1f1702;
     background: #f5bc00;
 }
 
-.site-navigation .nav-highlight:hover,
-.site-navigation .nav-highlight:focus-visible,
-.site-navigation .nav-highlight[aria-current="page"] {
+.site-navigation a[aria-current="page"]:hover,
+.site-navigation a[aria-current="page"]:focus-visible {
     color: #1f1702;
     background: #ffd451;
     transform: translateY(-1px);
