@@ -132,57 +132,50 @@
             return "";
         }
 
+        const paceColumns = training.paceColumns || [
+            { key: "group", label: "그룹", header: true },
+            { key: "goal", label: "목표 마라톤" },
+            { key: "fast", label: "600m 질주", emphasis: true },
+            { key: "pace", label: "1km 환산" },
+            { key: "recovery", label: "200m 조깅" },
+            { key: "total", label: "1세트" }
+        ];
+        const splitColumns = training.splitColumns || [
+            { key: "group", label: "그룹", header: true },
+            { key: "m200", label: "200m" },
+            { key: "m400", label: "400m" },
+            { key: "m600", label: "600m", emphasis: true }
+        ];
+        const renderTableHead = columns => columns.map(column => `<th>${column.label}</th>`).join("");
+        const renderTableRow = (row, columns) => columns.map(column => {
+            const content = column.emphasis ? `<strong>${row[column.key]}</strong>` : row[column.key];
+            const tag = column.header ? "th" : "td";
+            return `<${tag} data-label="${column.label}">${content}</${tag}>`;
+        }).join("");
+
         return `
             <section class="detail-section pace-section">
-                <h2>그룹별 메인 페이스</h2>
+                <h2>${training.paceTableTitle || "그룹별 메인 페이스"}</h2>
                 <div class="table-scroll">
                     <table class="pace-table">
                         <thead>
-                            <tr>
-                                <th>그룹</th>
-                                <th>목표 마라톤</th>
-                                <th>600m 질주</th>
-                                <th>1km 환산</th>
-                                <th>200m 조깅</th>
-                                <th>1세트</th>
-                            </tr>
+                            <tr>${renderTableHead(paceColumns)}</tr>
                         </thead>
                         <tbody>
-                            ${training.paceTable.map(row => `
-                                <tr>
-                                    <th data-label="그룹">${row.group}</th>
-                                    <td data-label="목표 마라톤">${row.goal}</td>
-                                    <td data-label="600m 질주"><strong>${row.fast}</strong></td>
-                                    <td data-label="1km 환산">${row.pace}</td>
-                                    <td data-label="200m 조깅">${row.recovery}</td>
-                                    <td data-label="1세트">${row.total}</td>
-                                </tr>
-                            `).join("")}
+                            ${training.paceTable.map(row => `<tr>${renderTableRow(row, paceColumns)}</tr>`).join("")}
                         </tbody>
                     </table>
                 </div>
             </section>
             <section class="detail-section split-section">
-                <h2>트랙 스플릿 체크</h2>
+                <h2>${training.splitTableTitle || "트랙 스플릿 체크"}</h2>
                 <div class="table-scroll">
                     <table class="pace-table compact">
                         <thead>
-                            <tr>
-                                <th>그룹</th>
-                                <th>200m</th>
-                                <th>400m</th>
-                                <th>600m</th>
-                            </tr>
+                            <tr>${renderTableHead(splitColumns)}</tr>
                         </thead>
                         <tbody>
-                            ${training.splitTable.map(row => `
-                                <tr>
-                                    <th data-label="그룹">${row.group}</th>
-                                    <td data-label="200m">${row.m200}</td>
-                                    <td data-label="400m">${row.m400}</td>
-                                    <td data-label="600m"><strong>${row.m600}</strong></td>
-                                </tr>
-                            `).join("")}
+                            ${training.splitTable.map(row => `<tr>${renderTableRow(row, splitColumns)}</tr>`).join("")}
                         </tbody>
                     </table>
                 </div>
@@ -209,6 +202,7 @@
                 <div class="detail-meta">
                     <span>난이도 ${training.level}</span>
                     <span>${training.duration}</span>
+                    ${training.designer ? `<span>훈련 디자인 ${training.designer}</span>` : ""}
                     <span>업데이트 ${training.updated}</span>
                 </div>
             </header>
