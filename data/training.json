@@ -124,6 +124,78 @@
         ]
     },
     {
+        "id": "800m-400m-two-set-interval",
+        "category": "인터벌",
+        "title": "800m/400m 4회 × 2세트 인터벌",
+        "summary": "800m 질주와 400m 회복 조깅을 네 번씩 두 세트 진행하는 스피드 지구력 훈련입니다.",
+        "level": "중급",
+        "duration": "약 75~90분",
+        "purposeTags": ["스피드 지구력", "페이스 유지", "회복 능력"],
+        "updated": "2026-08-07",
+        "purpose": "800m 목표 페이스를 반복해서 유지하고, 400m 회복 조깅 뒤에도 같은 리듬으로 다시 달리는 능력을 기릅니다.",
+        "recommendedFor": "인터벌 훈련 경험이 있고 자신의 조별 목표 페이스를 일정하게 유지할 수 있는 러너",
+        "structure": [
+            "워밍업 조깅과 러닝 드릴",
+            "1세트: 800m 질주 + 400m 회복 조깅 × 4회",
+            "세트 사이 3분 휴식",
+            "2세트: 800m 질주 + 400m 회복 조깅 × 4회",
+            "쿨다운 조깅"
+        ],
+        "intensity": "RPE 7~8/10입니다. 첫 반복부터 무리하게 앞서기보다 두 번째 세트 마지막까지 목표 시간을 유지할 수 있는 강도로 진행합니다.",
+        "coachNote": "800m를 마치면 멈추지 않고 바로 400m 회복 조깅으로 전환합니다. 첫 세트에서 목표 시간을 계속 놓치면 두 번째 세트는 한 단계 여유 있는 조에서 진행합니다.",
+        "mistakes": [
+            "첫 800m를 목표 시간보다 빠르게 시작하기",
+            "400m 회복 구간에서 완전히 멈추기",
+            "3분 휴식 뒤 갑자기 속도를 높여 두 번째 세트를 시작하기"
+        ],
+        "caution": "8월 저녁 훈련인 만큼 기록보다 호흡과 체온을 우선합니다. 어지럼증이나 오한, 평소와 다른 통증이 느껴지면 훈련을 중단합니다.",
+        "termNotes": [
+            {
+                "term": "RPE",
+                "description": "운동 강도를 스스로 1~10단계로 평가하는 기준입니다. 7~8은 힘들지만 계획한 반복을 유지할 수 있는 수준입니다."
+            },
+            {
+                "term": "회복 조깅",
+                "description": "완전히 멈추지 않고 천천히 달리며 다음 질주를 준비하는 구간입니다."
+            }
+        ],
+        "paceTableTitle": "그룹별 800m 질주 · 400m 회복",
+        "paceColumns": [
+            {"key": "group", "label": "그룹", "header": true},
+            {"key": "fastPace", "label": "800m 페이스"},
+            {"key": "fastTime", "label": "800m 목표", "emphasis": true},
+            {"key": "recoveryPace", "label": "400m 회복 페이스"},
+            {"key": "recoveryTime", "label": "400m 회복"}
+        ],
+        "paceTable": [
+            {"group": "1조", "fastPace": "3:50/km", "fastTime": "3분 04초", "recoveryPace": "5:00/km", "recoveryTime": "2분 00초"},
+            {"group": "2조", "fastPace": "4:00/km", "fastTime": "3분 12초", "recoveryPace": "5:00/km", "recoveryTime": "2분 00초"},
+            {"group": "3조", "fastPace": "4:20/km", "fastTime": "3분 28초", "recoveryPace": "5:30/km", "recoveryTime": "2분 12초"},
+            {"group": "4조", "fastPace": "4:30/km", "fastTime": "3분 36초", "recoveryPace": "5:30/km", "recoveryTime": "2분 12초"},
+            {"group": "5조", "fastPace": "4:40/km", "fastTime": "3분 44초", "recoveryPace": "6:00/km", "recoveryTime": "2분 24초"},
+            {"group": "6조", "fastPace": "5:00/km", "fastTime": "4분 00초", "recoveryPace": "6:00/km", "recoveryTime": "2분 24초"}
+        ],
+        "splitTableTitle": "800m 중간 통과 시간",
+        "splitColumns": [
+            {"key": "group", "label": "그룹", "header": true},
+            {"key": "m400", "label": "400m"},
+            {"key": "m800", "label": "800m", "emphasis": true}
+        ],
+        "splitTable": [
+            {"group": "1조", "m400": "1분 32초", "m800": "3분 04초"},
+            {"group": "2조", "m400": "1분 36초", "m800": "3분 12초"},
+            {"group": "3조", "m400": "1분 44초", "m800": "3분 28초"},
+            {"group": "4조", "m400": "1분 48초", "m800": "3분 36초"},
+            {"group": "5조", "m400": "1분 52초", "m800": "3분 44초"},
+            {"group": "6조", "m400": "2분 00초", "m800": "4분 00초"}
+        ],
+        "splitGuide": [
+            "400m: 첫 바퀴 통과 시간을 확인하고 목표보다 빠르면 바로 리듬을 낮춥니다.",
+            "800m: 마지막 100m에서 무리하게 가속하지 않고 정해진 페이스로 마칩니다.",
+            "회복 400m: Lap 버튼을 누른 뒤 각 조의 회복 페이스로 바로 전환합니다."
+        ]
+    },
+    {
         "id": "runner-strength-basic",
         "category": "보강운동",
         "title": "러너를 위한 하체·코어 기초",
