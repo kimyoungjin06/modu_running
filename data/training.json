@@ -196,6 +196,81 @@
         ]
     },
     {
+        "id": "400m-400m-800m-complex-interval",
+        "category": "인터벌",
+        "title": "400m/400m/800m 복합 인터벌",
+        "summary": "400m 질주와 400m 회복 뒤 800m를 다시 빠르게 달리는 구성을 세 번씩 두 세트 진행합니다.",
+        "level": "중급",
+        "duration": "약 75~90분",
+        "purposeTags": ["스피드 지구력", "페이스 전환", "회복 능력"],
+        "updated": "2026-08-19",
+        "purpose": "짧은 질주 후 회복 페이스로 전환하고, 이어지는 800m에서도 목표 속도를 유지하는 능력을 기릅니다.",
+        "recommendedFor": "인터벌 훈련 경험이 있고 400m와 800m 목표 페이스를 안정적으로 반복할 수 있는 러너",
+        "structure": [
+            "워밍업 조깅 15~20분",
+            "동적 스트레칭과 러닝 드릴",
+            "1세트: 400m 질주 + 400m 회복 조깅 + 800m 질주 + 1분 휴식 × 3회",
+            "세트 사이 3분 휴식",
+            "2세트: 400m 질주 + 400m 회복 조깅 + 800m 질주 + 1분 휴식 × 3회",
+            "쿨다운 조깅 10~15분"
+        ],
+        "intensity": "RPE 7~8/10입니다. 400m에서 속도를 과도하게 높이지 않고, 이어지는 800m까지 같은 목표 페이스를 유지합니다.",
+        "coachNote": "400m 회복 구간에서도 완전히 멈추지 않습니다. 첫 세트에서 800m 목표 시간을 반복해서 놓치면 두 번째 세트는 한 단계 여유 있는 조에서 진행합니다.",
+        "mistakes": [
+            "첫 400m를 전력에 가깝게 달리기",
+            "400m 회복 조깅을 목표보다 빠르게 진행하기",
+            "800m 후 1분 휴식을 넘겨 다음 반복의 시작이 늦어지기"
+        ],
+        "caution": "더운 날에는 목표 기록보다 호흡과 체온을 우선합니다. 어지럼증이나 오한, 평소와 다른 통증이 느껴지면 훈련을 중단합니다.",
+        "termNotes": [
+            {
+                "term": "복합 인터벌",
+                "description": "서로 다른 거리와 강도의 구간을 한 반복 안에 묶어 진행하는 인터벌 훈련입니다."
+            },
+            {
+                "term": "RPE",
+                "description": "운동 강도를 스스로 1~10단계로 평가하는 기준입니다. 7~8은 힘들지만 계획한 반복을 유지할 수 있는 수준입니다."
+            }
+        ],
+        "paceTableTitle": "그룹별 질주 · 회복 목표",
+        "paceColumns": [
+            {"key": "group", "label": "그룹", "header": true},
+            {"key": "fast400Pace", "label": "400m 질주 페이스"},
+            {"key": "fast400Time", "label": "400m 질주", "emphasis": true},
+            {"key": "recoveryPace", "label": "400m 회복 페이스"},
+            {"key": "recoveryTime", "label": "400m 회복"},
+            {"key": "fast800Pace", "label": "800m 질주 페이스"},
+            {"key": "fast800Time", "label": "800m 질주", "emphasis": true}
+        ],
+        "paceTable": [
+            {"group": "1조", "fast400Pace": "3:40/km", "fast400Time": "1분 28초", "recoveryPace": "4:05/km", "recoveryTime": "1분 38초", "fast800Pace": "3:40/km", "fast800Time": "2분 56초"},
+            {"group": "2조", "fast400Pace": "3:50/km", "fast400Time": "1분 32초", "recoveryPace": "4:15/km", "recoveryTime": "1분 42초", "fast800Pace": "3:50/km", "fast800Time": "3분 04초"},
+            {"group": "3조", "fast400Pace": "4:00/km", "fast400Time": "1분 36초", "recoveryPace": "4:25/km", "recoveryTime": "1분 46초", "fast800Pace": "4:00/km", "fast800Time": "3분 12초"},
+            {"group": "4조", "fast400Pace": "4:15/km", "fast400Time": "1분 42초", "recoveryPace": "4:35/km", "recoveryTime": "1분 50초", "fast800Pace": "4:15/km", "fast800Time": "3분 24초"},
+            {"group": "5조", "fast400Pace": "4:30/km", "fast400Time": "1분 48초", "recoveryPace": "4:55/km", "recoveryTime": "1분 58초", "fast800Pace": "4:30/km", "fast800Time": "3분 36초"},
+            {"group": "6조", "fast400Pace": "4:50/km", "fast400Time": "1분 56초", "recoveryPace": "5:15/km", "recoveryTime": "2분 06초", "fast800Pace": "4:50/km", "fast800Time": "3분 52초"}
+        ],
+        "splitTableTitle": "1회 예상 시간",
+        "splitColumns": [
+            {"key": "group", "label": "그룹", "header": true},
+            {"key": "running", "label": "달리기 구간"},
+            {"key": "withRest", "label": "1분 휴식 포함", "emphasis": true}
+        ],
+        "splitTable": [
+            {"group": "1조", "running": "6분 02초", "withRest": "7분 02초"},
+            {"group": "2조", "running": "6분 18초", "withRest": "7분 18초"},
+            {"group": "3조", "running": "6분 34초", "withRest": "7분 34초"},
+            {"group": "4조", "running": "6분 56초", "withRest": "7분 56초"},
+            {"group": "5조", "running": "7분 22초", "withRest": "8분 22초"},
+            {"group": "6조", "running": "7분 54초", "withRest": "8분 54초"}
+        ],
+        "splitGuide": [
+            "400m 질주: 첫 구간부터 조별 목표 페이스를 맞춥니다.",
+            "400m 회복: 시계를 멈추지 않고 회복 조깅으로 전환합니다.",
+            "800m 질주: 첫 400m와 같은 목표 페이스를 유지한 뒤 1분간 쉽니다."
+        ]
+    },
+    {
         "id": "runner-strength-basic",
         "category": "보강운동",
         "title": "러너를 위한 하체·코어 기초",
