@@ -2,27 +2,10 @@
   "source": {
     "name": "마라톤GO",
     "url": "https://marathongo.co.kr/raceSchedule/domestic",
-    "retrievedAt": "2026-10-01T09:35:22+09:00",
+    "retrievedAt": "2026-10-02T09:50:52+09:00",
     "notice": "일정은 변경될 수 있으므로 참가 전 공식 대회 안내를 확인해 주세요."
   },
   "races": [
-    {
-      "id": "saunarun-2026-08-31-ttukseom-hangang-park",
-      "name": "사우나런 in 뚝섬한강공원",
-      "raceDate": "2026-09-30",
-      "registrationOpen": "2026-07-06",
-      "registrationClose": "2026-09-30",
-      "registrationStatus": "접수중",
-      "courses": [
-        "10km",
-        "5km"
-      ],
-      "region": "서울",
-      "place": "뚝섬한강공원 인근",
-      "start": "상시 집결",
-      "host": "사우나런",
-      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/saunarun-2026-08-31-ttukseom-hangang-park"
-    },
     {
       "id": "2026-just-run10-cheongju-pb-easy-official-second",
       "name": "2026 JUST RUN10 청주 (하반기)",
@@ -116,7 +99,7 @@
       "raceDate": "2026-10-03",
       "registrationOpen": "2026-06-04",
       "registrationClose": "2026-09-30",
-      "registrationStatus": "접수중",
+      "registrationStatus": "접수마감",
       "courses": [
         "10km",
         "5km",
@@ -152,7 +135,7 @@
       "raceDate": "2026-10-03",
       "registrationOpen": "2026-08-06",
       "registrationClose": "2026-09-30",
-      "registrationStatus": "접수중",
+      "registrationStatus": "접수마감",
       "courses": [
         "10km"
       ],
@@ -463,6 +446,24 @@
       "start": "오전 9시 집결",
       "host": "고흥군체육회",
       "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/2026-goheung-space-aviation-marathon"
+    },
+    {
+      "id": "wyd-life-love-marathon-walking-2026-10-09",
+      "name": "WYD와 함께하는 생명사랑 마라톤/걷기 대회",
+      "raceDate": "2026-10-09",
+      "registrationOpen": "2026-08-02",
+      "registrationClose": "2026-08-23",
+      "registrationStatus": "접수마감",
+      "courses": [
+        "10km",
+        "5km",
+        "5km걷기"
+      ],
+      "region": "경기",
+      "place": "안성 미리내 성지",
+      "start": "08:30 집결",
+      "host": "마라톤선교연합회/천주교수원교구",
+      "sourceUrl": "https://marathongo.co.kr/raceDetail/domestic/wyd-life-love-marathon-walking-2026-10-09"
     }
   ]
 }
